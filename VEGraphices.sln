@@ -1,0 +1,32 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 11.00
+# Visual Studio 2010
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "QE_lib", "QE_lib\QE_lib.vcxproj", "{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "GIS_Abilities", "GIS_Wrapper\GIS_Wrapper.vcxproj", "{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}"
+EndProject
+Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "simpleax", "simple\simpleax.vcxproj", "{5F98B768-3BDA-3899-BE60-620EC181695A}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Win32 = Debug|Win32
+		Release|Win32 = Release|Win32
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}.Debug|Win32.ActiveCfg = Debug|Win32
+		{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}.Debug|Win32.Build.0 = Debug|Win32
+		{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}.Release|Win32.ActiveCfg = Release|Win32
+		{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}.Release|Win32.Build.0 = Release|Win32
+		{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}.Debug|Win32.ActiveCfg = Debug|Win32
+		{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}.Debug|Win32.Build.0 = Debug|Win32
+		{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}.Release|Win32.ActiveCfg = Release|Win32
+		{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}.Release|Win32.Build.0 = Release|Win32
+		{5F98B768-3BDA-3899-BE60-620EC181695A}.Debug|Win32.ActiveCfg = Debug|Win32
+		{5F98B768-3BDA-3899-BE60-620EC181695A}.Debug|Win32.Build.0 = Debug|Win32
+		{5F98B768-3BDA-3899-BE60-620EC181695A}.Release|Win32.ActiveCfg = Release|Win32
+		{5F98B768-3BDA-3899-BE60-620EC181695A}.Release|Win32.Build.0 = Release|Win32
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+EndGlobal

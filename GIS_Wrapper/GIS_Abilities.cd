@@ -1,0 +1,1929 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<ClassDiagram MajorVersion="1" MinorVersion="1">
+  <Class Name="CAlgorithmInterface" Collapsed="true">
+    <Position X="43" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAESAAAAAAAABAAEAAgACAAAAAIAAAAAA=</HashCode>
+      <FileName>AlgorithmInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAnalysisExponent" Collapsed="true">
+    <Position X="44.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIgAAAAACABBAAAMQAgCAIAwFBAAAAAAAgIAQABABCA=</HashCode>
+      <FileName>AnalysisExponent.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CStationElement" Collapsed="true">
+    <Position X="51.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAABAAAAAAIAAAAAAAAIAAAAAABAAQAAAAAAA=</HashCode>
+      <FileName>AnalysisStationFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CAnalysisStationFile" Collapsed="true">
+    <Position X="46.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgAAAAASAACKAAMIQgCAIEYEAIAAAEEACAAAAAAAAQ=</HashCode>
+      <FileName>AnalysisStationFile.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCIPASException" Collapsed="true">
+    <Position X="48.25" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAgCIAAAAAAAggAAAAAAAgABAAAAAIgBBAA=</HashCode>
+      <FileName>CIPASException.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCIPASMessageBox" Collapsed="true">
+    <Position X="50" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABEAAAAAAAAAAAEAAAAAAAAKAAAAAAAAAAAgAAAA=</HashCode>
+      <FileName>CIPASMessageBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CIPScene" Collapsed="true">
+    <Position X="46.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AFABAi8ZRAAAGMaCmibJECMCSg0wQA9JMEUACEQJQSY=</HashCode>
+      <FileName>CIPScene.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Circlip" Collapsed="true">
+    <Position X="17" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAgDAAAAAhAAAAAQEABQIAGABAAAAEAAAA=</HashCode>
+      <FileName>Circlip.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLineAnalysis" Collapsed="true">
+    <Position X="50" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAACABAAGAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CLineAnalysis.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ColorCardLegend" Collapsed="true">
+    <Position X="8.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEAAIABAgAAAAAAQAAAAAAAAAQAAAABEAAgAgAAQAA=</HashCode>
+      <FileName>ColorCardLegend.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ConcavePolygon" Collapsed="true">
+    <Position X="12.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAACAAAAAAABAAAEEAAAA=</HashCode>
+      <FileName>ConcavePolygon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CIPASApplication" Collapsed="true">
+    <Position X="44.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAUABAAAACAAIAAAACAAEAAAgAAAABAAEIIAGAAAA=</HashCode>
+      <FileName>Const.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CContourData" Collapsed="true">
+    <Position X="51.75" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAKEEIAAiIgAgACAAAAAAAAAAAAACAgAAAEEAgAY=</HashCode>
+      <FileName>ContourData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContourLayer" Collapsed="true">
+    <Position X="3" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAEAAEAAAQAACAAAAIAAAQggQABAAAA=</HashCode>
+      <FileName>ContourLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContourLegend" Collapsed="true">
+    <Position X="8.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAgAAAAAAAAAAAAAAAAQAAAAAAgAAAAAAAAA=</HashCode>
+      <FileName>ContourLegend.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ContourShadedLayer" Collapsed="true">
+    <Position X="5.25" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAIgAAAAAAAABAAAAEAAAQAACAAAAIAAAQggQABAAAA=</HashCode>
+      <FileName>ContourShadedLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CConvertFormat" Collapsed="true">
+    <Position X="53.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAIAZgAAAAAGUQAAAAAAAAAAgCAgABAAAEAAEAGA=</HashCode>
+      <FileName>ConvertExponentToCipasFormat.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CoordinateTransform" Collapsed="true">
+    <Position X="4.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAEAAAAAABCIQAAgQKAAAAAAAAAAJMIAAAAAA=</HashCode>
+      <FileName>CoordinateTransform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPolygonAnalysis" Collapsed="true">
+    <Position X="44.75" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAQAAgAIAAQAAASAAAAQAAIASQACAAAQICQAEAgIAk=</HashCode>
+      <FileName>CPolygonAnalysis.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CCustomizeArea" Collapsed="true">
+    <Position X="20.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAiAgEAAAAACgAAAAAAAAIIEAAAAAAAAgAAAAgAACA=</HashCode>
+      <FileName>CustomizeArea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DataProvider" Collapsed="true">
+    <Position X="43" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAEgSAQAAAJgAAAAAAAgBAQABAAMCQC0QAACQEAAA=</HashCode>
+      <FileName>DataProvider.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDiskFileLog" Collapsed="true">
+    <Position X="14.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAGAAEAAAgBAAIAAEAAAAAAAAQAAgEkwAAAAAQAAAQ=</HashCode>
+      <FileName>DiskFileLog.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawArea" Collapsed="true">
+    <Position X="9" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EUQiEggQCAAgCGICAAQCBAxAEAACAiKgAAAABAgAYJA=</HashCode>
+      <FileName>DrawArea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawContourArea" Collapsed="true">
+    <Position X="11.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQiUwgADAAgCEoAMEQCBAwAEAGCCiAgAAAAEEAAIMA=</HashCode>
+      <FileName>DrawContourArea.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawMicapsGroundMap" Collapsed="true">
+    <Position X="44.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>JBAIAEBBAQggAgACigAoACAEKCACAAYAQJASACCMIoA=</HashCode>
+      <FileName>DrawMicapsGroundMap.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawNormalSymbol" Collapsed="true">
+    <Position X="13.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQUiFgkAAAAJiAYABAACBAAAEABAABIAwEAgAABAAAA=</HashCode>
+      <FileName>DrawNormalSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawContourLine" Collapsed="true">
+    <Position X="15.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gQQiUwgADEAACEIAEAQCBAQAEQAACiCgAAAAAAAAIBA=</HashCode>
+      <FileName>DrawContourLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawLineSymbol" Collapsed="true">
+    <Position X="18" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AARjAggAABAhCAAAgACCBAAAEAAAAAEAAAAAIAgBAAA=</HashCode>
+      <FileName>DrawLineSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawOrder" Collapsed="true">
+    <Position X="43" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAIAAAQAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawOrder.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawPointSymbol" Collapsed="true">
+    <Position X="22.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQUiAkgAAAAASAAAAAAAAAAAEAAAACAgAEAAAABAAIA=</HashCode>
+      <FileName>DrawPointSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawShapeSymbol" Collapsed="true">
+    <Position X="24.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQjgggAQAAAL0AAAAAAgAAAUAAAABAAAAAAIAGBmBA=</HashCode>
+      <FileName>DrawShapeSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawString" Collapsed="true">
+    <Position X="29.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQiAggAAFAACBAABAEAACAAEAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawString.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawTroughLine" Collapsed="true">
+    <Position X="33.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQUiEgkAAAAICAQAAAAChAAAEAAAABAgAEAAAEAAAAA=</HashCode>
+      <FileName>DrawTroughLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDrawWindSymbol" Collapsed="true">
+    <Position X="38.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAiAggAQAghCCCAQAEABAAAEgAAACAiAEAAAAIAAAA=</HashCode>
+      <FileName>DrawWindSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="EarthSphere" Collapsed="true">
+    <Position X="1.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BQAACAAIAAAgJgAAAAhAQgAAAEgBAAAGgBCAAAkAACA=</HashCode>
+      <FileName>EarthSphere.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="FunPluginInterface" Collapsed="true">
+    <Position X="46.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAGAAAAAQAAAEAAAABAAAAAAQAAwAAAAACAAAAAA=</HashCode>
+      <FileName>FunPluginInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GeoTo3DTransform" Collapsed="true">
+    <Position X="3.5" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAEAAAAAAFCIQQIgQKAAEAAAAAAABMAAAAAAA=</HashCode>
+      <FileName>GeoTo3DTransform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="IChange" Collapsed="true">
+    <Position X="50" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILayerAttribute.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ILayerAttribute" Collapsed="true">
+    <Position X="51.75" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgDAYwAkIJgQrIAgEJESABQAAAYAAIACAQAgAEBAwAQ=</HashCode>
+      <FileName>ILayerAttribute.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ImageTexture" Collapsed="true">
+    <Position X="53.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAEEAAAAggAABhAAAAAECAAAIAgAAAACAAAAAAAg=</HashCode>
+      <FileName>ImageTexture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Legend" Collapsed="true">
+    <Position X="8.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAgAAAAgAAAAEAAQAAAAAEAAAQAAADgZAQAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLog" Collapsed="true">
+    <Position X="14.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAEAAAAAAAYAAEAAAgAAAAAAAAEAAIAAAAAAAAA=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="MeasureMouseManipulator" Collapsed="true">
+    <Position X="2.25" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQQiEggCDAIACAAAAAAUAQQAEAAAAiCAIAAAAgAAAAA=</HashCode>
+      <FileName>MeasureMouseManipulator.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CPixmapTexture" Collapsed="true">
+    <Position X="43" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgQAAAAAAAggAACBACAAAACAAAAAAAAAIAAAAAAAAA=</HashCode>
+      <FileName>PixmapTexture.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GeoCoordTransform" Collapsed="true">
+    <Position X="48.25" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEQAAAAAAAAAAAAAAAAAAAAAAAAACAEBICAAAAEAAAQ=</HashCode>
+      <FileName>GeoCoordTransform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CLayerDisplayControl" Collapsed="true">
+    <Position X="48.25" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAiBQEAAAAAgAAAAAAAAAAAAAAAgAAAAAAgAA=</HashCode>
+      <FileName>LayerDisplayControl.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ReadColorTableFromXML" Collapsed="true">
+    <Position X="46.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>BAAAAABAYAABAABAAIAAAAoAABAQACAAAAAAAABAAgA=</HashCode>
+      <FileName>ReadColorTableFromXML.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CReadSymbolFromM14File" Collapsed="true">
+    <Position X="46.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gABCAYAAIAgARAAVSIAAsggAAIjAACgmAAAoAAlICCA=</HashCode>
+      <FileName>ReadSymbolFromM14File.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveColorTableToXML" Collapsed="true">
+    <Position X="48.25" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIQAABAAAAAIAAgAAAAAAAAAAAAAAQAAAAAAACAEAKA=</HashCode>
+      <FileName>SaveColorTableToXML.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveLayerToKML" Collapsed="true">
+    <Position X="50" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAJAAAAAAgACAAAIAAAABAAAABACAAAAAAAAAAA=</HashCode>
+      <FileName>SaveLayerToKML.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSaveLayerToShape" Collapsed="true">
+    <Position X="48.25" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAAAAAIAQAgAAgAAAAAAIBAAAAACAAAAAAAAAEAAAgA=</HashCode>
+      <FileName>SaveLayerToShape.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSaveSymbolToM14" Collapsed="true">
+    <Position X="50" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAAAgAAAAAAQAQAAAAQBIgAAAAAAAAAAQAAAAgQEACA=</HashCode>
+      <FileName>SaveSymbolToM14File.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SaveSymbolToXML" Collapsed="true">
+    <Position X="51.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ApQAABQAQAAAAAgIQAAAIAAAAAAABAAAIAAAAAAEECA=</HashCode>
+      <FileName>SaveSymbolToXML.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="StationInterpretation" Collapsed="true">
+    <Position X="53.5" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAACEBAIIACAAAAYAAEJAQAAEABINAgAAAk5AAQQEA=</HashCode>
+      <FileName>StationInterpretation.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolMultiContourLine" Collapsed="true">
+    <Position X="44.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgRQECQAICAAkgAoAGAAAIQAASCoQkKgANjAwAgAhAA=</HashCode>
+      <FileName>SymbolMultiContourLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolMultiLine" Collapsed="true">
+    <Position X="5.75" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAACAAgCAAAgAQAUCAAIAAAAAAQkAAAJEAgBAAAAA=</HashCode>
+      <FileName>SymbolMultiLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolPluginInterface" Collapsed="true">
+    <Position X="46.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAIAAAAAAAAAAAAAAAAAAAACAAgAAAAAAAAA=</HashCode>
+      <FileName>SymbolPluginInterface.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoAddDrawMultiCommand" Collapsed="true">
+    <Position X="0.5" Y="16" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAAAAAAAAAEAAAAAAAAAAAAAAAABEAAAAAA=</HashCode>
+      <FileName>UndoAddDrawMultiCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoContourEditCommand" Collapsed="true">
+    <Position X="3.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggAAEAACAAACAAAEAgABAAAAAAAACBAAIAAAQAAA=</HashCode>
+      <FileName>UndoContourEditCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="OptMicapsDataXml" Collapsed="true">
+    <Position X="44.75" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgCAAAAAAAgAAIQACAAAAwCAgAAAQBCAAEBQAAATCA=</HashCode>
+      <FileName>OptMicapsDataXml.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoContourEditMultiCommand" Collapsed="true">
+    <Position X="5.5" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAEAAEAAAACAAEAAAAAAAACgAAAAAAAAABAAAA=</HashCode>
+      <FileName>UndoContourEditMultiCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoDeleteDrawCommand" Collapsed="true">
+    <Position X="7.75" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAEACAAEAAAAAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UndoDeleteDrawCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoDelPointCommand" Collapsed="true">
+    <Position X="12.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACMCAAAAAAAAAEAAAAAQAAAAAAAAAAAAAIAgBA=</HashCode>
+      <FileName>UndoDelPointCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoManualDrawMultiCommand" Collapsed="true">
+    <Position X="0.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAACAAABAAAQQAAAEAAAAIAIAAABAAAABAAAAAABQ=</HashCode>
+      <FileName>UndoManualDrawMultiCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoMultiContourEditCommand" Collapsed="true">
+    <Position X="10" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAggAAEAACBAACAAAEAgABAAAAACAAAAAAIAAAQAAA=</HashCode>
+      <FileName>UndoMultiContourEditCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoSymbolLineMoveCommand" Collapsed="true">
+    <Position X="12.25" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAgABEAggAAAQgCAEBEAAAAAAgAAQCQACAAAAQAAA=</HashCode>
+      <FileName>UndoSymbolLineMoveCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoSymbolMarkMoveCommand" Collapsed="true">
+    <Position X="51.75" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAASAA2BAAIAAAQAQEAEAABIQAAAAAAAAACAAAAAAQ=</HashCode>
+      <FileName>UndoSymbolMarkMoveCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoSymbolPointMoveCommand" Collapsed="true">
+    <Position X="53.5" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEQEAWBAAAAAAQCQEAFAABIAAAAAAAAAACAABAAAQ=</HashCode>
+      <FileName>UndoSymbolPointMoveCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SymbolData" Collapsed="true">
+    <Position X="43" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAkARAAAAAAIAADgAgCCAAAQCBAJiQgAECAAAAAAAA=</HashCode>
+      <FileName>SymbolData.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoAddDrawCommand" Collapsed="true">
+    <Position X="1" Y="9" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAABAAEAAAEAAAAAAEAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>UndoAddDrawCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoAddPointCommand" Collapsed="true">
+    <Position X="10.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAMAAAAAEAAACEAAAAAAAAAAAAAAAAAAEAAACA=</HashCode>
+      <FileName>UndoAddPointCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoManualDrawCommand" Collapsed="true">
+    <Position X="6.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAACAQQAAAEAAABIAIAAABAAAAAAAAAAABQ=</HashCode>
+      <FileName>UndoManualDrawCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CUndoPointDrawCommand" Collapsed="true">
+    <Position X="11.75" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>4AAEAEAUAAAAAAAQQwsIAkAAAAAAABAAAAAAgAAAAhQ=</HashCode>
+      <FileName>UndoPointDrawCommand.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Geometry" Collapsed="true">
+    <Position X="9" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CACICIAAAIAIgIIgIQphihACAAhAggCEgQggwAEAgAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NormalSymbol" Collapsed="true">
+    <Position X="11.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgCABAEAAAMEQQAIAEAQAAEAAygQACZAAIAEAAAQ=</HashCode>
+      <FileName>NormalSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolAttribute" Collapsed="true">
+    <Position X="53.5" Y="2.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>DABIAAAAoAAAAgEAAKCAAAIAB4EAAACAghgCEAAAAAM=</HashCode>
+      <FileName>SymbolAttribute.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolContourLine" Collapsed="true">
+    <Position X="43" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EgRBACAAIiAskgAIAmAAAIABACEgUkogAJBAwAgAgAA=</HashCode>
+      <FileName>SymbolContourLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CSymbolLine" Collapsed="true">
+    <Position X="3.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQACCAAACMggAAQAUKAAIAAAAQAQgAAAJEggAABABA=</HashCode>
+      <FileName>SymbolLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SymbolPoint" Collapsed="true">
+    <Position X="11.5" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQEgCAAAEAAEEEAQAIAAAAAAUAAygQAGZAAKAFAAAQ=</HashCode>
+      <FileName>SymbolPoint.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Map" Collapsed="true">
+    <Position X="43" Y="5.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AADAAAIAiFACBgoAAARAAQAAAAShQGSAoEAoAgEJIAg=</HashCode>
+      <FileName>Map.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Line" Collapsed="true">
+    <Position X="4.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACCAAECgAAAAIAQgAAgCEIAAAIgBEAJAAooERAAA=</HashCode>
+      <FileName>Line.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Plane" Collapsed="true">
+    <Position X="8" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACAAAAAAAAAAAAggBAgAAAAAAAgAEAAIAAgEAAAA=</HashCode>
+      <FileName>Plane.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Point" Collapsed="true">
+    <Position X="10.25" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAICAAAAAAAkAAAAAgAAkAAAQAAAAAEAAAAAgEAAAE=</HashCode>
+      <FileName>Point.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="GISPolygon" Collapsed="true">
+    <Position X="12.5" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAL5AAIAIAgIAAAAgAAgAAACAAABAEABAAAAEQAAA=</HashCode>
+      <FileName>Polygon.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Proj4Transform" Collapsed="true">
+    <Position X="5.75" Y="14.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIACAEAAAAAADCIUEAhQaAAQAYAAIIAR+AUAABCA=</HashCode>
+      <FileName>Proj4Transform.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Symbol" Collapsed="true">
+    <Position X="14.75" Y="5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQAAQAEAGAAgggEgCQAIAAwARAAAwIgAKAIAIARDAQ=</HashCode>
+      <FileName>Symbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CDelSymbol" Collapsed="true">
+    <Position X="27" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAgigggIAAAACAAAAAAAIEAAEABgAAAAAgAYAAAECAA=</HashCode>
+      <FileName>DelSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="DrawTexSymbol" Collapsed="true">
+    <Position X="31.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAQqAgoAIEgACCAABAEAAAAAEAAAgBAgAAAAAAAQAAA=</HashCode>
+      <FileName>DrawTexSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CModifyContour" Collapsed="true">
+    <Position X="36" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQgiAwgAAAkAHQAAUSIAEEgAsABgCgAIQAAIAAQArIg=</HashCode>
+      <FileName>ModifyContour.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CModifyStationSymbol" Collapsed="true">
+    <Position X="40.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ASiiAggIgAgAGQAAwKAAMEgAsADgAAQAAgAYAAAECAE=</HashCode>
+      <FileName>ModifyStationSymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CScaleSymbolLine" Collapsed="true">
+    <Position X="4.5" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CQiiAggIwAgAGQAEQKAKMEgA9BvgAAQAEgAYABAECAE=</HashCode>
+      <FileName>ScaleSymbolLine.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CTextBox" Collapsed="true">
+    <Position X="48.25" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAACIAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>TextBox.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="ManualDraw" Collapsed="true">
+    <Position X="21.5" Y="0.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KA5iAikAACBBKAAcgAAIMABAEAAUCALAAQAIABAAYAA=</HashCode>
+      <FileName>ManualDraw.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="CModifySymbol" Collapsed="true">
+    <Position X="6.75" Y="2" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQiiAggIgAwAGQAAQKAAMEgAsADgAAQAAgAYAAAECAE=</HashCode>
+      <FileName>ModifySymbol.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COLOR_PROPERTY" Collapsed="true">
+    <Position X="51.75" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAAACAAIAAAAAAAAAAAAAAAAEAAIAA=</HashCode>
+      <FileName>SymbolLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="SymbolLayer" Collapsed="true">
+    <Position X="0.75" Y="13.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAQkAAlAAAJQDKhIAQgAAADEgQQEAAAIACAQADAIAY=</HashCode>
+      <FileName>SymbolLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="QGraticuleCoordinates" Collapsed="true">
+    <Position X="7.5" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>KhIgBBJAACAQAAACAEBsAAECCkAAYAAAAwIAYAJQAiA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="COLORITEM" Collapsed="true">
+    <Position X="53.5" Y="1.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAIAAAAAAYAAAAAEAAAAQAAAAAAAAAAAgAwAAAAAA=</HashCode>
+      <FileName>Layer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="Layer" Collapsed="true">
+    <Position X="4" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>TYIyPLQjMMwv4gAyAGUgPQJ4uGC8w9SUZQoR1BPOKgo=</HashCode>
+      <FileName>Layer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="VectorLayer" Collapsed="true">
+    <Position X="0.75" Y="12" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAGAIAgEIACCgAGAgAwIACAKgAoAACQggQQBAAAc=</HashCode>
+      <FileName>VectorLayer.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Class Name="NCCGIS::CTIN" Collapsed="true">
+    <Position X="50" Y="3.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>uVCPKACZmsj2oVghl4tERb4oSHu5VCFIrbFjGMnV+Oc=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Class>
+  <Struct Name="__unnamed_struct_027f_1" Collapsed="true">
+    <Position X="5.5" Y="34.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQBAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawContourArea.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0281_1" Collapsed="true">
+    <Position X="43" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAQBAIAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawContourLine.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="v_shape" Collapsed="true">
+    <Position X="13.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAIAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="p_shape" Collapsed="true">
+    <Position X="32.5" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAgAAAAAAAAAAAAAAAAEABAAIAIAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="edge_shape" Collapsed="true">
+    <Position X="32.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAABAEAAAAAAAABAAQBAAggAAAABQAAAAABAABKABAg=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="lmt_shape" Collapsed="true">
+    <Position X="17.5" Y="32.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgCAIAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="sbt_t_shape" Collapsed="true">
+    <Position X="31.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAACAAAAAAAAAAABAAAAAAAAgAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="it_shape" Collapsed="true">
+    <Position X="31.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACAAAAAAAAAAAAQAAAAAAAAAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="st_shape" Collapsed="true">
+    <Position X="13.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAAAAAAAAAQAAAAARAAAAABAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="bbox_shape" Collapsed="true">
+    <Position X="9.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAEAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02a1_2" Collapsed="true">
+    <Position X="29.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02a1_4" Collapsed="true">
+    <Position X="24.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAEAAAAAIAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02a1_5" Collapsed="true">
+    <Position X="28.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAI=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02a7_1" Collapsed="true">
+    <Position X="20.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAFAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageTexture.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02b3_1" Collapsed="true">
+    <Position X="27.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAAAAAgAAAEAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02b3_2" Collapsed="true">
+    <Position X="9.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAgAAAEAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02b3_3" Collapsed="true">
+    <Position X="27.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAIAAAAAAAAAAAAAAIAAAgAAAEAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LogItem" Collapsed="true">
+    <Position X="8.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAACAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAAAg=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0301_1" Collapsed="true">
+    <Position X="26.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAEAAAIAAAYAAAAAABAECAAAAAAAAAAkAAAAAAAQ=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0301_2" Collapsed="true">
+    <Position X="19.5" Y="10.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAACEAQAAAIAAAACAAAAgACQAAAQIIAAAAYAAAAABA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0301_3" Collapsed="true">
+    <Position X="16.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAABAABAAAASAAABAAAAAAQAAIAAAAQAYiAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="shape_tree_node" Collapsed="true">
+    <Position X="25.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAQAAABABAAAAAAAAAAAgAAAAAAAAAAAgAAAAAAEEA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0301_4" Collapsed="true">
+    <Position X="1.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAEAAAAAAACAAAAAIACAAAAAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_0301_5" Collapsed="true">
+    <Position X="15.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>lAEACCgAACCIACAAAAAAAQQAAAAAAIMAADAAIAACIAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="StationInfo" Collapsed="true">
+    <Position X="46.5" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AIAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAAEAgAAAAAgA=</HashCode>
+      <FileName>StationInterpretation.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MicapsDataC" Collapsed="true">
+    <Position X="46.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAACAAAAACAAAAEAAAAAAAAAgAAAAAAgAgAAAA=</HashCode>
+      <FileName>OptMicapsDataXml.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MicapsDataB" Collapsed="true">
+    <Position X="44.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAQAAAAAACAAABACgAAAAAAkAAAA=</HashCode>
+      <FileName>OptMicapsDataXml.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="MicapsDataA" Collapsed="true">
+    <Position X="43" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABgAAAgAAAAAAAAAAAgAAAAAAgAAAA=</HashCode>
+      <FileName>OptMicapsDataXml.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="_CustomizeAttribute" Collapsed="true">
+    <Position X="4.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAEACAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="longlatrect" Collapsed="true">
+    <Position X="5.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAQAAAAIAAAAAAAAAAAAAAAAAgAAAACAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="LongLatLineData" Collapsed="true">
+    <Position X="23.5" Y="18.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEAAQAAAAAAAAAEAAAAAAAAAAAAAACAgAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="ht_bucket" Collapsed="true">
+    <Position X="48.25" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAEAAAAAAAAAAAAAAAQAAIAAgA=</HashCode>
+      <FileName>nn\hash.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="hashtable" Collapsed="true">
+    <Position X="46.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAABCAIAAAAAAADAAgAAAEIAAAAAAAAA=</HashCode>
+      <FileName>nn\hash.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02d8_1" Collapsed="true">
+    <Position X="23.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAAAAAAA=</HashCode>
+      <FileName>nn\lpi.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="lpi" Collapsed="true">
+    <Position X="50" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAAAAAAA=</HashCode>
+      <FileName>nn\lpi.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02db_1" Collapsed="true">
+    <Position X="20.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAAAAAAEAAAAAA=</HashCode>
+      <FileName>nn\nnai.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="nnai" Collapsed="true">
+    <Position X="48.25" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAABAAQAAEEABgAAAAAAA=</HashCode>
+      <FileName>nn\nnai.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="nnpi" Collapsed="true">
+    <Position X="51.75" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAABAQQAAEEEAAEAAAAAA=</HashCode>
+      <FileName>nn\nnpi.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="nnhpi" Collapsed="true">
+    <Position X="50" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAAAAAAAASAAAAAEAAAAAAAAAA=</HashCode>
+      <FileName>nn\nnpi.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02dd_1" Collapsed="true">
+    <Position X="46.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQQAAAAAAAEAAAAAA=</HashCode>
+      <FileName>nn\nnpi.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="otri" Collapsed="true">
+    <Position X="43" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="osub" Collapsed="true">
+    <Position X="53.5" Y="12.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAIAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="badsubseg" Collapsed="true">
+    <Position X="48.25" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAIAAAIAAAAAAAAAAAAAAAAAAAAIAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="badtriang" Collapsed="true">
+    <Position X="50" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAEAAAAAAAAAABEAAAQAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="flipstacker" Collapsed="true">
+    <Position X="44.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAAAAAACAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="event" Collapsed="true">
+    <Position X="43" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAgAAAAAAAAAAAgAAAAAAAAIAAAAEAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="splaynode" Collapsed="true">
+    <Position X="44.75" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAABAAAAAAAAAAACAAAAAAAAAAAAAAAABAAQAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="memorypool" Collapsed="true">
+    <Position X="51.75" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gEEACAAAAAAAAAAACQgAAAAAIEAAACABAAFAAAABAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="mesh" Collapsed="true">
+    <Position X="53.5" Y="11.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IACPIAAA2oiAABkAhgpEAUooDCAbAQAAAJBAgEQAEIE=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="behavior" Collapsed="true">
+    <Position X="51.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>FAAAqAADAUASAAQBsAECtECwAEEgRMjIAAKoEAASYAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02d3_1" Collapsed="true">
+    <Position X="16.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02d3_2" Collapsed="true">
+    <Position X="12.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02d3_3" Collapsed="true">
+    <Position X="1.5" Y="22.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABhAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="delaunay" Collapsed="true">
+    <Position X="53.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIQACAAIAABACAIAQAASAAAEkAAACAAAAAAEAAEAQ=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02d7_1" Collapsed="true">
+    <Position X="44.75" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>CAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAEBAAAAAAAAA=</HashCode>
+      <FileName>nn\istack.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="__unnamed_struct_02da_2" Collapsed="true">
+    <Position X="16.5" Y="9.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAABgAQAAAAA=</HashCode>
+      <FileName>nn\nn.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="triangulateio" Collapsed="true">
+    <Position X="48.25" Y="13.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>EAgAAQAaAgDAACgAAAJIAAAgAAAIQAAAAAAgAAGAAAg=</HashCode>
+      <FileName>nn\triangle.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CBoundBox" Collapsed="true">
+    <Position X="48.25" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAIAAAAAACAAAIAAAAAAAAAAAAAAAAAAAAgAECAEAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CPoint3D" Collapsed="true">
+    <Position X="48.25" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAACAAAAAAAAAAAAAQAAAAAAAAAAAABgAQAAAgA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTriangle" Collapsed="true">
+    <Position X="44.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAQAAAAAgA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CPoint2D" Collapsed="true">
+    <Position X="46.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAABAAAAAAAAAAAAAQAAAAAAAAAAAABgAAAAAAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CContour" Collapsed="true">
+    <Position X="51.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAACAAAAAAAAAAAAAIAAAAAAQAAQAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CConstrainLine" Collapsed="true">
+    <Position X="50" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAACIAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CIOTriangle" Collapsed="true">
+    <Position X="43" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAEAAAAAAAAABAgA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CBlockPoint" Collapsed="true">
+    <Position X="44.75" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAEAAAAAAAAAAAABAAAAAAAgAAAQAAAAAAAABSAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CBlockTIN" Collapsed="true">
+    <Position X="46.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAACAAgACAAAAAAAAAAAAAAAAAgAAABAABAAAAAASAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CBlockGrid" Collapsed="true">
+    <Position X="43" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>gAECAAAABAAAAAACAAAQAAAAAAgAAAEAAAAAAAAIAAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CBlockContour" Collapsed="true">
+    <Position X="53.5" Y="7.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AEAEIEAAAAAAAAAAAABAAAEAAAgAAAAAAAAAAAAASAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTContour" Collapsed="true">
+    <Position X="51.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAQAAAAAAAAAAAAAQAAAAAAAAAEAAAAAAAQAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTPoint" Collapsed="true">
+    <Position X="53.5" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAEAAAAAAAAAAAAAAAAAQAAAAAAAAAAAABgAAAAIgA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTPointChain" Collapsed="true">
+    <Position X="43" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAIAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTTriangle" Collapsed="true">
+    <Position X="50" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAEAIAAAAAAAAAQAEAAAAAAAAQAAgA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTTriangleChain" Collapsed="true">
+    <Position X="51.75" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAQAQAAAAAAAgIAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CPointChain" Collapsed="true">
+    <Position X="50" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAEAAAABAAAIAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTriangleChain" Collapsed="true">
+    <Position X="46.5" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAABAAAAAAAIAAAAAAAAAQAAAAAAAAAAIAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CTriEdge" Collapsed="true">
+    <Position X="48.25" Y="10.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>ABAAAAAAAAAAAAAAAAAAAAAAAAAQAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CEdge" Collapsed="true">
+    <Position X="53.5" Y="8.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAABAAAAAAAAAAAAAAAAAAIAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Struct Name="NCCGIS::CMemoryPool" Collapsed="true">
+    <Position X="44.75" Y="9.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>kEEACAAAAAAAAAAACQgAAAAAIGAAACAAAAFAAAABAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Struct>
+  <Typedef Name="ContourValue" Collapsed="true">
+    <Position X="5.5" Y="36.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawContourArea.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="vertex_type" Collapsed="true">
+    <Position X="34.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="h_state" Collapsed="true">
+    <Position X="21.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="bundle_state" Collapsed="true">
+    <Position X="33.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="vertex_node" Collapsed="true">
+    <Position X="13.5" Y="35.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="polygon_node" Collapsed="true">
+    <Position X="32.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="edge_node" Collapsed="true">
+    <Position X="32.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="lmt_node" Collapsed="true">
+    <Position X="17.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="sb_tree" Collapsed="true">
+    <Position X="31.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="it_node" Collapsed="true">
+    <Position X="31.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="st_node" Collapsed="true">
+    <Position X="13.5" Y="28.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="bbox" Collapsed="true">
+    <Position X="9.5" Y="32.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="TRANSFORM_DIRECTION" Collapsed="true">
+    <Position X="30.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>CoordinateTransform.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="VECTOR_DATA_TYPE" Collapsed="true">
+    <Position X="21.5" Y="15.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataProvider.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="P_VECTOR_DATA_TYPE" Collapsed="true">
+    <Position X="19.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataProvider.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NCCGIS::BYTE" Collapsed="true">
+    <Position X="44.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>dem.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CoutourZArray" Collapsed="true">
+    <Position X="51.75" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DrawContourArea.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gpc_op" Collapsed="true">
+    <Position X="28.5" Y="31.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gpc_vertex" Collapsed="true">
+    <Position X="29.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gpc_polygon" Collapsed="true">
+    <Position X="24.5" Y="30.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="gpc_tristrip" Collapsed="true">
+    <Position X="28.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LAYER_ATTRIBUTE" Collapsed="true">
+    <Position X="53.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILayerAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="P_LAYER_ATTRIBUTE" Collapsed="true">
+    <Position X="51.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ILayerAttribute.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="GeoBoundary" Collapsed="true">
+    <Position X="20.5" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>ImageTexture.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PointLegend" Collapsed="true">
+    <Position X="27.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LineLegend" Collapsed="true">
+    <Position X="9.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="AreaLegend" Collapsed="true">
+    <Position X="27.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PointLegendArray" Collapsed="true">
+    <Position X="44.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LineLegendArray" Collapsed="true">
+    <Position X="43" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="AreaLegendArray" Collapsed="true">
+    <Position X="43" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Legend.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LOG_ITEM" Collapsed="true">
+    <Position X="5.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="P_LOG_ITEM" Collapsed="true">
+    <Position X="8.5" Y="21.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Log.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SAFile" Collapsed="true">
+    <Position X="50" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SAOffset" Collapsed="true">
+    <Position X="51.75" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SAHooks" Collapsed="true">
+    <Position X="25.75" Y="6.5" Width="2.75" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SHPInfo" Collapsed="true">
+    <Position X="18.5" Y="12.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SHPHandle" Collapsed="true">
+    <Position X="18.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SHPObject" Collapsed="true">
+    <Position X="16.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SHPTreeNode" Collapsed="true">
+    <Position X="25.5" Y="16.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SHPTree" Collapsed="true">
+    <Position X="1.5" Y="27.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DBFInfo" Collapsed="true">
+    <Position X="12.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DBFHandle" Collapsed="true">
+    <Position X="12.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="DBFFieldType" Collapsed="true">
+    <Position X="24.5" Y="25.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="StationDataArray" Collapsed="true">
+    <Position X="43" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>StationInterpretation.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NCCGIS::triangle" Collapsed="true">
+    <Position X="48.25" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NCCGIS::shelle" Collapsed="true">
+    <Position X="53.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NCCGIS::point" Collapsed="true">
+    <Position X="43" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="GISMultiPolygon" Collapsed="true">
+    <Position X="44.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="GISMultiLine" Collapsed="true">
+    <Position X="53.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="GISMultiPoint" Collapsed="true">
+    <Position X="43" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="CUSTOMIZE_ATTRIBUTE" Collapsed="true">
+    <Position X="1.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="P_CUSTOMIZE_ATTRIBUTE" Collapsed="true">
+    <Position X="4.5" Y="19.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Geometry.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="pCPP_Fun" Collapsed="true">
+    <Position X="53.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Polygon.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PROJCRS" Collapsed="true">
+    <Position X="46.5" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Proj4Transform.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="PROJNAME" Collapsed="true">
+    <Position X="48.25" Y="19" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Proj4Transform.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="SYMBOL_VECTOR" Collapsed="true">
+    <Position X="46.5" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Symbol.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="COLORTABLE" Collapsed="true">
+    <Position X="48.25" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SymbolLayer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="COLORTABLELIST" Collapsed="true">
+    <Position X="50" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>SymbolLayer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONG_LAT_POINT" Collapsed="true">
+    <Position X="50" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONG_LAT_LINE" Collapsed="true">
+    <Position X="44.75" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONG_LAT_LINE_MAP" Collapsed="true">
+    <Position X="46.5" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONG_LAT_LINE_VECTOR" Collapsed="true">
+    <Position X="48.25" Y="18.25" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONG_LAT_RECT" Collapsed="true">
+    <Position X="5.5" Y="26.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="LONGLAT_LINE_DATA" Collapsed="true">
+    <Position X="23.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>GraticuleCoordinates.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="COLORITEM_TABLE" Collapsed="true">
+    <Position X="46.5" Y="16.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>Layer.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="lweights" Collapsed="true">
+    <Position X="23.5" Y="11.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\lpi.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="nn_weights" Collapsed="true">
+    <Position X="20.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\nnai.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="triangle" Collapsed="true">
+    <Position X="16.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="subseg" Collapsed="true">
+    <Position X="44.75" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="vertex" Collapsed="true">
+    <Position X="50" Y="19.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="triangle_neighbours" Collapsed="true">
+    <Position X="12.5" Y="24.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="circle" Collapsed="true">
+    <Position X="1.5" Y="20.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="istack" Collapsed="true">
+    <Position X="51.75" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\delaunay.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ht_keycp" Collapsed="true">
+    <Position X="48.25" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\hash.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ht_keyeq" Collapsed="true">
+    <Position X="50" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\hash.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="ht_key2hash" Collapsed="true">
+    <Position X="46.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\hash.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="NN_RULE" Collapsed="true">
+    <Position X="22.5" Y="6.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\nn.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="point" Collapsed="true">
+    <Position X="16.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\nn.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Typedef Name="nnpoint" Collapsed="true">
+    <Position X="19.5" Y="7.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\nn.h</FileName>
+    </TypeIdentifier>
+  </Typedef>
+  <Enum Name="__unnamed_enum_02a0_1" Collapsed="true">
+    <Position X="34.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAACACAAoIAAAEQAAAACAgCIAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_02a0_2" Collapsed="true">
+    <Position X="21.5" Y="33.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAABEEAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_02a0_3" Collapsed="true">
+    <Position X="33.5" Y="14.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAIAAAAAAAAAAAAAAAAAAAAgAAAAgAAAAAAAAAAAAA=</HashCode>
+      <FileName>gpc.cpp</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_Direction" Collapsed="true">
+    <Position X="30.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAACAAAAAAQAAAAA=</HashCode>
+      <FileName>CoordinateTransform.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="_VECTOR_DATA_TYPE" Collapsed="true">
+    <Position X="19.5" Y="17.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>QAAAAAAAECAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>DataProvider.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_02a1_1" Collapsed="true">
+    <Position X="28.5" Y="29.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAQACAAAAAAAAAABAAAAAAAAAAAAAAAAIAAA=</HashCode>
+      <FileName>gpc.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_0301_6" Collapsed="true">
+    <Position X="24.5" Y="23.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAQgAAIAAAAAAABAAAAAAAAgAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>shapefil.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="CONTOUR_TYPE" Collapsed="true">
+    <Position X="44.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAAQAAkAAAAAAAAAAAAAAAAAAAAgA=</HashCode>
+      <FileName>SymbolContourLine.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="locateresult" Collapsed="true">
+    <Position X="43" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAABAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="insertvertexresult" Collapsed="true">
+    <Position X="51.75" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAIAAAQAAAAAAAAAAAAgAAAAAgAAAAAAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="finddirectionresult" Collapsed="true">
+    <Position X="48.25" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>nn\triangle.c</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="__unnamed_enum_02da_1" Collapsed="true">
+    <Position X="21.5" Y="4.5" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>IAAAAAAAAAAAAAAAAAAAAAAAAAAAABAAAAAAAAAAAAA=</HashCode>
+      <FileName>nn\nn.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NCCGIS::locateresult" Collapsed="true">
+    <Position X="53.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAIAAAAAAgAAAAAAAAAAAAAAAAAAAAABAAABAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NCCGIS::insertsiteresult" Collapsed="true">
+    <Position X="50" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AQAAAAAABAAAAAAAAAAAAAAAAAAAAAAAAQAAEAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NCCGIS::finddirectionresult" Collapsed="true">
+    <Position X="46.5" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AgAAAAEAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAgAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NCCGIS::wordtype" Collapsed="true">
+    <Position X="44.75" Y="15.75" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AABAgAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Enum Name="NCCGIS::circumcenterresult" Collapsed="true">
+    <Position X="43" Y="15" Width="1.5" />
+    <TypeIdentifier>
+      <HashCode>AAAAAAAAAAAAAAAAEAIAAAAAAAACAAAAAAAAAAAAAAA=</HashCode>
+      <FileName>tin.h</FileName>
+    </TypeIdentifier>
+  </Enum>
+  <Font Name="Microsoft YaHei" Size="9" />
+</ClassDiagram>

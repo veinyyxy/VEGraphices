@@ -1,0 +1,224 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>QE_lib</RootNamespace>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>$(CIPAS_OSGeo4W)\include;..\FTGL\include;../IDataEngine;$(CIPAS_QT)\include;$(CIPAS_QT)\include\QtCore;$(CIPAS_QT)\include\QtGui;$(CIPAS_QT)\include\QtNetwork;$(CIPAS_QT)\include\Qt;$(CIPAS_QT)\include\QtXml;$(IncludePath)</IncludePath>
+    <LibraryPath>..\FTGL\lib;$(CIPAS_QT)\lib;$(LibraryPath)</LibraryPath>
+    <CodeAnalysisRuleSet>AllRules.ruleset</CodeAnalysisRuleSet>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\FTGL\include;../IDataEngine;$(CIPAS_QT)\include;$(CIPAS_QT)\include\QtCore;$(CIPAS_QT)\include\QtGui;$(CIPAS_QT)\include\QtNetwork;$(CIPAS_QT)\include\Qt;$(CIPAS_QT)\include\QtXml;$(IncludePath)</IncludePath>
+    <LibraryPath>..\FTGL\lib;$(CIPAS_QT)\lib;$(OutDir);../Release/Bin;$(LibraryPath)</LibraryPath>
+    <OutDir>../Release/Bin</OutDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <UndefinePreprocessorDefinitions>%(UndefinePreprocessorDefinitions)</UndefinePreprocessorDefinitions>
+      <InlineFunctionExpansion>Disabled</InlineFunctionExpansion>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>QtGuid4.lib;QtCored4.lib;QtOpenGLd4.lib;QtXmld4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>
+      </ImportLibrary>
+      <Version>0.6.00000.0</Version>
+      <ManifestFile>
+      </ManifestFile>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <RuntimeLibrary>MultiThreadedDLL</RuntimeLibrary>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>QtGui4.lib;QtCore4.lib;QtOpenGL4.lib;QtXml4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <ImportLibrary>
+      </ImportLibrary>
+      <OutputFile>$(OutDir)$(TargetName)$(TargetExt)</OutputFile>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <None Include="QE_lib.cd" />
+    <None Include="ReadMe.txt" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="CardinalSpline.h" />
+    <ClInclude Include="ColorAttribute.h" />
+    <ClInclude Include="Config.h" />
+    <ClInclude Include="DivisionData.h" />
+    <ClInclude Include="DrawSurface.h" />
+    <ClInclude Include="GLTransform.h" />
+    <ClInclude Include="LineStippleAttribute.h" />
+    <ClInclude Include="LineWidthAttribute.h" />
+    <ClInclude Include="Nccclosedcontour.h" />
+    <ClInclude Include="NccPoint.h" />
+    <ClInclude Include="Nccstation.h" />
+    <ClInclude Include="PixelBufferSurface.h" />
+    <ClInclude Include="PointSizeAttribute.h" />
+    <ClInclude Include="ProjectionTransform.h" />
+    <ClInclude Include="QAccessor.h" />
+    <ClInclude Include="QAttribute.h" />
+    <ClInclude Include="QAttributeSet.h" />
+    <ClInclude Include="QBitmapText.h" />
+    <ClInclude Include="QDataArray.h" />
+    <ClInclude Include="GL_Include.h" />
+    <ClInclude Include="QCamera.h" />
+    <ClInclude Include="QDefaultMouseManipulator.h" />
+    <ClInclude Include="QERenderContext.h" />
+    <ClInclude Include="QEText.h" />
+    <ClInclude Include="QLeaf.h" />
+    <ClInclude Include="QMouseManipulator.h" />
+    <ClInclude Include="QMouseManipulatorExtand.h" />
+    <ClInclude Include="QNodeCallBack.h" />
+    <ClInclude Include="QPickup.h" />
+    <ClInclude Include="QPixmapTextrue.h" />
+    <ClInclude Include="QSceneCallBack.h" />
+    <ClInclude Include="QTextrueInterface.h" />
+    <ClInclude Include="StationValues.h" />
+    <ClInclude Include="TextureAttribute.h" />
+    <ClInclude Include="ViewModelTransform.h" />
+    <CustomBuild Include="QRenderVolume.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderVolume.h -o moc_QRenderVolume.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_QRenderVolume.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderVolume.h -o moc_QRenderVolume.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_QRenderVolume.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="QNode.h" />
+    <ClInclude Include="QObserver.h" />
+    <CustomBuild Include="QRenderUnit.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderUnit.h -o moc_QRenderUnit.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_QRenderUnit.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderUnit.h -o moc_QRenderUnit.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_QRenderUnit.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="QRenderWindow.h" />
+    <ClInclude Include="QScene.h" />
+    <ClInclude Include="QSceneManager.h" />
+    <ClInclude Include="QFork.h" />
+    <ClInclude Include="QState.h" />
+    <ClInclude Include="QStateSet.h" />
+    <ClInclude Include="QTesselator.h" />
+    <ClInclude Include="QTexture.h" />
+    <ClInclude Include="QTransform3D.h" />
+    <ClInclude Include="QT_Include.h" />
+    <ClInclude Include="QViewport.h" />
+    <ClInclude Include="QRenderable.h" />
+    <ClInclude Include="SysDefine.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="CardinalSpline.cpp" />
+    <ClCompile Include="ColorAttribute.cpp" />
+    <ClCompile Include="DivisionData.cpp" />
+    <ClCompile Include="DrawSurface.cpp" />
+    <ClCompile Include="GLTransform.cpp" />
+    <ClCompile Include="LineStippleAttribute.cpp" />
+    <ClCompile Include="LineWidthAttribute.cpp" />
+    <ClCompile Include="moc_QRenderUnit.cpp" />
+    <ClCompile Include="moc_QRenderVolume.cpp" />
+    <ClCompile Include="Nccclosedcontour.cpp" />
+    <ClCompile Include="Nccstation.cpp" />
+    <ClCompile Include="PixelBufferSurface.cpp" />
+    <ClCompile Include="PointSizeAttribute.cpp" />
+    <ClCompile Include="ProjectionTransform.cpp" />
+    <ClCompile Include="QAccessor.cpp" />
+    <ClCompile Include="QAttribute.cpp" />
+    <ClCompile Include="QAttributeSet.cpp" />
+    <ClCompile Include="QBitmapText.cpp" />
+    <ClCompile Include="QCamera.cpp" />
+    <ClCompile Include="QDefaultMouseManipulator.cpp" />
+    <ClCompile Include="QERenderContext.cpp" />
+    <ClCompile Include="QEText.cpp" />
+    <ClCompile Include="QLeaf.cpp" />
+    <ClCompile Include="QMouseManipulator.cpp" />
+    <ClCompile Include="QMouseManipulatorExtand.cpp" />
+    <ClCompile Include="QNodeCallBack.cpp" />
+    <ClCompile Include="QPickup.cpp" />
+    <ClCompile Include="QPixmapTextrue.cpp" />
+    <ClCompile Include="QRenderVolume.cpp" />
+    <ClCompile Include="QNode.cpp" />
+    <ClCompile Include="QObserver.cpp" />
+    <ClCompile Include="QRenderUnit.cpp" />
+    <ClCompile Include="QRenderWindow.cpp" />
+    <ClCompile Include="QScene.cpp" />
+    <ClCompile Include="QSceneCallBack.cpp" />
+    <ClCompile Include="QSceneManager.cpp" />
+    <ClCompile Include="QFork.cpp" />
+    <ClCompile Include="QState.cpp" />
+    <ClCompile Include="QStateSet.cpp">
+      <Optimization Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Disabled</Optimization>
+      <InlineFunctionExpansion Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Default</InlineFunctionExpansion>
+      <DebugInformationFormat Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EditAndContinue</DebugInformationFormat>
+      <BasicRuntimeChecks Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">EnableFastChecks</BasicRuntimeChecks>
+    </ClCompile>
+    <ClCompile Include="QTesselator.cpp" />
+    <ClCompile Include="QTextrueInterface.cpp" />
+    <ClCompile Include="QTexture.cpp" />
+    <ClCompile Include="QTransform3D.cpp" />
+    <ClCompile Include="QViewport.cpp" />
+    <ClCompile Include="QRenderable.cpp" />
+    <ClCompile Include="StationValues.cpp" />
+    <ClCompile Include="TextureAttribute.cpp" />
+    <ClCompile Include="ViewModelTransform.cpp" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

@@ -1,0 +1,377 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{CD3B7BE0-E1B2-4DAF-8E04-DE8B03F87740}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>GIS_Wrapper</RootNamespace>
+    <ProjectName>GIS_Abilities</ProjectName>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <CharacterSet>MultiByte</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <IncludePath>../XMLProvider;..\FTGL\include;$(CIPAS_QT)\include;../QE_lib;$(CIPAS_OSGeo4W)\include;$(CIPAS_QT)\include\Qt;$(CIPAS_QT)\include\QtCore;$(CIPAS_QT)\include\QtGui;$(CIPAS_QT)\include\QtNetwork;$(CIPAS_QT)\include\Qt3Support;$(CIPAS_QT)\include\QtXml;../PluginSymbol;../CDataElement;../CDataProviderManager;../AlgBase;$(IncludePath)</IncludePath>
+    <LibraryPath>..\FTGL\lib;..\IDE;..\PluginSymbol;$(CIPAS_gdal)\lib;$(CIPAS_QT)\lib;$(CIPAS_OSGeo4W)\lib;..\Debug\Bin;$(OutDir);$(LibraryPath)</LibraryPath>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <IncludePath>..\XMLProvider;..\FTGL\include;$(CIPAS_QT)\include;../QE_lib;$(CIPAS_OSGeo4W)\include;$(CIPAS_QT)\include\Qt;$(CIPAS_QT)\include\QtCore;$(CIPAS_QT)\include\QtGui;$(CIPAS_QT)\include\QtNetwork;$(CIPAS_QT)\include\Qt3Support;$(CIPAS_QT)\include\QtXml;$(CIPAS_gdal)\include;$(CIPAS_qgis)\src;$(CIPAS_qgis)\src\core;$(CIPAS_qgis)\src\gui;$(CIPAS_qgis)\src\app;$(CIPAS_qgis)\src\analysis;../PluginSymbol;../CDataElement;../CDataProviderManager;$(IncludePath)</IncludePath>
+    <LibraryPath>..\FTGL\lib;..\IDE;..\PluginSymbol;$(CIPAS_gdal)\lib;$(CIPAS_QT)\lib;$(CIPAS_OSGeo4W)\lib;$(CIPAS_qgis)\VS2010\lib;$(OutDir);../Release/Bin;../Release/Plugin;$(LibraryPath)</LibraryPath>
+    <OutDir>../Release/Bin</OutDir>
+    <GenerateManifest>false</GenerateManifest>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <WarningLevel>TurnOffAllWarnings</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <PreprocessorDefinitions>WIN32;_DEBUG;_LIB;QE_LIB_IMPORT;CDATAELEMENT_LIB;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalDependencies>QtNetworkd4.lib;QtGuid4.lib;QtCored4.lib;QtOpenGLd4.lib;glu32.lib;opengl32.lib;proj_i.lib;gdal_i.lib;QE_lib.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <Version>1.0.00000.0</Version>
+    </Link>
+    <Lib>
+      <AdditionalDependencies>%(AdditionalDependencies)</AdditionalDependencies>
+    </Lib>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <PrecompiledHeader>
+      </PrecompiledHeader>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <PreprocessorDefinitions>WIN32;NDEBUG;_LIB;QE_LIB_IMPORT;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <TreatWChar_tAsBuiltInType>false</TreatWChar_tAsBuiltInType>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <AdditionalDependencies>XMLProvider.lib;QtGui4.lib;QtCore4.lib;QtOpenGL4.lib;glu32.lib;opengl32.lib;qgis_core.lib;qgis_gui.lib;proj_i.lib;gdal_i.lib;QE_lib.lib;CDataElement.lib;CDataProviderManager.lib;QtNetwork4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <ClInclude Include="AlgorithmInterface.h" />
+    <ClInclude Include="AnalysisExponent.h" />
+    <ClInclude Include="AnalysisStationFile.h" />
+    <ClInclude Include="CIPASException.h" />
+    <ClInclude Include="CipasField.h" />
+    <ClInclude Include="CIPASMessageBox.h" />
+    <ClInclude Include="CIPScene.h" />
+    <ClInclude Include="Circlip.h" />
+    <ClInclude Include="CLineAnalysis.h" />
+    <ClInclude Include="ColorCardLegend.h" />
+    <ClInclude Include="ConcavePolygon.h" />
+    <ClInclude Include="Const.h" />
+    <ClInclude Include="ContourData.h" />
+    <ClInclude Include="ContourLayer.h" />
+    <ClInclude Include="ContourLegend.h" />
+    <ClInclude Include="ContourShadedLayer.h" />
+    <ClInclude Include="ConvertExponentToCipasFormat.h" />
+    <ClInclude Include="CoordinateTransform.h" />
+    <ClInclude Include="CPolygonAnalysis.h" />
+    <ClInclude Include="CustomizeArea.h" />
+    <ClInclude Include="DataProvider.h" />
+    <CustomBuild Include="DelSymbol.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DelSymbol.h -o moc_DelSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_DelSymbol.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DelSymbol.h -o moc_DelSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_DelSymbol.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="dem.h" />
+    <ClInclude Include="DiskFileLog.h" />
+    <ClInclude Include="DrawArea.h" />
+    <ClInclude Include="DrawContourArea.h" />
+    <ClInclude Include="DrawCricle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DrawCricle.h -o moc_DrawCricle.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_DrawCricle.cpp</Outputs>
+    </ClInclude>
+    <CustomBuild Include="DrawLineTP.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DrawLineTP.h -o moc_DrawLineTP.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_DrawLineTP.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="DrawLineDistance.h" />
+    <ClInclude Include="DrawMicapsGroundMap.h" />
+    <ClInclude Include="DrawNormalSymbol.h" />
+    <ClInclude Include="DrawContourLine.h" />
+    <ClInclude Include="DrawLineSymbol.h" />
+    <ClInclude Include="DrawOrder.h" />
+    <ClInclude Include="DrawPointSymbol.h" />
+    <CustomBuild Include="DrawTexSymbol.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DrawTexSymbol.h -o moc_DrawTexSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_DrawTexSymbol.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DrawTexSymbol.h -o moc_DrawTexSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_DrawTexSymbol.cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="DrawRectangle.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 DrawRectangle.h -o moc_DrawRectangle.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_DrawRectangle.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="DrawShapeSymbol.h" />
+    <ClInclude Include="DrawString.h" />
+    <ClInclude Include="DrawTroughLine.h" />
+    <ClInclude Include="DrawWindSymbol.h" />
+    <ClInclude Include="EarthSphere.h" />
+    <ClInclude Include="FunPluginInterface.h" />
+    <ClInclude Include="GeoTo3DTransform.h" />
+    <ClInclude Include="gpc.h" />
+    <ClInclude Include="ILayerAttribute.h" />
+    <ClInclude Include="ImageTexture.h" />
+    <ClInclude Include="Legend.h" />
+    <ClInclude Include="Log.h" />
+    <CustomBuild Include="ModifyContour.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifyContour.h -o moc_ModifyContour.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_ModifyContour.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifyContour.h -o moc_ModifyContour.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_ModifyContour.cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ModifyStationSymbol.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifyStationSymbol.h -o moc_ModifyStationSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_ModifyStationSymbol.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifyStationSymbol.h -o moc_ModifyStationSymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_ModifyStationSymbol.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="MeasureMouseManipulator.h" />
+    <ClInclude Include="nn\delaunay.h" />
+    <ClInclude Include="nn\hash.h" />
+    <ClInclude Include="nn\istack.h" />
+    <ClInclude Include="nn\nan.h" />
+    <ClInclude Include="nn\nn.h" />
+    <ClInclude Include="nn\triangle.h" />
+    <ClInclude Include="nn\version.h" />
+    <ClInclude Include="PixmapTexture.h" />
+    <ClInclude Include="GeoCoordTransform.h" />
+    <ClInclude Include="LayerDisplayControl.h" />
+    <ClInclude Include="RadProjTransform.h" />
+    <ClInclude Include="ReadColorTableFromXML.h" />
+    <ClInclude Include="ReadSymbolFromM14File.h" />
+    <ClInclude Include="SaveColorTableToXML.h" />
+    <ClInclude Include="SaveLayerToKML.h" />
+    <ClInclude Include="SaveLayerToShape.h" />
+    <ClInclude Include="SaveSymbolToM14File.h" />
+    <ClInclude Include="SaveSymbolToXML.h" />
+    <CustomBuild Include="ScaleSymbolLine.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ScaleSymbolLine.h -o moc_ScaleSymbolLine.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_ScaleSymbolLine.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ScaleSymbolLine.h -o moc_ScaleSymbolLine.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_ScaleSymbolLine.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="shapefil.h" />
+    <ClInclude Include="StationInterpretation.h" />
+    <ClInclude Include="SymbolMultiContourLine.h" />
+    <ClInclude Include="SymbolMultiLine.h" />
+    <ClInclude Include="SymbolPluginInterface.h" />
+    <CustomBuild Include="TextBox.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 TextBox.h -o moc_TextBox.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_TextBox.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 TextBox.h -o moc_TextBox.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_TextBox.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="tin.h" />
+    <ClInclude Include="OptMicapsDataXml.h" />
+    <ClInclude Include="SymbolData.h" />
+    <ClInclude Include="Geometry.h" />
+    <CustomBuild Include="ManualDraw.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ManualDraw.h -o moc_ManualDraw.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_ManualDraw.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ManualDraw.h -o moc_ManualDraw.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_ManualDraw.cpp</Outputs>
+    </CustomBuild>
+    <CustomBuild Include="ModifySymbol.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifySymbol.h -o moc_ModifySymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_ModifySymbol.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 ModifySymbol.h -o moc_ModifySymbol.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_ModifySymbol.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="NormalSymbol.h" />
+    <ClInclude Include="SymbolAttribute.h" />
+    <ClInclude Include="SymbolContourLine.h" />
+    <CustomBuild Include="SymbolLayer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL"  -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 SymbolLayer.h -o moc_SymbolLayer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_SymbolLayer.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL"  -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 SymbolLayer.h -o moc_SymbolLayer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_SymbolLayer.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="SymbolLine.h" />
+    <ClInclude Include="SymbolPoint.h" />
+    <CustomBuild Include="GraticuleCoordinates.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 GraticuleCoordinates.h -o moc_GraticuleCoordinates.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_GraticuleCoordinates.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 GraticuleCoordinates.h -o moc_GraticuleCoordinates.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_GraticuleCoordinates.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="Map.h" />
+    <ClInclude Include="GIS_WrapperConfig.h" />
+    <CustomBuild Include="Layer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 Layer.h -o moc_Layer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_Layer.cpp</Outputs>
+      <Message Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">Performing Custom Build Tools</Message>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 Layer.h -o moc_Layer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_Layer.cpp</Outputs>
+    </CustomBuild>
+    <ClInclude Include="Line.h" />
+    <ClInclude Include="Plane.h" />
+    <ClInclude Include="Point.h" />
+    <ClInclude Include="Polygon.h" />
+    <ClInclude Include="Proj4Transform.h" />
+    <ClInclude Include="Symbol.h" />
+    <CustomBuild Include="VectorLayer.h">
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 VectorLayer.h -o moc_VectorLayer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_VectorLayer.cpp</Outputs>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe  -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_OPENGL_LIB -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include\QtOpenGL" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 VectorLayer.h -o moc_VectorLayer.cpp</Command>
+      <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_VectorLayer.cpp</Outputs>
+    </CustomBuild>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="AlgorithmInterface.cpp" />
+    <ClCompile Include="AnalysisExponent.cpp" />
+    <ClCompile Include="AnalysisStationFile.cpp" />
+    <ClCompile Include="CIPASException.cpp" />
+    <ClCompile Include="CipasField.cpp" />
+    <ClCompile Include="CIPASMessageBox.cpp" />
+    <ClCompile Include="CIPScene.cpp" />
+    <ClCompile Include="Circlip.cpp" />
+    <ClCompile Include="CLineAnalysis.cpp" />
+    <ClCompile Include="ColorCardLegend.cpp" />
+    <ClCompile Include="ConcavePolygon.cpp" />
+    <ClCompile Include="ContourData.cpp" />
+    <ClCompile Include="ContourLayer.cpp" />
+    <ClCompile Include="ContourLegend.cpp" />
+    <ClCompile Include="ContourShadedLayer.cpp" />
+    <ClCompile Include="ConvertExponentToCipasFormat.cpp" />
+    <ClCompile Include="CoordinateTransform.cpp" />
+    <ClCompile Include="CPolygonAnalysis.cpp" />
+    <ClCompile Include="CustomizeArea.cpp" />
+    <ClCompile Include="DataProvider.cpp" />
+    <ClCompile Include="DelSymbol.cpp" />
+    <ClCompile Include="DiskFileLog.cpp" />
+    <ClCompile Include="DrawArea.cpp" />
+    <ClCompile Include="DrawContourArea.cpp" />
+    <ClCompile Include="DrawCricle.cpp" />
+    <ClCompile Include="DrawLineDistance.cpp" />
+    <ClCompile Include="DrawLineTP.cpp" />
+    <ClCompile Include="DrawMicapsGroundMap.cpp" />
+    <ClCompile Include="DrawNormalSymbol.cpp" />
+    <ClCompile Include="DrawContourLine.cpp" />
+    <ClCompile Include="DrawLineSymbol.cpp" />
+    <ClCompile Include="DrawOrder.cpp" />
+    <ClCompile Include="DrawPointSymbol.cpp" />
+    <ClCompile Include="DrawRectangle.cpp" />
+    <ClCompile Include="DrawShapeSymbol.cpp" />
+    <ClCompile Include="DrawString.cpp" />
+    <ClCompile Include="DrawTexSymbol.cpp" />
+    <ClCompile Include="DrawWindSymbol.cpp" />
+    <ClCompile Include="EarthSphere.cpp" />
+    <ClCompile Include="GeoTo3DTransform.cpp" />
+    <ClCompile Include="gpc.cpp" />
+    <ClCompile Include="ILayerAttribute.cpp" />
+    <ClCompile Include="ImageTexture.cpp" />
+    <ClCompile Include="Legend.cpp" />
+    <ClCompile Include="Log.cpp" />
+    <ClCompile Include="Geometry.cpp" />
+    <ClCompile Include="ManualDraw.cpp" />
+    <ClCompile Include="Map.cpp" />
+    <ClCompile Include="GraticuleCoordinates.cpp" />
+    <ClCompile Include="Layer.cpp" />
+    <ClCompile Include="Line.cpp" />
+    <ClCompile Include="MeasureMouseManipulator.cpp" />
+    <ClCompile Include="moc_DelSymbol.cpp" />
+    <ClCompile Include="moc_DrawLineTP.cpp" />
+    <ClCompile Include="moc_DrawRectangle.cpp" />
+    <ClCompile Include="moc_DrawTexSymbol.cpp" />
+    <ClCompile Include="moc_GraticuleCoordinates.cpp" />
+    <ClCompile Include="moc_Layer.cpp" />
+    <ClCompile Include="moc_ManualDraw.cpp" />
+    <ClCompile Include="moc_ModifyContour.cpp" />
+    <ClCompile Include="moc_ModifyStationSymbol.cpp" />
+    <ClCompile Include="moc_ModifySymbol.cpp" />
+    <ClCompile Include="moc_ScaleSymbolLine.cpp" />
+    <ClCompile Include="moc_SymbolLayer.cpp" />
+    <ClCompile Include="moc_TextBox.cpp" />
+    <ClCompile Include="moc_VectorLayer.cpp" />
+    <ClCompile Include="ModifyContour.cpp" />
+    <ClCompile Include="ModifyStationSymbol.cpp" />
+    <ClCompile Include="ModifySymbol.cpp" />
+    <ClCompile Include="nn\delaunay.c" />
+    <ClCompile Include="nn\hash.c" />
+    <ClCompile Include="nn\istack.c" />
+    <ClCompile Include="nn\lpi.c" />
+    <ClCompile Include="nn\nnai.c" />
+    <ClCompile Include="nn\nncommon.c" />
+    <ClCompile Include="nn\nnpi.c" />
+    <ClCompile Include="nn\triangle.c" />
+    <ClCompile Include="NormalSymbol.cpp" />
+    <ClCompile Include="OptMicapsDataXml.cpp" />
+    <ClCompile Include="PixmapTexture.cpp" />
+    <ClCompile Include="Plane.cpp" />
+    <ClCompile Include="Point.cpp" />
+    <ClCompile Include="Polygon.cpp" />
+    <ClCompile Include="Proj4Transform.cpp" />
+    <ClCompile Include="GeoCoordTransform.cpp" />
+    <ClCompile Include="LayerDisplayControl.cpp" />
+    <ClCompile Include="RadProjTransform.cpp" />
+    <ClCompile Include="ReadColorTableFromXML.cpp" />
+    <ClCompile Include="ReadSymbolFromM14File.cpp" />
+    <ClCompile Include="SaveColorTableToXML.cpp" />
+    <ClCompile Include="SaveLayerToKML.cpp" />
+    <ClCompile Include="SaveLayerToShape.cpp" />
+    <ClCompile Include="SaveSymbolToM14File.cpp" />
+    <ClCompile Include="SaveSymbolToXML.cpp" />
+    <ClCompile Include="ScaleSymbolLine.cpp" />
+    <ClCompile Include="SymbolMultiContourLine.cpp" />
+    <ClCompile Include="SymbolMultiLine.cpp" />
+    <ClCompile Include="TextBox.cpp" />
+    <ClCompile Include="tin.cpp" />
+    <ClCompile Include="SymbolAttribute.cpp" />
+    <ClCompile Include="SymbolContourLine.cpp" />
+    <ClCompile Include="SymbolData.cpp" />
+    <ClCompile Include="SymbolLayer.cpp" />
+    <ClCompile Include="Symbol.cpp" />
+    <ClCompile Include="SymbolLine.cpp" />
+    <ClCompile Include="SymbolPoint.cpp" />
+    <ClCompile Include="VectorLayer.cpp" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="GIS_Abilities.cd" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>
