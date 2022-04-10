@@ -1,5 +1,5 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
-<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
   <ItemGroup Label="ProjectConfigurations">
     <ProjectConfiguration Include="Debug|Win32">
       <Configuration>Debug</Configuration>
@@ -14,24 +14,28 @@
     <ProjectGuid>{18A5CF7B-DAA5-4C03-B0A9-91585DE798AC}</ProjectGuid>
     <Keyword>Win32Proj</Keyword>
     <RootNamespace>QE_lib</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>true</UseDebugLibraries>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
     <ConfigurationType>DynamicLibrary</ConfigurationType>
     <UseDebugLibraries>false</UseDebugLibraries>
     <WholeProgramOptimization>true</WholeProgramOptimization>
     <CharacterSet>Unicode</CharacterSet>
+    <PlatformToolset>v141</PlatformToolset>
   </PropertyGroup>
   <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
   <ImportGroup Label="ExtensionSettings">
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+    <Import Project="QT_DEBUG.props" />
   </ImportGroup>
   <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
     <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
@@ -62,10 +66,11 @@
     <Link>
       <SubSystem>Windows</SubSystem>
       <GenerateDebugInformation>true</GenerateDebugInformation>
-      <AdditionalDependencies>QtGuid4.lib;QtCored4.lib;QtOpenGLd4.lib;QtXmld4.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalDependencies>Qt5Guid.lib;Qt5Cored.lib;Qt5OpenGLd.lib;Qt5Xmld.lib;Qt5Widgets.lib;opengl32.lib;glu32.lib;%(AdditionalDependencies)</AdditionalDependencies>
       <ImportLibrary>
       </ImportLibrary>
-      <Version>0.6.00000.0</Version>
+      <Version>
+      </Version>
       <ManifestFile>
       </ManifestFile>
     </Link>
@@ -124,6 +129,7 @@
     <ClInclude Include="QDefaultMouseManipulator.h" />
     <ClInclude Include="QERenderContext.h" />
     <ClInclude Include="QEText.h" />
+    <ClInclude Include="QFoundRenderUnit.h" />
     <ClInclude Include="QLeaf.h" />
     <ClInclude Include="QMouseManipulator.h" />
     <ClInclude Include="QMouseManipulatorExtand.h" />
@@ -144,7 +150,7 @@
     <ClInclude Include="QNode.h" />
     <ClInclude Include="QObserver.h" />
     <CustomBuild Include="QRenderUnit.h">
-      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderUnit.h -o moc_QRenderUnit.cpp</Command>
+      <Command Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">$(CIPAS_QT)\bin\moc.exe QRenderUnit.h -o moc_QRenderUnit.cpp</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">moc_QRenderUnit.cpp</Outputs>
       <Command Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">$(CIPAS_QT)\bin\moc.exe -DUNICODE -DWIN32 -DQT_LARGEFILE_SUPPORT -DQT_DLL -DQT_GUI_LIB -DQT_CORE_LIB -DQT_THREAD_SUPPORT -I"..\..\..\include\QtCore" -I"..\..\..\include\QtGui" -I"..\..\..\include" -I"..\..\..\include\ActiveQt" -I..\..\..\mkspecs\win32-msvc2010 -D_MSC_VER=1600 -DWIN32 QRenderUnit.h -o moc_QRenderUnit.cpp</Command>
       <Outputs Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">moc_QRenderUnit.cpp</Outputs>
@@ -171,8 +177,6 @@
     <ClCompile Include="GLTransform.cpp" />
     <ClCompile Include="LineStippleAttribute.cpp" />
     <ClCompile Include="LineWidthAttribute.cpp" />
-    <ClCompile Include="moc_QRenderUnit.cpp" />
-    <ClCompile Include="moc_QRenderVolume.cpp" />
     <ClCompile Include="Nccclosedcontour.cpp" />
     <ClCompile Include="Nccstation.cpp" />
     <ClCompile Include="PixelBufferSurface.cpp" />

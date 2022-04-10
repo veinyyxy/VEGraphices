@@ -165,7 +165,7 @@ void QRenderVolume::FindUnitUseSignal()
 		QRenderable* sub = iter.next();
 		if(sub->AsRenderUnit())
 		{
-			emit this->signal_Finded(-1, sub);
+			m_FoundRenderUnit->Found(-1, sub);
 		}
 		else
 		{

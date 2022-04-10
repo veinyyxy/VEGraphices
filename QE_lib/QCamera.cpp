@@ -139,7 +139,7 @@ void QCamera::ApplyCamera()
 QMatrix4x4 QCamera::GetProjectionMatix()
 {
 	QMatrix4x4 projMatiix;
-	glGetDoublev(GL_PROJECTION_MATRIX, projMatiix.data());
+	glGetFloatv(GL_PROJECTION_MATRIX, projMatiix.data());
 	return projMatiix;
 }
 

@@ -24,7 +24,7 @@ void QObserver::ApplyObserver()
 {
 	viewport.ApplyViewport();
 	camera.ApplyCamera();
-	glMultMatrixd(obTransform.data());
+	glMultMatrixf(obTransform.data());
 }
 
 void QObserver::Camera( const QCamera& c )

@@ -299,22 +299,22 @@ int QRenderUnit::FindDataUseSignal(GLenum type)
 	case GL_VERTEX_ARRAY:
 		if(vertexArray)
 		{
-			emit signal_Finded(vertexArray);
+			m_FoundRenderUnit->Found(vertexArray);
 		}
 		break;
 	case GL_NORMAL_ARRAY:
 		if(normalArray)
-			emit signal_Finded(normalArray);
+			m_FoundRenderUnit->Found(normalArray);
 		break;
 	case GL_COLOR_ARRAY:
 		if(colorArray)
 		{
-			emit signal_Finded(vertexArray);
+			m_FoundRenderUnit->Found(vertexArray);
 		}
 		break;
 	case GL_TEXTURE_COORD_ARRAY:
 		if(textureCoordArray0)
-			emit signal_Finded(textureCoordArray0);
+			m_FoundRenderUnit->Found(textureCoordArray0);
 		break;
 	default:
 		return false;

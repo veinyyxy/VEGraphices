@@ -202,14 +202,24 @@ void QScene::PickRay(const QPoint& screenPoint)
 	//WGL.GetCursorPos(ref mpos);
 	/*Point p = this.PointToClient(new Point(mpos.x, mpos.y));
 	mpos.x = p.X; mpos.y = p.Y;*/
-	glGetDoublev(GL_MODELVIEW_MATRIX , mv.data());
-	glGetDoublev(GL_PROJECTION_MATRIX, prj.data());
+	glGetFloatv(GL_MODELVIEW_MATRIX , mv.data());
+	glGetFloatv(GL_PROJECTION_MATRIX, prj.data());
 
 	int viewPort[4] = {0};
 	glGetIntegerv(GL_VIEWPORT, viewPort);
 
-	gluUnProject(screenPoint.x(), (viewPort[3] - screenPoint.y() - 1), 0.0, mv.data(), prj.data(), viewPort, &o1x, &o1y, &o1z);
-	gluUnProject(screenPoint.x(), (viewPort[3] - screenPoint.y() - 1), 1.0, mv.data(), prj.data(), viewPort, &o2x, &o2y, &o2z);
+	GLdouble modelMatrix[16] = { 0 };
+	GLdouble projMatrix[16] = { 0 };
+	for (int i = 0; i < sizeof modelMatrix; i++)
+	{
+		modelMatrix[i] = mv.data()[i];
+	}
+	for (int i = 0; i < sizeof modelMatrix; i++)
+	{
+		projMatrix[i] = prj.data()[i];
+	}
+	gluUnProject(screenPoint.x(), (viewPort[3] - screenPoint.y() - 1), 0.0, modelMatrix, projMatrix, viewPort, &o1x, &o1y, &o1z);
+	gluUnProject(screenPoint.x(), (viewPort[3] - screenPoint.y() - 1), 1.0, modelMatrix, projMatrix, viewPort, &o2x, &o2y, &o2z);
 
 	rayStart.setX(o1x);rayStart.setY(o1y);rayStart.setZ(/*o1y*/0);
 	rayEnd.setX(o2x);rayEnd.setY(o2y);rayEnd.setZ(/*o2z*/0);

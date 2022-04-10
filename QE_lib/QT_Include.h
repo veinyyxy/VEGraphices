@@ -18,12 +18,12 @@
 #include <QtGui/QVector2D>
 #include <QtGui/QColor>
 #include <QtGui/QMatrix4x4>
-#include <QtGui/QWidget>
+#include <QtWidgets/QWidget>
 ////////////////////////////////////OpenGL//////////////////////////////////////
 #include <QtOpenGL/QGLWidget>
 #include <QtOpenGL/QGLPixelBuffer>
 ////////////////////////////////////Xml//////////////////////////////////////
-#include <QtXml/QXmlStreamReader>
+#include <QtCore/QXmlStreamReader>
 
 //#include <Qt/qpointer.h>
 

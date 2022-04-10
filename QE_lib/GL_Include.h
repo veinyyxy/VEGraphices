@@ -6,7 +6,7 @@
 
 #include <GL/gl.h>
 #include <GL/glu.h>
-#include <GL/glut.h>
+
 #define MPI 3.1415926
 enum TRANSFORM_MODE
 {

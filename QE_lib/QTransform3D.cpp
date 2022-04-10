@@ -23,7 +23,7 @@ void QTransform3D::EnableTransforms()
 	/*m_temp = m_Rotate * m_Translate * m_Scale;
 	m_AllInTransform *= m_temp;*/
 	m_AllInTransform  = m_Translate * m_Rotate * m_Scale;
-	glMultMatrixd(m_AllInTransform.data());
+	glMultMatrixf(m_AllInTransform.data());
 	//glLoadIdentity();
 	/*m_Translate.setToIdentity();
 	m_Rotate.setToIdentity();

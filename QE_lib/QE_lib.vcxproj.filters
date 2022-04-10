@@ -172,6 +172,9 @@
     <ClInclude Include="PixelBufferSurface.h">
       <Filter>Header Files</Filter>
     </ClInclude>
+    <ClInclude Include="QFoundRenderUnit.h">
+      <Filter>Header Files</Filter>
+    </ClInclude>
   </ItemGroup>
   <ItemGroup>
     <ClCompile Include="QCamera.cpp">
@@ -293,12 +296,6 @@
     </ClCompile>
     <ClCompile Include="QERenderContext.cpp">
       <Filter>Source Files</Filter>
-    </ClCompile>
-    <ClCompile Include="moc_QRenderUnit.cpp">
-      <Filter>Generated file</Filter>
-    </ClCompile>
-    <ClCompile Include="moc_QRenderVolume.cpp">
-      <Filter>Generated file</Filter>
     </ClCompile>
     <ClCompile Include="QMouseManipulatorExtand.cpp">
       <Filter>Source Files</Filter>

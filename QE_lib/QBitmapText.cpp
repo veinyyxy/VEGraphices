@@ -3,7 +3,7 @@
 
 QBitmapText::QBitmapText(void) : QRenderUnit(SIMPLEX),m_fXAlpha(.0f),m_fYAlpha(.0f)
 {
-	size  =  GLUT_BITMAP_HELVETICA_18;
+	size = 0;//GLUT_BITMAP_HELVETICA_18;
 	postion.DataUsage(GL_VERTEX_ARRAY);
 	SetArrayData(&postion);
 	m_uiList = 0;
@@ -70,8 +70,8 @@ void QBitmapText::TextRender()
 
 		while(!pText->isNull())
 		{
-			char c = pText->toAscii();
-			glutBitmapCharacter(size, c);
+			char c = pText->toLatin1();
+			//glutBitmapCharacter(size, c);
 			pText++;
 		}
 	}
@@ -222,8 +222,8 @@ void QBitmapText::TextRenderUseCallList()
 			glNewList(m_uiList + stringCount, GL_COMPILE_AND_EXECUTE);
 			while(!pText->isNull())
 			{
-				char c = pText->toAscii();
-				glutBitmapCharacter(size, c);
+				char c = pText->toLatin1();
+				//glutBitmapCharacter(size, c);
 				pText++;
 			}
 			glEndList();

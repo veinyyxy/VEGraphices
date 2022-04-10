@@ -8,8 +8,6 @@
 *********************************/
 class QE_LIB_EXPORT_IMPORT QRenderVolume : public QRenderable
 {
-	Q_OBJECT
-
 public:
 	QRenderVolume(void);
 	~QRenderVolume(void);
@@ -37,11 +35,9 @@ public:
 	void CallListDirty(bool bv);
 	virtual int ChildCount();
 	virtual bool PickUp(const QVector3D* pickPoint);
-
-signals:
-	void signal_Finded(GLenum type, QRenderable* data);
-
+	inline void SetFoundCallback(QFoundRenderUnit* pCallback) { m_FoundRenderUnit = pCallback; }
 private:
 	RENDER_UNIT_SET unitSet;
+	QFoundRenderUnit* m_FoundRenderUnit;
 };
 

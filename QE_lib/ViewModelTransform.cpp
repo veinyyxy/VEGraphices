@@ -25,7 +25,7 @@ void ViewModelTransform::Transform( QMatrix4x4& tr )
 void ViewModelTransform::Transform()
 {
 	m_RenderableTransform = m_TranslateMatirx * m_RotateMatirx * m_ScaleMatirx;
-	glLoadMatrixd(m_RenderableTransform.data());
+	glLoadMatrixf(m_RenderableTransform.data());
 }
 
 void ViewModelTransform::EndApplyTransform()

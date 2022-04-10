@@ -2,14 +2,12 @@
 
 #include "QDataArray.h"
 #include "QRenderable.h"
-
+#include "QFoundRenderUnit.h"
 /*********************************
 单一渲染对象
 **********************************/
 class QE_LIB_EXPORT_IMPORT QRenderUnit : public QRenderable
 {
-	Q_OBJECT
-
 public:
 	QRenderUnit(DATA_COMPOSE compos);
 	virtual ~QRenderUnit(void);
@@ -62,8 +60,7 @@ public:
 	void SetRenderNodeMask(bool bv);
 	bool GetRenderNodeMask() {return m_NodeMask;}
 	QRenderUnit& operator=(const QRenderUnit& other);
-signals:
-	void signal_Finded(QDataArray* data);
+	inline void SetFoundCallback(QFoundRenderUnit* pCallback) { m_FoundRenderUnit = pCallback; }
 protected:
 		bool bCalculateA;			//标志是否重新计算角度
 		bool m_NodeMask;
@@ -89,6 +86,8 @@ private:
 	bool bTextureArray;
 	GLuint *pTexture;
 	QVector3DArray m_OriginalArray;
+
+	QFoundRenderUnit* m_FoundRenderUnit;
 };
 
 typedef QMap<COMPOSE_KEY, QRenderUnit*> UNIT_MAP;
