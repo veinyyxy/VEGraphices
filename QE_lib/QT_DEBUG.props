@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ImportGroup Label="PropertySheets" />
+  <PropertyGroup Label="UserMacros">
+    <CIPAS_QT>D:\QT\Qt5.12.12\5.12.12\msvc2017</CIPAS_QT>
+  </PropertyGroup>
+  <PropertyGroup />
+  <ItemDefinitionGroup />
+  <ItemGroup>
+    <BuildMacro Include="CIPAS_QT">
+      <Value>$(CIPAS_QT)</Value>
+    </BuildMacro>
+  </ItemGroup>
+</Project>
