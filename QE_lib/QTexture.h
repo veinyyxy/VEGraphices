@@ -19,7 +19,7 @@ public:
 	//QTexture(const QImage& image);
 	~CTGATexture(void);
 	//virtual int LoadTextrueFromFile(const QString& strFileName);
-	inline int LoadTextrueFromPixelBuffer(const QGLPixelBuffer* pPixelBuffer){return false;}
+    inline int LoadTextrueFromPixelBuffer(const QOpenGLBuffer* pPixelBuffer){return false;}
 	inline int LoadTextrueFromPixmap(const QPixmap* pPixmap){return false;}
 	int BindTextrue();
 	int UnloadTexture();

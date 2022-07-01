@@ -1,11 +1,14 @@
 #pragma once
+#include <QtOpenGL/QOpenGLWindow>
+#include <QtOpenGL/QOpenGLBuffer>
+
 class CPixmapTexture : public QTextrueInterface
 {
 public:
-	CPixmapTexture(QGLWidget* context);
+    CPixmapTexture(QOpenGLWindow* context);
 	virtual ~CPixmapTexture(void);
 	virtual int LoadTextrueFromFile(const QString& strFileName);
-	virtual int LoadTextrueFromPixelBuffer(const QGLPixelBuffer* pPixelBuffer);
+    virtual int LoadTextrueFromPixelBuffer(const QOpenGLBuffer* pPixelBuffer);
 	virtual int LoadTextrueFromPixmap(const QPixmap* pPixmap);
 	//virtual int LoadTextrueFromPixmap(const QPixmap* pPixmap, QGLWidget* pGLContext);
 	virtual int BindTextrue();
@@ -13,6 +16,6 @@ public:
 
 private:
 	GLint m_gliTexture;
-	QGLWidget* m_pGLWiget;
+    QOpenGLWindow* m_pGLWiget;
 };
 

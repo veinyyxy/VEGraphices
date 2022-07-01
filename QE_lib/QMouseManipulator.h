@@ -36,8 +36,8 @@ public:
 		m_pObserver = pob;
 		m_pSceneTransform = ptr;
 	}
-	inline void SetGLContext(QGLContext* pglc){m_pGLContext = pglc;}
-	inline QGLContext* GLContext(){return m_pGLContext;}
+    inline void SetGLContext(QOpenGLContext* pglc){m_pGLContext = pglc;}
+    inline QOpenGLContext* GLContext(){return m_pGLContext;}
 	inline QNode* Node(){return m_pSceneRootNode;}
 	inline QObserver* Observer(){return m_pObserver;}
 	inline QTransform3D* SceneTransform(){return m_pSceneTransform;}
@@ -46,7 +46,7 @@ public:
 	inline void SetAssociScene(QScene* pS){m_pAssociatedScene = pS;}
 	inline QScene* GetAssociScene(){return m_pAssociatedScene;}
 protected:
-	QGLContext* m_pGLContext;
+    QOpenGLContext* m_pGLContext;
 	QNode* m_pSceneRootNode;
 	QObserver* m_pObserver;
 	QTransform3D* m_pSceneTransform;

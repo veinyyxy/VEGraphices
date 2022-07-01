@@ -8,11 +8,11 @@
 #endif
 extern "C"
 {
-#include <proj_api.h>
+#include <proj.h>
 }
 #include "CoordinateTransform.h"
-#include "cpl_string.h"
-#include <ogr_spatialref.h>
+//#include "cpl_string.h"
+//#include <ogr_spatialref.h>
 
 typedef QString PROJCRS;
 typedef QString PROJNAME;
@@ -96,7 +96,7 @@ public:
 	bool m_isSet, m_isCheck,m_elevation;
 private:
 	double Km;
-	projPJ mSourceProjection,mDestinationProjection;
+    PJ *mSourceProjection, *mDestinationProjection;
 	QString strSourceProjection, strDestinationProjection;
 	QString strSourceProName,strDestinationProName;
 	int i,projResult;

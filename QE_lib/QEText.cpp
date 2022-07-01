@@ -47,13 +47,13 @@ QEText::QEText( const QStringList& strList, const FONT_LIST fontList ) : QRender
 QEText::~QEText(void)
 {
 	SetArrayData(false, &m_TextPositions);
-	QGLContext* pTempGLContext = const_cast<QGLContext*>(QGLContext::currentContext());
-	if(pTempGLContext)
-	{
-		//pTempGLContext->deleteTexture(m_TextrueID);
-		for(int i = 0; i < m_TextrueList.size(); i++)
-			pTempGLContext->deleteTexture(m_TextrueList[i].glTextrue);
-	}
+//    QOpenGLContext* pTempGLContext = const_cast<QOpenGLContext*>(QOpenGLContext::currentContext());
+//	if(pTempGLContext)
+//	{
+//		//pTempGLContext->deleteTexture(m_TextrueID);
+//		for(int i = 0; i < m_TextrueList.size(); i++)
+//			pTempGLContext->deleteTexture(m_TextrueList[i].glTextrue);
+//	}
 }
 
 void QEText::Render()
@@ -61,7 +61,7 @@ void QEText::Render()
 	QEText::TEXTRUE_INFO textureinfo;
 	GLuint textrue = 0;
 	if(!m_pRenderContext) return;
-	QGLContext* pTempGLContext = const_cast<QGLContext*>(QGLContext::currentContext());
+    QOpenGLContext* pTempGLContext = const_cast<QOpenGLContext*>(QOpenGLContext::currentContext());
 	QMatrix4x4 rotMatrix = m_pRenderContext->Transform()->Rotate();
 	if(pTempGLContext != pGLContext)
 	{
@@ -118,7 +118,7 @@ void QEText::Render()
 	}
 }
 
-QEText::TEXTRUE_INFO QEText::DrawTextToPixmap(const QString& str, const QFont& font, QGLContext* pTempGLContext)
+QEText::TEXTRUE_INFO QEText::DrawTextToPixmap(const QString& str, const QFont& font, QOpenGLContext* pTempGLContext)
 {
 	TEXTRUE_INFO textureinfo = {0};
 	GLuint texture = 0;
@@ -127,8 +127,9 @@ QEText::TEXTRUE_INFO QEText::DrawTextToPixmap(const QString& str, const QFont& f
 		if(m_pixmapDirty)
 		{
 			QFontMetricsF fontMerics(font);
-			textureinfo.glTextrueHeight = fontMerics.height();
-			textureinfo.glTextrueWidth = fontMerics.width(str);
+            QSizeF size = fontMerics.size(Qt::TextSingleLine, str);
+            textureinfo.glTextrueHeight = size.height();
+            textureinfo.glTextrueWidth = size.width();
 
 			QPixmap* pPixmap = new QPixmap(textureinfo.glTextrueWidth + m_qrMargin * 2, textureinfo.glTextrueHeight + m_qrMargin * 2);
 			pPixmap->fill(QColor(255, 255, 255, 0));
@@ -142,7 +143,7 @@ QEText::TEXTRUE_INFO QEText::DrawTextToPixmap(const QString& str, const QFont& f
 			
 			if(!pTempGLContext) return textureinfo;
 
-			textureinfo.glTextrue = pTempGLContext->bindTexture(*pPixmap);
+            //textureinfo.glTextrue = pTempGLContext->bindTexture(*pPixmap);
 			if(pPixmap) delete pPixmap;
 			m_pixmapDirty = false;
 			pGLContext = pTempGLContext;
@@ -442,21 +443,21 @@ bool QEText::GetRectPoint( POSITION_ORIGIN_POINT ogrPosition, const QVector3D& o
 	return true;
 }
 
-void QEText::DeleteTextModeTextrue(QGLContext* pGlContext)
+void QEText::DeleteTextModeTextrue(QOpenGLContext* pGlContext)
 {
 	if(pGlContext)
 	{
-		pGlContext->deleteTexture(m_TextrueID);
+        //pGlContext->deleteTexture(m_TextrueID);
 		m_TextrueID = 0;
 	}
 }
 
-void QEText::DeleteTextListModeTextrue(QGLContext* pGlContext)
+void QEText::DeleteTextListModeTextrue(QOpenGLContext* pGlContext)
 {
 	if(pGlContext)
 	{
-		for(int i = 0; i < m_TextrueList.size(); i++)
-			pGlContext->deleteTexture(m_TextrueList[i].glTextrue);
+        //for(int i = 0; i < m_TextrueList.size(); i++)
+            //pGlContext->deleteTexture(m_TextrueList[i].glTextrue);
 		m_TextrueList.clear();
 	}
 }

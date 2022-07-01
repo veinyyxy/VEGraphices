@@ -27,11 +27,10 @@ V 0.0
 更新说明：
 ============================================================*/
 #pragma once
-#include "qglobal.h"
-#include "QtXml/QXmlStreamReader"
-#include <QtGui/QTreeWidget>
-#include <QDebug>
-#include "qvector.h"
+#include <QtCore/QXmlStreamReader>
+#include <QtWidgets/QTreeWidget>
+#include <QtCore/QDebug>
+#include <QtCore/QVector>
 
 #include "../GIS_Wrapper/Const.h"
 

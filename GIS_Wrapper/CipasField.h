@@ -1,7 +1,7 @@
 #pragma once
-#include <QVariant>
-#include <QString>
-#include <QMap>
+#include <QtCore/QVariant>
+#include <QtCore/QString>
+#include <QtCore/QMap>
 #include "GIS_WrapperConfig.h"
 
 class GIS_WRAPPER_EXPORT_IMPORT CipasField

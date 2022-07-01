@@ -1,6 +1,6 @@
 #pragma once
-#include <QtPlugin>
-#include <QString>
+#include <QtCore/QtPlugin>
+#include <Qtcore/QString>
 #include "Nccclosedcontour.h"
 #include "dem.h"
 #include "tin.h"

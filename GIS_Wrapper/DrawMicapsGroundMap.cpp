@@ -114,7 +114,8 @@ void DrawMicapsGroundMap::Draw()
 	//glPopMatrix();	
 // 	if (m_ndrawtimes == 1)
 // 	{
-		m_PTempText->FontSize(GLUT_BITMAP_9_BY_15);
+        int size = 15;
+        m_PTempText->FontSize(/*GLUT_BITMAP_9_BY_15*/&size);
 		m_PTempText->SetColor(m_pTextColorAttri);
 		m_PTempText->DisplayList(true);
 		m_PTempText->SetBakData();
@@ -151,7 +152,8 @@ void DrawMicapsGroundMap::DrawAirmap()
 		if(m_bTemperature)
 			DrawBitmapText(m_PosArray[i],m_TemperatureArray.at(i),4);//ÎÂ¶È
 	}
-	m_PTempText->FontSize(GLUT_BITMAP_9_BY_15);
+    int size = 15;
+    m_PTempText->FontSize(/*GLUT_BITMAP_9_BY_15*/(void*)size);
 	m_PTempText->SetColor(m_pTextColorAttri);
 	m_PTempText->DisplayList(true);
 	m_PTempText->SetBakData();

@@ -1,7 +1,6 @@
 #include "NormalSymbol.h"
 #include <math.h>
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
 
 NormalSymbol::NormalSymbol(void) :  m_pointStyle(0), m_iPickIndex(-1),m_bHadPicked(false)
 {
@@ -80,7 +79,7 @@ void NormalSymbol::RenderStyle(QVector3D& pos, CSymbolAttribute *symbolAttr)
 		else
 		{
 			//可能会产生渲染列覆盖
-			ListName = (GLuint)this;
+            GLuint ListName = (LONGLONG)this;
 			glNewList(ListName, GL_COMPILE_AND_EXECUTE);
 			m_pointStyle->SetSelected(m_bHadPicked);
 			m_pointStyle->Draw();

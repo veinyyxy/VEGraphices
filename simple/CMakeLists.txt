@@ -26,7 +26,7 @@ set(ALL_FILES
 ################################################################################
 add_executable(${PROJECT_NAME} ${ALL_FILES})
 
-use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
+#use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
 set(ROOT_NAMESPACE simpleax)
 
 set_target_properties(${PROJECT_NAME} PROPERTIES
@@ -151,10 +151,9 @@ endif()
 ################################################################################
 # Post build events
 ################################################################################
-add_custom_command_if(
+add_custom_command(
     TARGET ${PROJECT_NAME}
     POST_BUILD
-    COMMANDS
     COMMAND $<CONFIG:Release> C:\\Qt\\qt_vs2010\\qt\\bin\\idc.exe $<SHELL_PATH:$<TARGET_FILE:${PROJECT_NAME}>> /idl ${CMAKE_CURRENT_BINARY_DIR}\\${CMAKE_CFG_INTDIR}\\simpleax.idl -version 1.0
     COMMAND $<CONFIG:Release> midl ${CMAKE_CURRENT_BINARY_DIR}\\${CMAKE_CFG_INTDIR}\\simpleax.idl /nologo /tlb ${CMAKE_CURRENT_BINARY_DIR}\\${CMAKE_CFG_INTDIR}\\simpleax.tlb
     COMMAND $<CONFIG:Release> C:\\Qt\\qt_vs2010\\qt\\bin\\idc.exe $<SHELL_PATH:$<TARGET_FILE:${PROJECT_NAME}>> /tlb ${CMAKE_CURRENT_BINARY_DIR}\\${CMAKE_CFG_INTDIR}\\simpleax.tlb

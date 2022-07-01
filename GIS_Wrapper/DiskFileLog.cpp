@@ -99,7 +99,7 @@ int CDiskFileLog::WriteLog(QString level,QString message,QString user, QString h
 		QString Text2write = QString::fromLocal8Bit(strlogLine,nLog);   
 		QFile logFile(LogFileDir+prefix+data_str+".txt");
 		logFile.open(QIODevice::Append);
-		logFile.write(Text2write.toAscii());
+        logFile.write(Text2write.toLatin1());
 		logFile.close();
 		nLog =0;//*/
 	}//*/

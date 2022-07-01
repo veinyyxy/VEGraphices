@@ -17,7 +17,7 @@ V 1.1
 更新说明：加入符号线拾取功能 
 ============================================================*/
 #pragma once
-#include <QPair>
+#include <QtCore/QPair>
 #include "GIS_WrapperConfig.h"
 #include "Line.h"
 #include "Symbol.h"

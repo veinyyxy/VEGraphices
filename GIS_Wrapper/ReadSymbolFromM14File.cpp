@@ -11,8 +11,8 @@ V 1.0
 原作者 ：renxue
 完成日期：2011年08月01日
 ============================================================*/
-#include <QDebug>
-#include <QMessageBox>
+#include <QtCore/QDebug>
+#include <QtWidgets/QMessageBox>
 #include "ReadSymbolFromM14File.h"
 #include "ManualDraw.h"
 
@@ -126,7 +126,7 @@ bool CReadSymbolFromM14File::ReadLines(QString strLineHead)
 		}
 		
 		//读每条线的控制信息：编号、线宽、点的个数
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 2)
 		{
 			nLineWidth = strList.at(0).toInt();
@@ -159,7 +159,7 @@ bool CReadSymbolFromM14File::ReadLines(QString strLineHead)
 		else //有标值
 		{
 			nPointNum = 0;
-			strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+            strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 			if(strList.length() == 2)
 			{
 				strValue = strList.at(0);
@@ -212,7 +212,7 @@ bool CReadSymbolFromM14File::ReadLinesSymbol(QString strLineHead)
 		}
 		
 		//读每条线的控制信息：编号、线宽、点的个数
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 3)
 		{
 			nType = strList.at(0).toInt();
@@ -272,7 +272,7 @@ bool CReadSymbolFromM14File::ReadSymbol(QString strLineHead)
 		}
 		
 		//读每个符号的信息：编号、坐标、风向角度
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);		
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 5)
 		{
 			nType = strList.at(0).toInt();
@@ -322,7 +322,7 @@ bool CReadSymbolFromM14File::ReadContour(QString strLineHead)
 		{
 			strLine = m_txtStream.readLine();
 		}
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		
 		if(strList.length()==2)
 		{
@@ -359,7 +359,7 @@ bool CReadSymbolFromM14File::ReadContour(QString strLineHead)
 		}
 		else
 		{
-			strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+            strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 			if(strList.length() == 2)
 			{
 				strValue = strList.at(0);
@@ -431,7 +431,7 @@ bool CReadSymbolFromM14File::ReadWeatherRegion(QString strLineHead)
 		}
 
 		//读每条线的控制信息：编号、点的个数
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 2)
 		{
 			nCode = strList.at(0).toInt();
@@ -481,7 +481,7 @@ bool CReadSymbolFromM14File::ReadFillArea(QString strLineHead)
 		}
 
 		//读每个区域的控制信息：编号、点的个数
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 2)
 		{
 			nType = strList.at(0).toInt();
@@ -507,7 +507,7 @@ bool CReadSymbolFromM14File::ReadFillArea(QString strLineHead)
 		{
 			strLine = m_txtStream.readLine();
 		}
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 16)
 		{
 			strLineType = strList.at(0);				
@@ -582,7 +582,7 @@ bool CReadSymbolFromM14File::ReadNotesSymbol(QString strLineHead)
 		}
 
 		//读每个符号的控制信息：编号、坐标、风向角度
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 		if(strList.length() == 15)
 		{
 			nCode = strList.at(0).toInt();			
@@ -661,7 +661,7 @@ bool CReadSymbolFromM14File::ReadPositionArray(QVector3DArray &Array, int nPoint
 		{
 			strLine = m_txtStream.readLine();
 		}
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split(("\\s+"), Qt::SkipEmptyParts);
 	
 		if(strList.length()%3 == 0)
 		{
@@ -752,7 +752,7 @@ void CReadSymbolFromM14File::CreatLinesSymbol(int nType, int nWidth, QVector3DAr
 	m_pSymLine->SetSymbolLineStyle(m_pSymbol);					
 
 	//设置属性和顶点数组
-	m_pSymLine->m_LineAttribute.SetLineType(QString(nType));
+    m_pSymLine->m_LineAttribute.SetLineType(QString("%1").arg(nType));
 	m_pSymLine->m_LineAttribute.SetLineWidth(nWidth);
 	if(nLineType == 1201)
 	{

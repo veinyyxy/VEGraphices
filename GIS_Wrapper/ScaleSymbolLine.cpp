@@ -30,7 +30,6 @@ V 1.0
 #include "SymbolContourLine.h"
 #include "NormalSymbol.h"
 #include <QtGui/QCursor>
-#include <QDockWidget>
 //#include "QTextureFont.h"
 
 /************************************************************************/
@@ -486,7 +485,7 @@ void CScaleSymbolLine::setILayerAttrib(ILayerAttribute *Ilayer)
 			else if(strName == QString("cColor"))
 			{
 				QColor tColor = Ilayer->Value().value<QColor>();
-				m_pAttribute->SetColor(QVector3D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0));
+                m_pAttribute->SetColor(QVector4D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0, 1.0));
 			}
 			else if(strName == QString("cFill"))
 			{

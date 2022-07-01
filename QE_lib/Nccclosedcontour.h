@@ -1,7 +1,7 @@
 #pragma once
 #include "Config.h"
 #include "NccPoint.h"
-#include <QList>
+#include <QtCore/QList>
 
 namespace NCC{
 

@@ -13,10 +13,10 @@ V 1.1
 #pragma once
 #include "GIS_WrapperConfig.h"
 
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QXmlStreamWriter>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QTreeWidgetItem>
 #include "SymbolLayer.h"
 
 class GIS_WRAPPER_EXPORT_IMPORT SaveColorTableToXML : public QWidget

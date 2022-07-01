@@ -1,5 +1,5 @@
 #include "SaveLayerToShape.h"
-#include <QDebug>
+#include <QtCore/QDebug>
 #include "SymbolLayer.h"
 
 //extern "C"
@@ -260,14 +260,14 @@ bool CSaveLayerToShape::SavePolygon(const char* fileName, VectorLayer *lay )
 	hSHP = SHPOpen( shpfilename, "r+" );
 	QHash<QString,GISPolygon*> *HashPolygon = lay->Get2DFDnoTessel();
 	QHash<QString,gpc_polygon*> hashPolyCombine;
-	QStringList keylist = HashPolygon->uniqueKeys();
+    QList<QString> keylist = HashPolygon->keys();
 
 	//多边形合并
 	for (int i = 0 ;i< keylist.count();i++)
 	{
-		QList<GISPolygon *> valuelist = HashPolygon->values(keylist.at(i));
-		gpc_polygon * tempPoly = combinePolygon(valuelist);
-		hashPolyCombine.insert(keylist.at(i),tempPoly);
+        //QList<GISPolygon *> valuelist = HashPolygon->values(keylist.at(i));
+        //gpc_polygon * tempPoly = combinePolygon(valuelist);
+        //hashPolyCombine.insert(keylist.at(i),tempPoly);
 	}
 
 

@@ -9,7 +9,7 @@
 
 ============================================================*/ 
 #pragma once
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include "manualdraw.h"
 #include "Line.h"
 #include "SymbolLayer.h"

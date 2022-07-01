@@ -33,7 +33,7 @@ V 1.1
 ============================================================*/
 
 #pragma once
-#include <QtOpenGL/QGLWidget>
+#include <QtOpenGL/QOpenGLWindow>
 #include <QtGui/QUndoStack>
 #include "GIS_WrapperConfig.h"
 #include "QT_Include.h"
@@ -72,7 +72,7 @@ public:
 	virtual void InitAttribute(bool b);
 
 	virtual void SetParentLayer(Layer * Layer){m_ParentLayer = Layer;}
-	virtual void SetViewWidget(QGLWidget * pView) { m_pOpenglView = pView;}
+    virtual void SetViewWidget(QOpenGLWindow * pView) { m_pOpenglView = pView;}
 	virtual Layer* GetParentLayer() {return m_ParentLayer;}
 	virtual QVector3DArray* getPoint(){return 0;}
 	inline  void CoordTrans(RadProjTransform *pProj4);				//从当前投影坐标转换成为经纬度坐标
@@ -98,7 +98,7 @@ protected:
 	GeoCoordTransform geotrans;
 	LAYER_ATTRIBUTE *m_layerAttribute;
 	Layer * m_ParentLayer;
-	QGLWidget * m_pOpenglView;			//用于记录当
+    QOpenGLWindow * m_pOpenglView;			//用于记录当
 	//QUndoStack* m_undoStack;
 	bool  m_bFinished;	    	//判断是否结束画线
 	Line *m_pLine;

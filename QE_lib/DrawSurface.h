@@ -11,7 +11,7 @@ public:
 	virtual bool MakeGLContext() = 0;
 	virtual void DoneGLContext() = 0;
 	virtual void FlushSurface() = 0;
-	virtual const QGLContext* Context() = 0;
+    virtual const QOpenGLContext* Context() = 0;
 	virtual QImage ToImage(bool br = false) = 0;
 	virtual QPixmap ToPixmap(int iW, int iH, bool bs) = 0;
 	virtual void Resize(int iW, int iH){m_iWidth = iW; m_iHeight = iH;}
@@ -22,7 +22,7 @@ public:
 
 protected:
 	QScene* m_pAssociatedScene;
-	QGLContext* m_pContext;
+    QOpenGLContext* m_pContext;
 	int m_iWidth;
 	int m_iHeight;
 };

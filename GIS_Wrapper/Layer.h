@@ -27,7 +27,7 @@ All rights reserved
 #include "ILayerAttribute.h"
 #include <QtCore/QPointer>
 #include <QtCore/QSettings>
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 #include <QtCore/QHash>
 #include "SymbolContourLine.h"
 #include "SymbolPoint.h"

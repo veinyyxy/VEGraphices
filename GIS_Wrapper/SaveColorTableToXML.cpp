@@ -1,5 +1,4 @@
 #include "SaveColorTableToXML.h"
-#include <QTextCodec>
 
 SaveColorTableToXML::SaveColorTableToXML(void)
 {

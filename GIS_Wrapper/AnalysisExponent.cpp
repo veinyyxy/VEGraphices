@@ -58,7 +58,7 @@ bool CAnalysisExponent::LoadFile( QString FileName )
 	if (!file.open(QFile::ReadOnly | QFile::Text)) 	return false;
 
 	m_txtStream.setDevice(&file);
-	m_txtStream.setCodec("UTF-8");
+    //m_txtStream.setCodec("UTF-8");
 
 	ReadFileHead(m_txtStream);
 
@@ -139,7 +139,7 @@ bool CAnalysisExponent::ReadFileHead( QTextStream &txtStream )
 				
 		if(strLine.contains("TIME"))
 		{
-			strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+            strList = strLine.split("\\s+",Qt::SkipEmptyParts);
 			m_nStartYear = strList.at(2).toInt();
 			m_nStartMonth = strList.at(3).toInt();
 			m_nEndYear = strList.at(5).toInt();					
@@ -147,7 +147,7 @@ bool CAnalysisExponent::ReadFileHead( QTextStream &txtStream )
 		}
 		else if(strLine.contains("ATTRIBUTES"))
 		{
-			strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+            strList = strLine.split("\\s+",Qt::SkipEmptyParts);
 			int nSize = strList.size();
 			for(int i=7; i<nSize; i+=2)
 			{
@@ -262,7 +262,7 @@ bool CAnalysisExponent::ReadData( QTextStream &txtStream, int nElementSize )
 		{
 			//指数文件的数据行第一行
 			strLine = m_txtStream.readLine();
-			strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+            strList = strLine.split("\\s+", Qt::SkipEmptyParts);
 			nYear = strList.at(0).toInt();
 			nMonth = strList.at(1).toInt();
 			for(int i=2; i<nDataNum; i++ )
@@ -275,7 +275,7 @@ bool CAnalysisExponent::ReadData( QTextStream &txtStream, int nElementSize )
 
 			//指数文件的数据行第二行
 			strLine = m_txtStream.readLine();
-			strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+            strList = strLine.split("\\s+", Qt::SkipEmptyParts);
 			nDataNum = strList.size(); 
 			for(int i=0; i<nDataNum; i++ )
 			{
@@ -293,7 +293,7 @@ bool CAnalysisExponent::ReadData( QTextStream &txtStream, int nElementSize )
 		{
 			//指数文件的数据行
 			strLine = m_txtStream.readLine();
-			strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+            strList = strLine.split("\\s+", Qt::SkipEmptyParts);
 			nYear = strList.at(0).toInt();
 			nMonth = strList.at(1).toInt();
 			nDataNum = strList.size();

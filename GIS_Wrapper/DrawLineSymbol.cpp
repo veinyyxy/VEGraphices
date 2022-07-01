@@ -437,7 +437,7 @@ void  CDrawLineSymbol::GetSymbolAttribute()
 	pLayAttribute = pLA->value(QString("cColor"));
 	if(!pLayAttribute) return;
 	QColor tColor = pLayAttribute->Value().value<QColor>();;
-	m_pSymbolLine->m_LineAttribute.SetColor(QVector3D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0));
+    m_pSymbolLine->m_LineAttribute.SetColor(QVector4D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0, 1.0f));
 
 	//ÉèÖÃÏßÐÍ
 	pLayAttribute = pLA->value(QString("cKinds"));

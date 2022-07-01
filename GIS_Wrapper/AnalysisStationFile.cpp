@@ -14,7 +14,7 @@
 //完成日期：2011年10月17日
 //============================================================*/
 #include "AnalysisStationFile.h"
-#include <QDate>
+#include <QtCore/QDate>
 
 CAnalysisStationFile::CAnalysisStationFile( void )
 {
@@ -170,7 +170,7 @@ bool CAnalysisStationFile::ReadStationFile( QTextStream &txtStream )
 	while(!txtStream.atEnd())
 	{
 		strLine = txtStream.readLine();
-		strList = strLine.split(QRegExp("\\s+"),QString::SkipEmptyParts);
+        strList = strLine.split("\\s+", Qt::SkipEmptyParts);
 		nLength = strList.size();
 
 		CStationElement *pStation = new CStationElement;
@@ -209,7 +209,7 @@ bool CAnalysisStationFile::ReadDataFile( QTextStream &txtStream, int *pData, int
 	{
 		//按照行读数据文件的数据
 		strLine = m_txtStream.readLine();
-		strList = strLine.split(QRegExp("\\s+"), QString::SkipEmptyParts);
+        strList = strLine.split("\\s+", Qt::SkipEmptyParts);
 		nListSize = strList.size();
 		for(i=0; i<nListSize; i++ )
 		{
@@ -301,13 +301,13 @@ void CAnalysisStationFile::PrintHashTable(QString strName)
 		return ;
 	}
 	txtStream.setDevice(&file);
-	txtStream.setCodec("UTF-8");
+    //txtStream.setCodec("UTF-8");
 
 	QHash<QString, CStationElement*>::Iterator i = m_DataHash.begin();
 
 	while(i != m_DataHash.end())
 	{
-		txtStream<<i.key()<<endl;
+        txtStream<<i.key()<<Qt::endl;
 		int *p = i.value()->pElement;
 		for(int k=0; k<12; k++)
 		{
@@ -317,7 +317,7 @@ void CAnalysisStationFile::PrintHashTable(QString strName)
 				txtStream.setFieldAlignment(QTextStream::AlignRight);
 				txtStream<<*p++;
 			}
-			txtStream<<endl;
+            txtStream<<Qt::endl;
 		}
 		i++;
 	}

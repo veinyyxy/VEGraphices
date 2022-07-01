@@ -28,7 +28,7 @@ public:
 	typedef enum _surface_type{WINDOW_TYPE = 1, OFF_SCREEN} SURFACE_TYPE;
 	typedef QMap<QString, QObserver*> OBSERVER_MAP, *P_OVSERVER_MAP;
 	QScene(void);
-	QScene(QGLContext* glContext);
+    QScene(QOpenGLContext* glContext);
 	virtual ~QScene(void);
 	virtual void InitScene();
 	virtual void Render();
@@ -89,7 +89,7 @@ protected:
 	QTransform3D m_SceneTransform;
 	QSceneCallBack* m_SceneCallBack;
 	QNodeCallBack* m_NodeCallBack;
-	QGLContext* m_glContext;
+    QOpenGLContext* m_glContext;
 	QThreadPool m_ThreadPool;
 	QMouseManipulator* m_pMouseManipulator;
 	bool m_EnableThread;

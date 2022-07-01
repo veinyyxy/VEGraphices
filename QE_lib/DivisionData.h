@@ -1,5 +1,5 @@
 #pragma once
-#include <QtGui/qvector3d.h>
+#include <QtGui/QVector3D>
 //#include <QVector>
 #include "QDataArray.h"
 #include "QRenderUnit.h"
@@ -7,7 +7,7 @@
 enum DIVISITON_TYPE {KEEP_NORTH = 0,KEEP_SOUTH = 1,KEEP_ALL = 2};
 enum POLY_TYPE { POLY_LINE = 1,POLY_GON = 2};
 
-class QE_LIB_EXPORT_IMPORT CDivisionData
+class CDivisionData
 {
 public:
 	CDivisionData(void);

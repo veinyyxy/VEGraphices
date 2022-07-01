@@ -53,7 +53,7 @@ void DrawNormalSymbol::MousePress( QMouseEvent *event )
 
 	m_nLayerAttr = m_CSlayerAttribute->value(QString("borderColor"));
 	tColor = m_nLayerAttr->Value().value<QColor>();
-	pAttri->SetColor(QVector3D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0));
+    pAttri->SetColor(QVector4D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0, 1.0f));
 
 	m_nLayerAttr = m_CSlayerAttribute->value(QString("symbolSize"));
 	pAttri->SetValue(m_nLayerAttr->Value().toFloat());
@@ -188,7 +188,7 @@ void  DrawNormalSymbol::GetAttribute()
 		ILayerAttribute *pLayAttribute = pLA->value(QString("borderColor"));
 
 		tColor = pLayAttribute->Value().value<QColor>();
-		pAttri->SetColor(QVector3D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0));
+        pAttri->SetColor(QVector4D(tColor.red()/255.0, tColor.green()/255.0, tColor.blue()/255.0, 1.0f));
 
 
 		pLayAttribute = pLA->value( QString("symbolSize"));

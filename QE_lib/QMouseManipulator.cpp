@@ -23,7 +23,7 @@ QMouseManipulator::~QMouseManipulator(void)
 /************************************************************************/
 void QMouseManipulator::ScreenToGL( const QVector3D& screenPoint, QVector3D& glPoint )
 {
-	m_pGLContext->makeCurrent();
+    //m_pGLContext->makeCurrent();
 	GLint    viewport[4];
 	GLdouble modelview[16];
 	GLdouble projection[16];
@@ -45,7 +45,7 @@ void QMouseManipulator::ScreenToGL( const QVector3D& screenPoint, QVector3D& glP
 
 void QMouseManipulator::GLToScreen( const QVector3D& src, QVector3D& des )
 {
-	m_pGLContext->makeCurrent();
+    //m_pGLContext->makeCurrent();
 	qreal x(0), y(0), z(0), x1(0), y1(0), z1(0);
 	GLint    viewport[4] = {0};
 	GLdouble modelview[16] = {0};

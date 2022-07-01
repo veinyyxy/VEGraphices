@@ -28,8 +28,8 @@ bool ReadColorTableFromXML::readFile( const QString &fileName,COLORTABLELIST &co
 	{
 		m_XMLreader.readNext();
 		if (m_XMLreader.isStartElement())
-		{
-			if (m_XMLreader.name() == "ColorTableList")
+        {
+            if (m_XMLreader.name() == QStringView(QString::fromLocal8Bit("ColorTableList")))
 			{
 				colortablelist.clear();
 				ReadColorTableList(colortablelist);
@@ -84,15 +84,15 @@ void ReadColorTableFromXML::ReadFilehead()
 
 		if (m_XMLreader.isStartElement())
 		{
-			if (m_XMLreader.name() == "DataType")
+            if (m_XMLreader.name() == QObject::tr("DataType"))
 			{
 				m_DataType = m_XMLreader.readElementText();
 			}	
-			if (m_XMLreader.name() == "Description")
+            if (m_XMLreader.name() == QObject::tr("Description"))
 			{
 				m_Description = m_XMLreader.readElementText();
 			}
-			if (m_XMLreader.name() == "Date")
+            if (m_XMLreader.name() == QObject::tr("Date"))
 			{
 				m_Date = m_XMLreader.readElementText();
 			}			
@@ -100,7 +100,7 @@ void ReadColorTableFromXML::ReadFilehead()
 
 		if (m_XMLreader.isEndElement())
 		{
-			if(m_XMLreader.name() == "FileHead")  
+            if(m_XMLreader.name() == QObject::tr("FileHead"))
 			{  
 				//qDebug()<<"Now at the end of FileHead...";  
 				break;  
@@ -117,7 +117,7 @@ void ReadColorTableFromXML::ReadData(COLORTABLELIST &colortablelist)
 
 		if (m_XMLreader.isStartElement())
 		{
- 			if (m_XMLreader.name() == "ColorTableID")
+            if (m_XMLreader.name() == QObject::tr("ColorTableID"))
  			{
 // 				ReadPointSymbols();
 				name = m_XMLreader.attributes().value("id").toString();
@@ -129,7 +129,7 @@ void ReadColorTableFromXML::ReadData(COLORTABLELIST &colortablelist)
 
 		if (m_XMLreader.isEndElement())
 		{
-			if(m_XMLreader.name() == "Data")  
+            if(m_XMLreader.name() == QObject::tr("Data"))
 			{  
 				//qDebug()<<"Now at the end of Data...";  
 				break;  
@@ -151,7 +151,7 @@ void ReadColorTableFromXML::ReadColorTable(COLORTABLE &colortable)
 
 		if (m_XMLreader.isStartElement())
 		{
-			if (m_XMLreader.name() == "ColorItem")
+            if (m_XMLreader.name() == QObject::tr("ColorItem"))
 			{
 			   ReadItem(vauleTemp,valuestringtemp,colorTemp,Zcount);
 			   colortable.insert(vauleTemp,COLOR_PROPERTY(valuestringtemp,colorTemp,Zcount));
@@ -160,7 +160,7 @@ void ReadColorTableFromXML::ReadColorTable(COLORTABLE &colortable)
 
 		if (m_XMLreader.isEndElement())
 		{
-			if(m_XMLreader.name() == "ColorTableID")  
+            if(m_XMLreader.name() == QObject::tr("ColorTableID"))
 			{  
 				break;  
 			} 
@@ -175,19 +175,19 @@ void ReadColorTableFromXML::ReadItem(double &vlaue,QString &valuestring,QColor &
 		m_XMLreader.readNext();  
 		if(m_XMLreader.isStartElement())  
 		{  
-			if(m_XMLreader.name() == "value")  
+            if(m_XMLreader.name() == QObject::tr("value"))
 			{  
 				vlaue = m_XMLreader.readElementText().toDouble();			
 			}  	
-			if(m_XMLreader.name() == "ValueString")  
+            if(m_XMLreader.name() == QObject::tr("ValueString"))
 			{  
 				valuestring = m_XMLreader.readElementText();			
 			}  
-			if (m_XMLreader.name() == "Color")
+            if (m_XMLreader.name() == QObject::tr("Color"))
 			{
 				ReadColorElement(color);								
 			}
-			if (m_XMLreader.name() == "ZValue")
+            if (m_XMLreader.name() == QObject::tr("ZValue"))
 			{
 				Zcount = m_XMLreader.readElementText().toInt();									
 			}
@@ -195,7 +195,7 @@ void ReadColorTableFromXML::ReadItem(double &vlaue,QString &valuestring,QColor &
 		}  
 		if(m_XMLreader.isEndElement())  
 		{  
-			if(m_XMLreader.name() == "ColorItem")  
+            if(m_XMLreader.name() == QObject::tr("ColorItem"))
 			{  
 				//qDebug()<<"Now at the end of SymbolID...";  
 				break;  
@@ -212,22 +212,22 @@ void ReadColorTableFromXML::ReadColorElement(QColor &color) //¶ÁÑÕÉ«
 		m_XMLreader.readNext();  
 		if(m_XMLreader.isStartElement())  
 		{  
-			if(m_XMLreader.name() == "r")  
+            if(m_XMLreader.name() == QObject::tr("r"))
 			{  
 				r = m_XMLreader.readElementText();
 				color.setRedF(r.toFloat());
 			}  
-			if(m_XMLreader.name() == "g")  
+            if(m_XMLreader.name() == QObject::tr("g"))
 			{  
 				g =m_XMLreader.readElementText();
 				color.setGreenF(g.toFloat());
 			}  
-			if(m_XMLreader.name() == "b")  
+            if(m_XMLreader.name() == QObject::tr("b"))
 			{  
 				b = m_XMLreader.readElementText();
 				color.setBlueF(b.toFloat());
 			}  		
-			if(m_XMLreader.name() == "a")  
+            if(m_XMLreader.name() == QObject::tr("a"))
 			{  
 				a = m_XMLreader.readElementText();
 				color.setAlphaF(a.toFloat());
@@ -235,7 +235,7 @@ void ReadColorTableFromXML::ReadColorElement(QColor &color) //¶ÁÑÕÉ«
 		}  
 		if(m_XMLreader.isEndElement())  
 		{  
-			if(m_XMLreader.name() == "Color")  
+            if(m_XMLreader.name() == QObject::tr("Color"))
 			{  
 				//qDebug()<<"Now at the end of Color..";  
 				break;  
@@ -251,18 +251,18 @@ void ReadColorTableFromXML::ReadColorTableList(COLORTABLELIST &colortablelist)
 		m_XMLreader.readNext();  
 		if(m_XMLreader.isStartElement())  
 		{  
-			if (m_XMLreader.name() == "FileHead")
+            if (m_XMLreader.name() == QObject::tr("FileHead"))
 			{
 				ReadFilehead();
 			}
- 			if (m_XMLreader.name() == "Data")
+            if (m_XMLreader.name() == QObject::tr("Data"))
  			{
  			    ReadData(colortablelist);
  			}			  
 		}  
 		if(m_XMLreader.isEndElement())  
 		{  
-			if(m_XMLreader.name() == "ColorTableList")  
+            if(m_XMLreader.name() == QObject::tr("ColorTableList"))
 			{    
 				break;  
 			}  

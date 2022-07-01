@@ -1,5 +1,5 @@
 #pragma once
-#include <QtGui\QTextEdit>
+#include <QtWidgets\QTextEdit>
 #include "GIS_WrapperConfig.h"
 
 

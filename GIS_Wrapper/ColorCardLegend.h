@@ -1,12 +1,12 @@
 #pragma once
 #include "GIS_WrapperConfig.h"
-#include <QPointer>
-#include <QGraphicsPixmapItem>
-#include <QPixmap>
-#include <QMap>
-#include <QPainter>
-#include <QRect>
-#include <QPainterPath>
+#include <QtCore/QPointer>
+#include <QtWidgets/QGraphicsPixmapItem>
+#include <QtGui/QPixmap>
+#include <QtCore/QMap>
+#include <QtGui/QPainter>
+#include <QtCore/QRect>
+#include <QtGui/QPainterPath>
 #include "Legend.h"
 #include "Layer.h"
 

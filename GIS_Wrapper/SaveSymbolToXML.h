@@ -29,13 +29,9 @@ V 1.1
 ============================================================*/
 #pragma once
 #include "GIS_WrapperConfig.h"
-
-#include <QtGui/QFileDialog>
+#include <QtCore/QFile>
+#include <QtCore/QFileInfo>
 #include <QtCore/QXmlStreamWriter>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
-
-
 #include "SymbolData.h"
 class GIS_WRAPPER_EXPORT_IMPORT SaveSymbolToXML : public QWidget
 {

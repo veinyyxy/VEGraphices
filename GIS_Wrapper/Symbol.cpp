@@ -140,16 +140,16 @@ void Symbol::ScreenToGL( const QVector3D& screenPoint, QVector3D& glPoint )
 	glPoint.setZ(0.0);
 }
 
-bool Symbol::SetTextureFromPixmap( const QPixmap* pPixmap, QGLWidget* pContext)
+bool Symbol::SetTextureFromPixmap( const QPixmap* pPixmap, QOpenGLWidget* pContext)
 {
-	CPixmapTexture* pTexture = new CPixmapTexture(pContext);
-	pTexture->TargetTextrue(GL_TEXTURE_2D);
-	if(!pTexture) return false;
-	pTexture->LoadTextrueFromPixmap(pPixmap);
-	m_TextureAttrib.SetTexture(pTexture);
+    //CPixmapTexture* pTexture = new CPixmapTexture(pContext);
+    //pTexture->TargetTextrue(GL_TEXTURE_2D);
+    //if(!pTexture) return false;
+    //pTexture->LoadTextrueFromPixmap(pPixmap);
+    //m_TextureAttrib.SetTexture(pTexture);
 	//m_TextureAttrib.TargetTexture(GL_TEXTURE_2D);
-	AttribSet()->insert(QE_ATTRI_TEXTURE0, &m_TextureAttrib);
-	SetArrayData(&texture);
+    //AttribSet()->insert(QE_ATTRI_TEXTURE0, &m_TextureAttrib);
+    //SetArrayData(&texture);
 }
 
 void Symbol::setSymbolSize(int nsize)

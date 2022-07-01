@@ -17,14 +17,14 @@ int ImageTexture::LoadTextrueFromFile( const QString& strFileName )
 	return 1;
 }
 
-int ImageTexture::LoadTextrueFromPixelBuffer( const QGLPixelBuffer* pPixelBuffer )
+int ImageTexture::LoadTextrueFromPixelBuffer( const QOpenGLBuffer* pPixelBuffer )
 {
 	return 1;
 }
 
 int ImageTexture::LoadTextrueFromQimage(const QImage* pQimage)
 {
-	const QGLContext* pGLContext = QGLContext::currentContext();
+    const QOpenGLContext* pGLContext = QOpenGLContext::currentContext();
 	if(!pGLContext)
 	{
 		if(currentWidget)
@@ -34,9 +34,9 @@ int ImageTexture::LoadTextrueFromQimage(const QImage* pQimage)
 	}
 	
 	glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-	QGLPixelBuffer *pixBuff = new QGLPixelBuffer(pQimage->width(),pQimage->height(),pGLContext->format(), currentWidget);
-	bool x = pixBuff->makeCurrent();	
-	texture[0]= pixBuff->bindTexture(*pQimage);
+    QOpenGLBuffer *pixBuff = new QOpenGLBuffer(QOpenGLBuffer::PixelPackBuffer/*pQimage->width(),pQimage->height(),pGLContext->format(), currentWidget*/);
+    //bool x = pixBuff->makeCurrent();
+    texture[0] = 0;//pixBuff->bindTexture(*pQimage);
 	glBindTexture(GL_TEXTURE_2D,texture[0]);
 	delete pixBuff;
 	return 1;
@@ -44,7 +44,7 @@ int ImageTexture::LoadTextrueFromQimage(const QImage* pQimage)
 
 int ImageTexture::LoadTextrueFromPixmap( const QPixmap* pPixmap )
 {
-	const QGLContext* pGLContext = QGLContext::currentContext();
+    const QOpenGLContext* pGLContext = QOpenGLContext::currentContext();
 	if(!pGLContext)
 	{
 		if(currentWidget)
@@ -54,7 +54,7 @@ int ImageTexture::LoadTextrueFromPixmap( const QPixmap* pPixmap )
 	}
 	
 	glPixelStorei (GL_UNPACK_ALIGNMENT, 1);
-	texture[0] = (( QGLContext*)pGLContext)->bindTexture(*pPixmap);
+    texture[0] = 0;//(( QGLContext*)pGLContext)->bindTexture(*pPixmap);
 	glBindTexture(GL_TEXTURE_2D,texture[0]);
 
 	return 1;
@@ -81,11 +81,11 @@ int ImageTexture::ApplyTextrueParam()
 	return true;
 }
 
-bool ImageTexture::SetGLGLWidget( QGLWidget * sharewidget )
+bool ImageTexture::SetGLGLWidget( QOpenGLWindow * sharewidget )
 {
 	//currentWidget =new QGLWidget;
 	currentWidget = sharewidget;
-	m_pGLContext = const_cast<QGLContext*>(sharewidget->context());/*const_cast<QGLContext*>(QGLContext::currentContext());*/
+    m_pGLContext = const_cast<QOpenGLContext*>(sharewidget->context());/*const_cast<QGLContext*>(QGLContext::currentContext());*/
 	return true;
 }
 

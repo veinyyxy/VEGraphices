@@ -1,9 +1,9 @@
 #include "CPolygonAnalysis.h"
-#include <QLineF>
+#include <QtCore/QLineF>
 #include "DrawOrder.h"
 #include "CLineAnalysis.h"
 
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 bool CPolygonAnalysis::TestPolygonIntersection(QVector3DArray* linestrip)
 {
@@ -20,7 +20,7 @@ bool CPolygonAnalysis::TestPolygonIntersection(QVector3DArray* linestrip)
 				if (i<j-1)
 				{
 					QLineF line2  = QLineF(linestrip->at(j).x(),linestrip->at(j).y(),linestrip->at(j+1).x(),linestrip->at(j+1).y());
-					if (QLineF::BoundedIntersection == line1.intersect(line2,&tempPoint))
+                    if (QLineF::BoundedIntersection == line1.intersects(line2,&tempPoint))
 					{
 						isintersect = true;
 						break;
@@ -114,7 +114,7 @@ bool CPolygonAnalysis::ModifyPolygon(QVector3DArray& inputdata,QVector3DArray* m
 		QLineF line1 = QLineF(modifylines->at(i).x(),modifylines->at(i).y(),modifylines->at(i+1).x(),modifylines->at(i+1).y());
 			for (int j=0;j<inputdata.count()-1;j++)
 			{
-				if (QLineF::BoundedIntersection == line1.intersect(QLineF(inputdata.at(j).x(),inputdata.at(j).y(),inputdata.at(j+1).x(),inputdata.at(j+1).y()),&tempPoint))
+                if (QLineF::BoundedIntersection == line1.intersects(QLineF(inputdata.at(j).x(),inputdata.at(j).y(),inputdata.at(j+1).x(),inputdata.at(j+1).y()),&tempPoint))
 				{
 					nCountArray.push_back(i);
 					nCount2Array.push_back(j);
@@ -209,7 +209,7 @@ bool CPolygonAnalysis::ModifyPolygon(QVector3DArray& inputdata,QVector3DArray* m
 		//  		float xx = (pos1.x()+ inputdata.at(nCountBegin).x() + inputdata.at(nCountBegin+1).x())/3.0f;
 		//  		float yy = (pos1.y()+ inputdata.at(nCountBegin).y() + inputdata.at(nCountBegin+1).y())/3.0f;
 		//  		tempPoint1 = QPointF(xx,yy);
-		linebegin.intersect(QLineF(inputdata.at(nCountBegin).x(),inputdata.at(nCountBegin).y(),inputdata.at(nCountBegin+1).x(),inputdata.at(nCountBegin+1).y()),&tempPoint1);
+        linebegin.intersects(QLineF(inputdata.at(nCountBegin).x(),inputdata.at(nCountBegin).y(),inputdata.at(nCountBegin+1).x(),inputdata.at(nCountBegin+1).y()),&tempPoint1);
 	}
 	if (!b_foundpos2)
 	{
@@ -233,7 +233,7 @@ bool CPolygonAnalysis::ModifyPolygon(QVector3DArray& inputdata,QVector3DArray* m
 		// 		float xx = (pos4.x()+ inputdata.at(nCountEnd).x() + inputdata.at(nCountEnd+1).x())/3.0f;
 		// 		float yy = (pos4.y()+ inputdata.at(nCountEnd).y() + inputdata.at(nCountEnd+1).y())/3.0f;
 		// 		tempPoint2 = QPointF(xx,yy);
-		lineend.intersect(QLineF(inputdata.at(nCountEnd).x(),inputdata.at(nCountEnd).y(),inputdata.at(nCountEnd+1).x(),inputdata.at(nCountEnd+1).y()),&tempPoint2);
+        lineend.intersects(QLineF(inputdata.at(nCountEnd).x(),inputdata.at(nCountEnd).y(),inputdata.at(nCountEnd+1).x(),inputdata.at(nCountEnd+1).y()),&tempPoint2);
 	}
 
 	//STEP 2: Input points to stripline1 and stripline2 

@@ -17,7 +17,7 @@ CIPScene::CIPScene() : m_bInitGL(true)
 	//m_backgroundColor = QColor(100, 170, 255);	
 }
 
-CIPScene::CIPScene( QGLContext* glContext ) :
+CIPScene::CIPScene( QOpenGLContext* glContext ) :
 	QScene(glContext)
 	, m_bInitGL(true)
 	, m_bRenderThread(false)
@@ -168,7 +168,7 @@ void CIPScene::InitScene()
 	{		
 	GetObserver("MainObserver")->Camera()->SetCameraScale(1500.0138171976105);
 	}*/
-	QGLWidget* qglWdiget = dynamic_cast<QGLWidget*>(GetDrawSurface());
+    QOpenGLWindow* qglWdiget = dynamic_cast<QOpenGLWindow*>(GetDrawSurface());
 }
 
 inline void CIPScene::MoveX(int ScreenLen)

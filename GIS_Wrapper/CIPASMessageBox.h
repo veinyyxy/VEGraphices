@@ -1,7 +1,7 @@
 #pragma once
 
 #include "GIS_WrapperConfig.h"
-#include <QtGui/QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 
 class GIS_WRAPPER_EXPORT_IMPORT CCIPASMessageBox : QWidget

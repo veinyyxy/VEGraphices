@@ -18,10 +18,9 @@ V 1.0
 #include "GIS_WrapperConfig.h"
 #include <Qtcore/QFile>
 #include <QtCore/QTextStream>
-#include <QtGui/QFileDialog>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
-#include <QtGui/QApplication>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QTreeWidgetItem>
 #include "../GIS_Wrapper/Const.h"
 
 class GIS_WRAPPER_EXPORT_IMPORT CConvertFormat

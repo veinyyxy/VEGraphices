@@ -23,11 +23,11 @@ All rights reserved
 #include "GIS_WrapperConfig.h"
 extern "C"
 {
-#include <proj_api.h>
+#include <proj.h>
 }
 #include "CoordinateTransform.h"
-#include "cpl_string.h"
-#include <ogr_spatialref.h>
+//#include "cpl_string.h"
+//#include <ogr_spatialref.h>
 
 typedef QString PROJCRS;
 typedef QString PROJNAME;
@@ -59,7 +59,8 @@ public:
 	void initGeoMap();
 
 private:
-	projPJ mSourceProjection,mDestinationProjection;
+    PJ_CONTEXT* m_pContext;
+    PJ *mSourceProjection, *mDestinationProjection;
 	QString strSourceProjection, strDestinationProjection;
 	QString strSourceProName,strDestinationProName;
 	int i,projResult;

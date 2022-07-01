@@ -56,7 +56,7 @@ void QDefaultMouseManipulator::wheelEvent( QWheelEvent *event )
 	qreal xyzScale = 0.0;
 	static GLfloat v = 0.1f, v1 = 0.1f;
 
-	if(event->delta() > 0)
+    if(event->inverted())
 	{
 		m_pObserver->Camera()->Scale(0.9);
 	}

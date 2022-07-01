@@ -87,28 +87,34 @@ int QGraticuleCoordinates::CreateLayer(QNode* node)
 #if 1
 	//内核
 	EarthSphere* pEarthCore = new EarthSphere;
-	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(1228, 30, QColor(255, 245, 0, 255));
+    pEarthCore->SetColorBlend(false);
+    QColor temp = QColor(255, 245, 0, 255);
+    pEarthCore->InitShpere(1228, 30, temp);
 	//外核
 	EarthSphere* pEarthCore1 = new EarthSphere;
 	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(3488, 30, QColor(249, 165, 9, 255));
+    temp = QColor(249, 165, 9, 255);
+    pEarthCore->InitShpere(3488, 30, temp);
 	//D层
 	EarthSphere* pEarthDLayer = new EarthSphere;
 	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(3678, 30, QColor(151, 216, 41, 255));
+    temp = QColor(151, 216, 41, 255);
+    pEarthCore->InitShpere(3678, 30, temp);
 	//下地幔
 	EarthSphere* pEarthMesosphere = new EarthSphere;
 	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(5728, 30, QColor(78, 121, 180, 255));
+    temp = QColor(78, 121, 180, 255);
+    pEarthCore->InitShpere(5728, 30, temp);
 	//过渡区
 	EarthSphere* pEarthTransitionRagion = new EarthSphere;
 	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(5978, 30, QColor(108, 205, 152, 255));
+    temp = QColor(108, 205, 152, 255);
+    pEarthCore->InitShpere(5978, 30, temp);
 	//上地幔
 	EarthSphere* pEarthUpperMantle = new EarthSphere;
 	pEarthCore->SetColorBlend(false);
-	pEarthCore->InitShpere(6338, 30, QColor(77, 77, 77, 255));
+    temp = QColor(77, 77, 77, 255);
+    pEarthCore->InitShpere(6338, 30, temp);
 	//pEarth->SetBakData();
 	
 	renderVol->InsertRenderable(pEarthCore);

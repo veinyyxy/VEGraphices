@@ -11,7 +11,7 @@ public:
 	void StartRender(QERenderContext* renderContext);
 	void EndRender();
 	void Apply(QNode& node);
-	inline void SetWhetherRender(qreal to, qreal not){m_toRender = to; m_notRender = not;}
+    inline void SetWhetherRender(qreal fto, qreal fnot){m_toRender = fto; m_notRender = fnot;}
 
 private:
 	qreal m_toRender;

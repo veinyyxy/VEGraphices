@@ -8,8 +8,8 @@
 namespace NCCGIS{
 #endif
 
-#define min(a, b) (((a) < (b)) ? (a) : (b))
-#define max(a, b) (((a) > (b)) ? (a) : (b))
+//#define min(a, b) (((a) < (b)) ? (a) : (b))
+//#define max(a, b) (((a) > (b)) ? (a) : (b))
 #define Is_Flat_Tri(tri) ((fabs(tri->pt[0]->pContour->z - tri->pt[1]->pContour->z) < ZERO)&&(fabs(tri->pt[0]->pContour->z - tri->pt[2]->pContour->z) < ZERO))
 #define MinZ(tri) (min(tri->pt[0]->z, min(tri->pt[1]->z, tri->pt[2]->z)))
 #define MaxZ(tri) (max(tri->pt[0]->z, max(tri->pt[1]->z, tri->pt[2]->z)))
@@ -183,16 +183,16 @@ struct CTriangleChain
 /*   extracted from the two least significant bits of the pointer.           */
 
 #define decode(ptr, triedge)                                                  \
-  (triedge).orient = (long) ((unsigned long) (ptr) & (unsigned long) 3l);      \
+  (triedge).orient = (long) ((unsigned long long) (ptr) & (unsigned long long) 3l);      \
   (triedge).tri = (triangle *)                                                \
-                  ((unsigned long) (ptr) ^ (unsigned long) (triedge).orient)
+                  ((unsigned long long) (ptr) ^ (unsigned long long) (triedge).orient)
 
 /* encode() compresses an oriented triangle into a single pointer.  It       */
 /*   relies on the assumption that all triangles are aligned to four-byte    */
 /*   boundaries, so the two least significant bits of (triedge).tri are zero.*/
 
 #define encode(triedge)                                                       \
-  (triangle) ((unsigned long) (triedge).tri | (unsigned long) (triedge).orient)
+  (triangle) ((unsigned long long) (triedge).tri | (unsigned long long) (triedge).orient)
 
 /* The following edge manipulation primitives are all described by Guibas    */
 /*   and Stolfi.  However, they use an edge-based data structure, whereas I  */
@@ -397,16 +397,16 @@ struct CTriangleChain
 /*   are masked out to produce the real pointer.                             */
 
 #define sdecode(sptr, edge)                                                   \
-  (edge).shorient = (long) ((unsigned long) (sptr) & (unsigned long) 1l);      \
+  (edge).shorient = (long) ((unsigned long long) (sptr) & (unsigned long long) 1l);      \
   (edge).sh = (shelle *)                                                      \
-              ((unsigned long) (sptr) & ~ (unsigned long) 3l)
+              ((unsigned long long) (sptr) & ~ (unsigned long long) 3l)
 
 /* sencode() compresses an oriented shell edge into a single pointer.  It    */
 /*   relies on the assumption that all shell edges are aligned to two-byte   */
 /*   boundaries, so the least significant bit of (edge).sh is zero.          */
 
 #define sencode(edge)                                                         \
-  (shelle) ((unsigned long) (edge).sh | (unsigned long) (edge).shorient)
+  (shelle) ((unsigned long long) (edge).sh | (unsigned long long) (edge).shorient)
 
 /* ssym() toggles the orientation of a shell edge.                           */
 

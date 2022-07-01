@@ -10,7 +10,7 @@ public:
 	QTextrueInterface(void);
 	virtual ~QTextrueInterface(void);
 	virtual int LoadTextrueFromFile(const QString& strFileName) = 0;
-	virtual int LoadTextrueFromPixelBuffer(const QGLPixelBuffer* pPixelBuffer) = 0;
+    virtual int LoadTextrueFromPixelBuffer(const QOpenGLBuffer* pPixelBuffer) = 0;
 	virtual int LoadTextrueFromPixmap(const QPixmap* pPixmap) = 0;
 	virtual int BindTextrue() = 0;
 	virtual int ApplyTextrueParam() = 0;

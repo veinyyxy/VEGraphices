@@ -34,7 +34,7 @@ void QRenderVolume::Render()
 			CallDisplayList();
 		else
 		{
-			ListName = (GLuint)this;
+            GLuint ListName = (ULONGLONG)this;
 			glNewList(ListName, GL_COMPILE_AND_EXECUTE);
 			while(iter.hasNext())
 			{

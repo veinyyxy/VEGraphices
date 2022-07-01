@@ -5,14 +5,14 @@ bool CLineAnalysis::isLineintersect(float x0,float x1,float x2,float x3,float y0
 {
 	//两条线段是否相交X0X1 AND X1X2
 	float x, y;
-	float Minx01 = min(x0, x1);
-	float Miny01 = min(y0, y1);
-	float Minx23 = min(x2, x3);
-	float Miny23 = min(y2, y3);
-	float Maxx01 = max(x0, x1);
-	float Maxy01 = max(y0, y1);
-	float Maxx23 = max(x2, x3);
-	float Maxy23 = max(y2, y3);
+    float Minx01 = std::min(x0, x1);
+    float Miny01 = std::min(y0, y1);
+    float Minx23 = std::min(x2, x3);
+    float Miny23 = std::min(y2, y3);
+    float Maxx01 = std::max(x0, x1);
+    float Maxy01 = std::max(y0, y1);
+    float Maxx23 = std::max(x2, x3);
+    float Maxy23 = std::max(y2, y3);
 
 	if(x1!=x0 && x2!=x3)
 	{

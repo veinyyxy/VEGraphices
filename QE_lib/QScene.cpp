@@ -1,5 +1,3 @@
-#include "DrawSurface.h"
-#include "PixelBufferSurface.h"
 #include "QRenderWindow.h"
 #include "QScene.h"
 
@@ -15,7 +13,7 @@ QScene::QScene(void)
 	m_EnableThread = false;
 }
 
-QScene::QScene( QGLContext* glContext )/* : QGLWidget(glContext)*/
+QScene::QScene( QOpenGLContext* glContext )/* : QGLWidget(glContext)*/
 {
 	m_bIsRun = false;
 	root = 0;
@@ -126,7 +124,7 @@ void QScene::RenderFrame()
 		if(root)
 		{
 			m_RenderContext.Observer(ob);
-			m_RenderContext.RenderWindow((QGLWidget*)this);
+            m_RenderContext.RenderWindow((QOpenGLWidget*)this);
 			m_RenderContext.Transform(&m_SceneTransform);
 
 			root->SetObserver(ob);
@@ -479,10 +477,10 @@ void QScene::GLToScreen( const QVector3D& glPoint, QVector3D& screenPoint )
 
 DrawSurface* QScene::CreateDrawSurface(SURFACE_TYPE surType)
 {
-	QGLFormat format;  
+    QSurfaceFormat format;
 	format.setVersion(4,0);  
-	format.setProfile(QGLFormat::CoreProfile);  
-	format.setSampleBuffers(true);
+    format.setProfile(QSurfaceFormat::CoreProfile);
+    //format.setSampleBuffers(true);
 	format.setSamples(4);
 
 	switch(surType)
@@ -492,7 +490,7 @@ DrawSurface* QScene::CreateDrawSurface(SURFACE_TYPE surType)
 		m_pDrawSurface = new QRenderWindow(format);
 		break;
 	case OFF_SCREEN:
-		m_pDrawSurface = new PixelBufferSurface;
+        m_pDrawSurface = nullptr;//new PixelBufferSurface;
 		break;
 	default:
 		return 0;

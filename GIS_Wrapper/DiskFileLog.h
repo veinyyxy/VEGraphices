@@ -6,7 +6,6 @@
 #include <QtNetwork/QHostInfo>
 #include <QtCore/QDateTime>
 #include <QtCore/QFile>
-#include <QtGui/QApplication>
 
 
 class GIS_WRAPPER_EXPORT_IMPORT CDiskFileLog :public CLog

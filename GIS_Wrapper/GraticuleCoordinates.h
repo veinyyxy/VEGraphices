@@ -2,9 +2,9 @@
 #include "GIS_WrapperConfig.h"
 #define CORE_EXPORT _declspec(dllimport)
 #define GUI_EXPORT _declspec(dllimport)
-#include <QObject>
-#include <QString>
-#include <QLineF>
+#include <QtCore/QObject>
+#include <QtCore/QString>
+#include <QtCore/QLineF>
 
 #include "QRenderUnit.h"
 #include "QRenderVolume.h"

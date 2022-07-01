@@ -2,7 +2,7 @@
 #include "PixmapTexture.h"
 
 
-CPixmapTexture::CPixmapTexture(QGLWidget* context) : m_pGLWiget(context)
+CPixmapTexture::CPixmapTexture(QOpenGLWindow* context) : m_pGLWiget(context)
 {
 }
 
@@ -16,19 +16,19 @@ int CPixmapTexture::LoadTextrueFromFile( const QString& strFileName )
 	return -1;
 }
 
-int CPixmapTexture::LoadTextrueFromPixelBuffer( const QGLPixelBuffer* pPixelBuffer )
+int CPixmapTexture::LoadTextrueFromPixelBuffer( const QOpenGLBuffer* pPixelBuffer )
 {
 	return -1;
 }
 
 int CPixmapTexture::LoadTextrueFromPixmap( const QPixmap* pPixmap )
 {
-	QGLPixelBuffer* pPixbuffer = new QGLPixelBuffer(pPixmap->width(), pPixmap->height(), m_pGLWiget->format(), m_pGLWiget);
-	bool bRes = pPixbuffer->makeCurrent();
+    QOpenGLBuffer* pPixbuffer = new QOpenGLBuffer(/*pPixmap->width(), pPixmap->height(), m_pGLWiget->format(), m_pGLWiget*/);
+    //bool bRes = pPixbuffer->makeCurrent();
 	//pPixmap->save("c:/aaa.bmp");
-	m_gliTexture =  pPixbuffer->bindTexture(*pPixmap);
+    //m_gliTexture =  pPixbuffer->bindTexture(*pPixmap);
 	delete pPixbuffer;
-	return 1;
+    return 0;
 }
 
 //int CPixmapTexture::LoadTextrueFromPixmap( const QPixmap* pPixmap, QGLWidget* pGLContext )

@@ -26,8 +26,9 @@ V 1.0
 
 ============================================================*/
 #include "DrawTexSymbol.h"
-#include <QtGui/QFontDialog>
-#include <QtGui/QTextEdit>
+#include <QtCore/QVariant>
+#include <QtWidgets/QFontDialog>
+#include <QtWidgets/QTextEdit>
 #include "QEText.h"
 
 DrawTexSymbol::DrawTexSymbol(CoordinateTransform* proj)
@@ -167,7 +168,7 @@ void DrawTexSymbol::setILayerAttrib( ILayerAttribute *Ilayer )
 	}
 	else if(Ilayer->Name() == QString("Font"))
 	{
-		m_font = qVariantValue<QFont>(Ilayer->Value());
+        //m_font = QVariant::fromValue<QFont>(Ilayer->Value());
 	}
 }
 
@@ -195,7 +196,7 @@ void DrawTexSymbol::initAttribute(  )
 	m_FontColor.setY(0);
 	m_FontColor.setZ(0);
 	m_FontColor.setW(1);
-	m_layerAttribute->insert(QString("cColor"),cColor);
+    m_layerAttribute->insert(QString("cColor"), cColor);
 
 	ILayerAttribute* pFontAttrib = new ILayerAttribute("Font", "Font", tr("×ÖÌå"), QFont(QString("ËÎÌå"), 11), QVariant::Font, 5, 30, QStringList("ËÎÌå"));
 	m_layerAttribute->insert(QString("Font"), pFontAttrib);

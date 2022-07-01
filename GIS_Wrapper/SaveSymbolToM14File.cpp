@@ -11,11 +11,9 @@ V 1.0
 原作者 ：renxue
 完成日期：2011年08月08日
 ============================================================*/
-
+#include <QtWidgets/QMessageBox>
 #include <QtCore/QTime>
 #include <QtCore/QDate>
-#include <Qtgui/QMessageBox>
-#include <Qtcore/QTextCodec>
 #include "SaveSymbolToM14File.h"
 
 
@@ -56,31 +54,31 @@ bool CSaveSymbolToM14::SaveSymbolToM14File(QString fileName, SymbolData *pSymbol
 	}
 	if(m_pTextStream == NULL) return false;
 	m_pTextStream->setDevice(m_pFile);
-	m_pTextStream->setCodec("GB2312");
+    //m_pTextStream->setCodec("GB2312");
 
 	WriteFileHead();
 	bool ret;
 	ret = SaveContourSymbol(pSymbolData, false);
-	if(!ret) *m_pTextStream<<"LINES: 0"<<endl;
+    if(!ret) *m_pTextStream<<"LINES: 0"<<Qt::endl;
 
 	ret = SaveLineSymbol(pSymbolData);
-	if(!ret) *m_pTextStream<<"LINES_SYMBOL: 0"<<endl;
+    if(!ret) *m_pTextStream<<"LINES_SYMBOL: 0"<<Qt::endl;
 
 	SavePointSymbol(pSymbolData);	
 
 	ret = SaveContourSymbol(pSymbolData, true);
-	if(!ret) *m_pTextStream<<"CLOSED_CONTOURS: 0"<<endl;
+    if(!ret) *m_pTextStream<<"CLOSED_CONTOURS: 0"<<Qt::endl;
 
-	*m_pTextStream<<"STATION_SITUATION"<<endl;
+    *m_pTextStream<<"STATION_SITUATION"<<Qt::endl;
 
 	ret = SavePolygonSymbol(pSymbolData);
-	if(!ret) *m_pTextStream<<"WEATHER_REGION: 0"<<endl;
+    if(!ret) *m_pTextStream<<"WEATHER_REGION: 0"<<Qt::endl;
 
-	*m_pTextStream<<"FILLAREA: 0"<<endl;
+    *m_pTextStream<<"FILLAREA: 0"<<Qt::endl;
 
 	ret = SaveMarkSymbol(pSymbolData);
-	if(!ret) *m_pTextStream<<"NOTES_SYMBOL: 0"<<endl;
-	*m_pTextStream<<"WithProp_LINESYMBOLS: 0 "<<endl;
+    if(!ret) *m_pTextStream<<"NOTES_SYMBOL: 0"<<Qt::endl;
+    *m_pTextStream<<"WithProp_LINESYMBOLS: 0 "<<Qt::endl;
 	return true;
 }
 
@@ -93,7 +91,7 @@ bool CSaveSymbolToM14::SaveSymbolToM14File(QString fileName, SymbolData *pSymbol
 void CSaveSymbolToM14::WriteFileHead()
 {
 	*m_pTextStream<<"diamond 14  CIPAS";
-	*m_pTextStream<<tr("交互符号")<<endl;
+    *m_pTextStream<<tr("交互符号")<<Qt::endl;
 
 	//写入日期时间
 	QDate curDate = QDate::currentDate();
@@ -102,7 +100,7 @@ void CSaveSymbolToM14::WriteFileHead()
 	*m_pTextStream<<curDate.day()<<" ";
 	QTime curTime = QTime::currentTime();
 	*m_pTextStream<<curTime.hour()<<" ";
-	*m_pTextStream<<0<<endl;
+    *m_pTextStream<<0<<Qt::endl;
 
 	return;
 }
@@ -143,7 +141,7 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 	//写数据
 	if(bFlag)
 	{
-		*m_pTextStream<<("CLOSED_CONTOURS: ")<<nLineCounts<<endl;
+        *m_pTextStream<<("CLOSED_CONTOURS: ")<<nLineCounts<<Qt::endl;
 		for (i=0; i<nCounts; i++)
 		{
 			pContourLine = pContourSymbol->at(i);
@@ -157,7 +155,7 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 			
 			//写线宽、点数
 			*m_pTextStream<<nWidth<<" ";
-			*m_pTextStream<<nPointNum<<endl;
+            *m_pTextStream<<nPointNum<<Qt::endl;
 
 			//写三维坐标点
 			for (int j=0; j<nPointNum; j++)
@@ -165,10 +163,10 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 				vecPosition = pArray->at(j);
 				*m_pTextStream<<vecPosition.x()<<" ";
 				*m_pTextStream<<vecPosition.y()<<" ";
-				*m_pTextStream<<vecPosition.z()<<endl;		
+                *m_pTextStream<<vecPosition.z()<<Qt::endl;
 			}
 
-			*m_pTextStream<<"NoLabel 0 "<<endl;//micaps3.1.1
+            *m_pTextStream<<"NoLabel 0 "<<Qt::endl;//micaps3.1.1
 			////micaps3写标号，坐标
 			//*m_pTextStream<<pAttribute->GetValue()<<" "<<1<<endl;
 			//vecPosition = pArray->at(0);
@@ -180,7 +178,7 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 	else 
 	{
 		nLineCounts = nCounts - nLineCounts;
-		*m_pTextStream<<("LINES: ")<<nLineCounts<<endl;
+        *m_pTextStream<<("LINES: ")<<nLineCounts<<Qt::endl;
 		for (i=0; i<nLineCounts; i++)
 		{
 			pContourLine = pContourSymbol->at(i);
@@ -195,7 +193,7 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 	
 			//写线宽、点数
 			*m_pTextStream<<nWidth<<" ";
-			*m_pTextStream<<nPointNum<<endl;
+            *m_pTextStream<<nPointNum<<Qt::endl;
 
 			//写三维坐标点
 			for (int j=0; j<nPointNum; j++)
@@ -203,10 +201,10 @@ bool  CSaveSymbolToM14::SaveContourSymbol(SymbolData *pSymbolData, bool bFlag)
 				vecPosition = pArray->at(j);
 				*m_pTextStream<<vecPosition.x()<<" ";
 				*m_pTextStream<<vecPosition.y()<<" ";
-				*m_pTextStream<<vecPosition.z()<<endl;		
+                *m_pTextStream<<vecPosition.z()<<Qt::endl;
 			}
 
-			*m_pTextStream<<"NoLabel 0 "<<endl;//micaps3.1.1
+            *m_pTextStream<<"NoLabel 0 "<<Qt::endl;//micaps3.1.1
 
 			////micaps3.1.1写标号，位置坐标
 			//*m_pTextStream<<pAttribute->GetValue()<<" "<<2<<endl;
@@ -260,7 +258,7 @@ bool CSaveSymbolToM14::SavePointSymbol(SymbolData *pSymbolData)
 		pArray = pPoint->OriginalArray();
 		nCounts += pArray->size();
 	}
-	*m_pTextStream<<"SYMBOLS: "<<nCounts<<endl;
+    *m_pTextStream<<"SYMBOLS: "<<nCounts<<Qt::endl;
 	if(nCounts == 0) return false;
 
 	//写数据编号、位置（X、Y、Z）、风向角度或字符串
@@ -292,7 +290,7 @@ bool CSaveSymbolToM14::SavePointSymbol(SymbolData *pSymbolData)
 
 			//写风向或字符串
 			GLfloat angle_ = angleArray->at(k);
-			*m_pTextStream<<angle_<<endl;
+            *m_pTextStream<<angle_<<Qt::endl;
 		}
 	}	
 	
@@ -322,7 +320,7 @@ bool CSaveSymbolToM14::SavePointSymbol(SymbolData *pSymbolData)
 			*m_pTextStream<<vecPosition.z()<<" ";
 
 			//写风向或字符串
-			*m_pTextStream<<0<<endl;
+            *m_pTextStream<<0<<Qt::endl;
 		}
 	}
 	return true;
@@ -353,7 +351,7 @@ bool CSaveSymbolToM14::SaveLineSymbol(SymbolData *pSymbolData)
 		nType = pLine->GetLineStyle()->getType(); 
 		if(nType == 1308) nPolygons++;
 	}
-	*m_pTextStream<<("LINES_SYMBOL: ")<<(nLineCounts-nPolygons)<<endl;
+    *m_pTextStream<<("LINES_SYMBOL: ")<<(nLineCounts-nPolygons)<<Qt::endl;
 
 	//写数据
 	int nWidth, nPointNum;
@@ -373,7 +371,7 @@ bool CSaveSymbolToM14::SaveLineSymbol(SymbolData *pSymbolData)
 		nType = ChangeCodeToM14(nType);
 		*m_pTextStream<<nType<<" ";
 		*m_pTextStream<<nWidth<<" ";
-		*m_pTextStream<<nPointNum<<endl;
+        *m_pTextStream<<nPointNum<<Qt::endl;
 
 		//写三维坐标点
 		for (int j=0; j<nPointNum; j++)
@@ -381,9 +379,9 @@ bool CSaveSymbolToM14::SaveLineSymbol(SymbolData *pSymbolData)
 			vecPosition = pArray->at(j);
 			*m_pTextStream<<vecPosition.x()<<" ";
 			*m_pTextStream<<vecPosition.y()<<" ";
-			*m_pTextStream<<vecPosition.z()<<endl;		
+            *m_pTextStream<<vecPosition.z()<<Qt::endl;
 		}
-		*m_pTextStream<<" NoLabel 0 "<<endl;
+        *m_pTextStream<<" NoLabel 0 "<<Qt::endl;
 	}
 	return true;
 }
@@ -413,7 +411,7 @@ bool CSaveSymbolToM14::SavePolygonSymbol(SymbolData *pSymbolData)
 		nType = pLine->GetLineStyle()->getType(); 
 		if(nType == 1308) nPolygons++;
 	}
-	*m_pTextStream<<("WEATHER_REGION: ")<<nPolygons<<endl;
+    *m_pTextStream<<("WEATHER_REGION: ")<<nPolygons<<Qt::endl;
 
 	//写数据
 	int nWidth, nPointNum;
@@ -436,7 +434,7 @@ bool CSaveSymbolToM14::SavePolygonSymbol(SymbolData *pSymbolData)
 		else if(strRegion.compare(tr("大风区")) == 0) nType = 16;
 		else if(strRegion.compare(tr("沙暴区")) == 0) nType = 32;
 
-		*m_pTextStream<<nType<<" "<<(nPointNum+1)<<endl;
+        *m_pTextStream<<nType<<" "<<(nPointNum+1)<<Qt::endl;
 
 		//写三维坐标点
 		for (int j=0; j<nPointNum; j++)
@@ -444,12 +442,12 @@ bool CSaveSymbolToM14::SavePolygonSymbol(SymbolData *pSymbolData)
 			vecPosition = pArray->at(j);
 			*m_pTextStream<<vecPosition.x()<<" ";
 			*m_pTextStream<<vecPosition.y()<<" ";
-			*m_pTextStream<<vecPosition.z()<<endl;		
+            *m_pTextStream<<vecPosition.z()<<Qt::endl;
 		}
 		vecPosition = pArray->at(0);
 		*m_pTextStream<<vecPosition.x()<<" ";
 		*m_pTextStream<<vecPosition.y()<<" ";
-		*m_pTextStream<<vecPosition.z()<<endl;		
+        *m_pTextStream<<vecPosition.z()<<Qt::endl;
 	}//处理完一条符号线
 	return true;
 }

@@ -1,7 +1,7 @@
 #include "SymbolPoint.h"
 #include <math.h>
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 
 SymbolPoint::SymbolPoint(void) : QRenderUnit(SIMPLEX), m_pointStyle(0), m_iPickIndex(-1),m_bHadPicked(false)
 {
@@ -44,7 +44,7 @@ void SymbolPoint::Render()
 				QVector3D temp  = pOrigin->at(i);
 				QVector3D Origin1(temp.x(), temp.y()+10, temp.z()),glPoint1, glPoint2;
 				QSettings setting("ProjectionType.ini", QSettings::IniFormat);
-				setting.setIniCodec(QTextCodec::codecForName("UTF-8"));
+                //setting.setIniCodec(QTextCodec::codecForName("UTF-8"));
 
 				m_Proj4Trans->setSourceCRS(setting.value("/GeographicCoordinate_CONFIG/WGS84").toString());
 				m_Proj4Trans->setDestCRS(coordTrans->getDesCRS());
@@ -103,7 +103,7 @@ void SymbolPoint::RenderStyle(QVector3D& pos, GLfloat angle/*, QVector3D& sc*/)
 		else
 		{
 			//可能会产生渲染列覆盖
-			ListName = (GLuint)this;
+            ListName = (qlonglong)this;
 			glNewList(ListName, GL_COMPILE_AND_EXECUTE);
 			m_pointStyle->Draw();
 			glEndList();

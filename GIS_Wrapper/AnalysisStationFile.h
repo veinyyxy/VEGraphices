@@ -14,13 +14,13 @@ V 1.0
 ============================================================*/
 #pragma once
 #include "GIS_WrapperConfig.h"
-#include <QFile>
-#include <QString>
-#include <QMessageBox>
-#include <QWidget>
-#include <QTextStream>
-#include <QHash>
-#include <QCoreApplication>
+#include <QtCore/QFile>
+#include <QtCore/QString>
+#include <QtWidgets/QMessageBox>
+#include <QtWidgets/QWidget>
+#include <QtCore/QTextStream>
+#include <QtCore/QHash>
+#include <QtCore/QCoreApplication>
 
 #include "../GIS_Wrapper/Const.h"
 

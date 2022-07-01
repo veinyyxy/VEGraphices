@@ -17,9 +17,9 @@ V 1.0
 #include "GIS_WrapperConfig.h"
 #include <Qtcore/QFile>
 #include <QtCore/QTextStream>
-#include <QtGui/QFileDialog>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
+#include <QtWidgets/QFileDialog>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QTreeWidgetItem>
 
 #include "SymbolData.h"
 

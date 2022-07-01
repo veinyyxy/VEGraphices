@@ -3,12 +3,12 @@
 #include "QT_Include.h"
 #include "DrawSurface.h"
 
-class QE_LIB_EXPORT_IMPORT QRenderWindow : public QGLWidget, public DrawSurface
+class QE_LIB_EXPORT_IMPORT QRenderWindow : public QOpenGLWindow, public DrawSurface
 {
 public:
 	QRenderWindow(void);
 	~QRenderWindow(void);
-	QRenderWindow( const QGLFormat & format, QWidget * parent = 0, const QGLWidget * shareWidget = 0, Qt::WindowFlags f = 0 );
+    QRenderWindow( const QSurfaceFormat & format, QWidget * parent = 0, const QOpenGLWidget * shareWidget = 0, Qt::WindowFlags f = (Qt::WindowFlags)Qt::Window );
 	/*void glInit();
 	void glDraw();
 	void StartContext();
@@ -17,7 +17,7 @@ public:
 	void DoneGLContext();
 	void Resize(int iW, int iH);
 	void FlushSurface();
-	const QGLContext* Context();
+    const QOpenGLContext* Context();
 	QImage ToImage(bool br = false);
 	QPixmap ToPixmap(int iW, int iH, bool bs = false);
 	int Width();

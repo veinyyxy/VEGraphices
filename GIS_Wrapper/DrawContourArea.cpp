@@ -13,12 +13,12 @@
 #include "Const.h"
 #include "DrawContourArea.h"
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 #include "ILayerAttribute.h"
-#include <qinputdialog.h>
+#include <QtWidgets/QInputDialog>
 #include "SaveColorTableToXML.h"
 #include "ReadColorTableFromXML.h"
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 
 
 typedef struct

@@ -3,7 +3,7 @@
 #include "layer.h"
 #include "Polygon.h"
 #include <QtGui/QMouseEvent>
-#include <QtOpenGL/QGLWidget>
+//#include <QtOpenGL/QGLWidget>
 #include "QDataArray.h"
 
 class GIS_WRAPPER_EXPORT_IMPORT VectorLayer :

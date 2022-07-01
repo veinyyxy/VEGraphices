@@ -47,18 +47,18 @@ public:
 	typedef QSet<TEXTURE_PARAM> TEXTURE_PARAM_SET, *P_TEXTURE_PARAM_SET;
 
 	virtual int LoadTextrueFromFile(const QString& strFileName) ;
-	virtual int LoadTextrueFromPixelBuffer(const QGLPixelBuffer* pPixelBuffer) ;
+    virtual int LoadTextrueFromPixelBuffer(const QOpenGLBuffer* pPixelBuffer) ;
 	virtual int LoadTextrueFromPixmap(const QPixmap* pPixmap);
 	virtual int LoadTextrueFromQimage(const QImage* pQimage);
 	virtual int BindTextrue();
 	virtual int ApplyTextrueParam();
 	//GLuint GetTextrueID(){return texture[0];};
-	bool SetGLGLWidget(QGLWidget * sharewidget);
-	void SetGLContext(QGLContext* pglContext){m_pGLContext = pglContext;}
+    bool SetGLGLWidget(QOpenGLWindow * sharewidget);
+    void SetGLContext(QOpenGLContext* pglContext){m_pGLContext = pglContext;}
 	void SetImage(const QImage* pImage){m_pImage = const_cast<QImage*>(pImage);}
 private:
 	GLuint texture[1];
-	QGLWidget *currentWidget;
-	QGLContext* m_pGLContext;
+    QOpenGLWindow *currentWidget;
+    QOpenGLContext* m_pGLContext;
 	QImage* m_pImage;
 };

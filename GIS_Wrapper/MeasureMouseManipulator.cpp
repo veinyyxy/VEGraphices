@@ -13,7 +13,7 @@ V 0.1
 
 #include "MeasureMouseManipulator.h"
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 #include "ILayerAttribute.h"
 
 //int DrawContourLine::m_nCount = 0;

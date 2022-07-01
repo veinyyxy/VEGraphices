@@ -1,7 +1,7 @@
 #ifndef NCCSTATION_H
 #define NCCSTATION_H
 #include "Config.h"
-#include <QString>
+#include <QtCore/QString>
 #include "NccPoint.h"
 
 //class QString;

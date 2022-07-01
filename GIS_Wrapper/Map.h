@@ -18,16 +18,19 @@ All rights reserved
 调用说明：
 ------------------------------------------------------------------------------------*/
 #pragma once
+#include <QtCore/QMap>
 #include <QtGui/QUndoStack>
 #include <QtGui/QUndoCommand>
 #include "GIS_WrapperConfig.h"
 #include "QT_Include.h"
 #include "VectorLayer.h"
+#include "QFork.h"
 
 class GIS_WRAPPER_EXPORT_IMPORT Map : public QObject
 {
 public:
 	Map(void);
+    Map(const Map& otherMap);
 	virtual ~Map(void);
 	Layer* CreateVectorLayer(const QString& name);
 	Layer* CreateVectorLayer(const QStringList& namelist);

@@ -17,7 +17,7 @@ V 0.2
 更新说明: 调整整个类，使之类似于CDrawLineSymbol
 ============================================================*/ 
 #pragma once
-#include <QMap>
+#include <QtCore/QMap>
 #include "manualdraw.h"
 #include "Line.h"
 #include "SymbolContourLine.h"

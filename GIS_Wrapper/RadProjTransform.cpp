@@ -1,4 +1,5 @@
 #include "RadProjTransform.h"
+//#include <proj_intemal.h>
 
 #include <cstdlib>
 #include <cstdio>
@@ -20,7 +21,8 @@ RadProjTransform::RadProjTransform(void)
 
 RadProjTransform::~RadProjTransform(void)
 {
-	if ( mSourceProjection != 0&&mSourceProjection != "RADARPROJ"&&mSourceProjection != " ")
+#if 0
+    if ( mSourceProjection != 0 && mSourceProjection != "RADARPROJ" && mSourceProjection != " ")
 	{
 
 		pj_free( mSourceProjection );
@@ -33,7 +35,8 @@ RadProjTransform::~RadProjTransform(void)
 		}
 		else
 			pj_free( mDestinationProjection );
-	}
+    }
+#endif
 }
 
 //
@@ -457,6 +460,7 @@ int RadProjTransform::Transform( const QVector3DArray& src, QVector3DArray& dst,
 
 int RadProjTransform::Transform( const QVector3D& src, QVector3D& dst )
 {
+#if 0
 	if (!m_isCheck)
 	{
 		if(!isSet())
@@ -500,6 +504,9 @@ int RadProjTransform::Transform( const QVector3D& src, QVector3D& dst )
 	}
 	
 	return projResult;
+#else
+    return 0;
+#endif
 }
 
 QRectF RadProjTransform::TransformBoundingBox( const QRectF rectangle, TRANSFORM_DIRECTION direction /*= FORWARD_DIRECTION*/ )
@@ -520,6 +527,7 @@ QRectF RadProjTransform::TransformBoundingBox( const QRectF rectangle, TRANSFORM
 
 void RadProjTransform::setDestCRS( QString ProjString )
 {
+#if 0
 	QStringList projstringlist ;
 	if (ProjString.contains("RADARPROJ"))
 	{
@@ -547,6 +555,7 @@ void RadProjTransform::setDestCRS( QString ProjString )
 	{
 		qDebug("Set mDestinationProjection fail");
 	}
+#endif
 }
 
 QString RadProjTransform::getDesCRS()
@@ -566,7 +575,7 @@ void RadProjTransform::setSourceCRS( QString ProjString )
 		float z = projstringlist[3].toDouble();
 		Set(x,y,z);
 		strSourceProjection = ProjString;
-		mSourceProjection = " ";
+        //mSourceProjection = " ";
 		setSourceProjName(projstringlist[0]);	
 		return;
 	}
@@ -577,7 +586,7 @@ void RadProjTransform::setSourceCRS( QString ProjString )
 			setSourceProjName(Pro_map.find(ProjString).value());	
 
 			strSourceProjection = ProjString;
-			mSourceProjection = pj_init_plus(strSourceProjection.toUtf8());
+            //mSourceProjection = pj_init_plus(strSourceProjection.toUtf8());
 			if ( mSourceProjection == NULL )
 			{
 				qDebug("Set mSourceProjection fail");
@@ -650,6 +659,7 @@ void RadProjTransform::initialise()
 
 int RadProjTransform::transformCoords( const int &numPoints, double *x, double *y, double *z, TRANSFORM_DIRECTION direction /*= FORWARD_DIRECTION */ )
 {
+#if 0
 	if ( mDestinationProjection == NULL )
 	{
 		qDebug("DestinationProjection NULL");
@@ -721,6 +731,9 @@ int RadProjTransform::transformCoords( const int &numPoints, double *x, double *
 		}
 	}
 	return 1;
+#else
+    return 0;
+#endif
 }
 
 QVector3D RadProjTransform::xyWorld2DC( double lx,double ly )

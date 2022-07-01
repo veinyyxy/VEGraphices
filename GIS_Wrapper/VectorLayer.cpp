@@ -4,7 +4,7 @@
 #include <QtCore/QTime>
 #include <QtCore/QDebug>
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 //#include <CDataElement>
 //#include "cdataprovidermanager.h"
 #include "GeoTo3DTransform.h"
@@ -483,7 +483,7 @@ void VectorLayer::EndProfile(QVector3D & point)
 QVector3D VectorLayer::TransformData(QVector3D & glPostion)
 {
 	QSettings setting("ProjectionType.ini", QSettings::IniFormat);
-	setting.setIniCodec(QTextCodec::codecForName("UTF-8"));
+    //setting.setIniCodec(QTextCodec::codecForName("UTF-8"));
 
 	m_Proj4Trans->setSourceCRS(coordTrans->getDesCRS());
 	m_Proj4Trans->setDestCRS(setting.value("/GeographicCoordinate_CONFIG/WGS84").toString());

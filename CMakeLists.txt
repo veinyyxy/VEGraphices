@@ -1,7 +1,21 @@
 cmake_minimum_required(VERSION 3.16.0 FATAL_ERROR)
 
-project(VEGraphices C CXX)
+project(VEGraphices VERSION 1.0.0 LANGUAGES C CXX)
 
+set(CMAKE_AUTOUIC ON)
+set(CMAKE_AUTOMOC ON)
+set(CMAKE_AUTORCC ON)
+set(CMAKE_INCLUDE_CURRENT_DIR ON)
+set(PROJ_INCLUDE_DIR "" CACHE PATH "Libaray PROJ include path")
+set(PROJ_LIBRARY "" CACHE FILEPATH "Libaray PROJ lib file")
+#set(CMAKE_CXX_STANDARD 11)
+#set(CMAKE_CXX_STANDARD_REQUIRED ON)
+
+set(CMAKE_PREFIX_PATH ${QT_PATH})
+
+find_package(QT NAMES Qt6 Qt5 REQUIRED COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets)
+find_package(Qt${QT_VERSION_MAJOR} REQUIRED COMPONENTS Core Gui Widgets OpenGL OpenGLWidgets)
+#find_package(PROJ 8.2.1)
 ################################################################################
 # Global configuration types
 ################################################################################
@@ -12,38 +26,6 @@ set(CMAKE_CONFIGURATION_TYPES
 )
 
 ################################################################################
-# Global compiler options
-################################################################################
-if(MSVC)
-    # remove default flags provided with CMake for MSVC
-    set(CMAKE_C_FLAGS "")
-    set(CMAKE_C_FLAGS_DEBUG "")
-    set(CMAKE_C_FLAGS_RELEASE "")
-    set(CMAKE_CXX_FLAGS "")
-    set(CMAKE_CXX_FLAGS_DEBUG "")
-    set(CMAKE_CXX_FLAGS_RELEASE "")
-endif()
-
-################################################################################
-# Global linker options
-################################################################################
-if(MSVC)
-    # remove default flags provided with CMake for MSVC
-    set(CMAKE_EXE_LINKER_FLAGS "")
-    set(CMAKE_MODULE_LINKER_FLAGS "")
-    set(CMAKE_SHARED_LINKER_FLAGS "")
-    set(CMAKE_STATIC_LINKER_FLAGS "")
-    set(CMAKE_EXE_LINKER_FLAGS_DEBUG "${CMAKE_EXE_LINKER_FLAGS}")
-    set(CMAKE_MODULE_LINKER_FLAGS_DEBUG "${CMAKE_MODULE_LINKER_FLAGS}")
-    set(CMAKE_SHARED_LINKER_FLAGS_DEBUG "${CMAKE_SHARED_LINKER_FLAGS}")
-    set(CMAKE_STATIC_LINKER_FLAGS_DEBUG "${CMAKE_STATIC_LINKER_FLAGS}")
-    set(CMAKE_EXE_LINKER_FLAGS_RELEASE "${CMAKE_EXE_LINKER_FLAGS}")
-    set(CMAKE_MODULE_LINKER_FLAGS_RELEASE "${CMAKE_MODULE_LINKER_FLAGS}")
-    set(CMAKE_SHARED_LINKER_FLAGS_RELEASE "${CMAKE_SHARED_LINKER_FLAGS}")
-    set(CMAKE_STATIC_LINKER_FLAGS_RELEASE "${CMAKE_STATIC_LINKER_FLAGS}")
-endif()
-
-################################################################################
 # Nuget packages function stub.
 ################################################################################
 function(use_package TARGET PACKAGE VERSION)
@@ -51,11 +33,6 @@ function(use_package TARGET PACKAGE VERSION)
                     "Package \"${PACKAGE}\" with version \"${VERSION}\" "
                     "for target \"${TARGET}\" is ignored!")
 endfunction()
-
-################################################################################
-# Common utils
-################################################################################
-include(CMake/Utils.cmake)
 
 ################################################################################
 # Additional Global Settings(add specific info there)

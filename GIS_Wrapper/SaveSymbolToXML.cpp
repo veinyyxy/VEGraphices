@@ -1,6 +1,6 @@
 #include "SaveSymbolToXML.h"
 #include "Layer.h"
-#include <QTextCodec>
+//#include <QTextCodec>
 
 SaveSymbolToXML::SaveSymbolToXML(void)
 {

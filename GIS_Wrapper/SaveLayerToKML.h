@@ -16,18 +16,18 @@ V 1.0
 #pragma once
 
 #include "GIS_WrapperConfig.h"
+#include <QtCore/QHash>
 #include <Qtcore/QFile>
 #include <QtCore/QTextStream>
-#include <QtGui/QFileDialog>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
-#include <QtGui/QWidget>
-#include <QTextCodec>
+#include <QtWidgets//QFileDialog>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QTreeWidgetItem>
+#include <QtWidgets/QWidget>
 #include "SymbolData.h"
 #include "Layer.h"
 #include "VectorLayer.h"
 #include "CIPASMessageBox.h"
-#include "gdal.h"
+//#include "gdal.h"
 
 #include "ogr_api.h"
 #include "SaveLayerToShape.h"

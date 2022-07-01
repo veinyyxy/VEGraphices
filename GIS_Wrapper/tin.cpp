@@ -128,7 +128,7 @@ void CTIN::poolinit(struct CMemoryPool *pool, long bytecount, long itemcount, en
 
 void CTIN::poolrestart(struct CMemoryPool *pool)
 {
-        unsigned long alignptr;
+        unsigned long long alignptr;
 
         pool->items = 0;
         pool->maxitems = 0;
@@ -136,7 +136,7 @@ void CTIN::poolrestart(struct CMemoryPool *pool)
         /* Set the currently active block. */
         pool->nowblock = pool->firstblock;
         /* Find the first item in the pool.  Increment by the size of (long *). */
-        alignptr = (unsigned long) (pool->nowblock + 1);
+        alignptr = (unsigned long long) (pool->nowblock + 1);
         /* Align the item on an `alignbytes'-byte boundary. */
         pool->nextitem = (long *)
                 (alignptr + (unsigned long) pool->alignbytes
@@ -173,7 +173,7 @@ long *CTIN::poolalloc(struct CMemoryPool *pool)
 {
         long *newitem;
         long **newblock;
-        unsigned long alignptr;
+        unsigned long long alignptr;
 
         /* First check the linked list of dead items.  If the list is not   */
         /*   empty, allocate an item from the list rather than a fresh one. */
@@ -200,11 +200,11 @@ long *CTIN::poolalloc(struct CMemoryPool *pool)
                         pool->nowblock = (long **) *(pool->nowblock);
                         /* Find the first item in the block.    */
                         /*   Increment by the size of (long *). */
-                        alignptr = (unsigned long) (pool->nowblock + 1);
+                        alignptr = (unsigned long long) (pool->nowblock + 1);
                         /* Align the item on an `alignbytes'-byte boundary. */
                         pool->nextitem = (long *)
-                                (alignptr + (unsigned long) pool->alignbytes
-                                - (alignptr % (unsigned long) pool->alignbytes));
+                                (alignptr + (unsigned long long) pool->alignbytes
+                                - (alignptr % (unsigned long long) pool->alignbytes));
                         /* There are lots of unallocated items left in this block. */
                         pool->unallocateditems = pool->itemsperblock;
                 }
@@ -249,12 +249,12 @@ void CTIN::pooldealloc(struct CMemoryPool *pool, long *dyingitem)
 
 void CTIN::traversalinit(struct CMemoryPool *pool)
 {
-        unsigned long alignptr;
+        unsigned long long alignptr;
 
         /* Begin the traversal in the first block. */
         pool->pathblock = pool->firstblock;
         /* Find the first item in the block.  Increment by the size of (long *). */
-        alignptr = (unsigned long) (pool->pathblock + 1);
+        alignptr = (unsigned long long) (pool->pathblock + 1);
         /* Align with item on an `alignbytes'-byte boundary. */
         pool->pathitem = (long *)
                 (alignptr + (unsigned long) pool->alignbytes
@@ -280,7 +280,7 @@ void CTIN::traversalinit(struct CMemoryPool *pool)
 long *CTIN::traverse(struct CMemoryPool *pool)
 {
         long *newitem;
-        unsigned long alignptr;
+        unsigned long long alignptr;
 
         /* Stop upon exhausting the list of items. */
         if (pool->pathitem == pool->nextitem) {
@@ -291,7 +291,7 @@ long *CTIN::traverse(struct CMemoryPool *pool)
                 /* Find the next block. */
                 pool->pathblock = (long **) *(pool->pathblock);
                 /* Find the first item in the block.  Increment by the size of (long *). */
-                alignptr = (unsigned long) (pool->pathblock + 1);
+                alignptr = (unsigned long long) (pool->pathblock + 1);
                 /* Align with item on an `alignbytes'-byte boundary. */
                 pool->pathitem = (long *)
                         (alignptr + (unsigned long) pool->alignbytes
@@ -329,7 +329,7 @@ long *CTIN::traverse(struct CMemoryPool *pool)
 
 void CTIN::dummyinit(long trianglewords, long shellewords)
 {
-        unsigned long alignptr;
+        unsigned long long alignptr;
 
         /* `triwords' and `shwords' are used by the mesh manipulation primitives */
         /*   to extract orientations of triangles and shell edges from pointers. */
@@ -344,7 +344,7 @@ void CTIN::dummyinit(long trianglewords, long shellewords)
                 exit(1);
         }
         /* Align `dummytri' on a `triangles.alignbytes'-byte boundary. */
-        alignptr = (unsigned long) dummytribase;
+        alignptr = (unsigned long long) dummytribase;
         dummytri = (triangle *)
                 (alignptr + (unsigned long) triangles.alignbytes
                 - (alignptr % (unsigned long) triangles.alignbytes));
@@ -371,7 +371,7 @@ void CTIN::dummyinit(long trianglewords, long shellewords)
                         exit(1);
                 }
                 /* Align `dummysh' on a `shelles.alignbytes'-byte boundary. */
-                alignptr = (unsigned long) dummyshbase;
+                alignptr = (unsigned long long) dummyshbase;
                 dummysh = (shelle *)
                         (alignptr + (unsigned long) shelles.alignbytes
                         - (alignptr % (unsigned long) shelles.alignbytes));
@@ -607,7 +607,7 @@ point CTIN::getpoint(long number)
 {
         long **getblock;
         point foundpoint;
-        unsigned long alignptr;
+        unsigned long long alignptr;
         long current;
 
         getblock = points.firstblock;
@@ -618,7 +618,7 @@ point CTIN::getpoint(long number)
                 current += points.itemsperblock;
         }
         /* Now find the right point. */
-        alignptr = (unsigned long) (getblock + 1);
+        alignptr = (unsigned long long) (getblock + 1);
         foundpoint = (point) (alignptr + (unsigned long) points.alignbytes
                 - (alignptr % (unsigned long) points.alignbytes));
         while (current < number) {
@@ -1992,7 +1992,7 @@ enum locateresult CTIN::locate(point searchpoint,struct CTriEdge * searchtri)
         triangle *firsttri;
         struct CTriEdge sampletri;
         point torg, tdest;
-        unsigned long alignptr;
+        unsigned long long alignptr;
         double searchdist, dist;
         double ahead;
         long sampleblocks, samplesperblock, samplenum;
@@ -2050,9 +2050,9 @@ enum locateresult CTIN::locate(point searchpoint,struct CTriEdge * searchtri)
         sampletri.orient = 0;
 
         for (i = 0; i < sampleblocks; i++) {
-                alignptr = (unsigned long) (sampleblock + 1);
-                firsttri = (triangle *) (alignptr + (unsigned long) triangles.alignbytes
-                        - (alignptr % (unsigned long) triangles.alignbytes));
+                alignptr = (unsigned long long) (sampleblock + 1);
+                firsttri = (triangle *) (alignptr + (unsigned long long) triangles.alignbytes
+                        - (alignptr % (unsigned long long) triangles.alignbytes));
                 for (j = 0; j < samplesperblock; j++) {
                         if (i == triblocks - 1) {
                                 samplenum = randomnation((long )

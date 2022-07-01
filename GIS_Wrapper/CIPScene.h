@@ -3,11 +3,10 @@
 
 //#include "tabpage.h"
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
-#include <QtGui/QStatusBar>
+#include <QtWidgets/QStatusBar>
 #include <QtGui/QUndoCommand>
 #include <QtGui/QUndoStack>
-#include <QPainter>
+#include <QtGui/QPainter>
 #include "QRenderUnit.h"
 #include "QRenderVolume.h"
 #include "QCamera.h"
@@ -24,7 +23,7 @@
 //#include "MeteToolBox.h"
 #include <QtCore/QThread>
 #include <QtCore/QThreadPool>
-#include <QToolButton>
+#include <QtWidgets/QToolButton>
 //#include "QTextureFont.h"
 #include "GeoCoordTransform.h"
 //#include "UndoStack.h"
@@ -40,7 +39,7 @@ class GIS_WRAPPER_EXPORT_IMPORT CIPScene : public QScene
 	//Q_OBJECT
 public:
 	CIPScene();
-	CIPScene(QGLContext* glContext);
+    CIPScene(QOpenGLContext* glContext);
 	~CIPScene();
 	void InitScene();
 	void ReadShpFile(const char* filename);

@@ -3,8 +3,22 @@
 Map::Map(void) : mapRoot(0), mapScale(1.0), dataProvider(0), coordTrans(0), m_pMapUndoStack(0)
 {
 	mapRoot = NULL;
-	mapRoot = new QFork(this);
+    mapRoot = new QFork(this);
     currentLayer = NULL;
+}
+
+Map::Map(const Map &otherMap)
+{
+    currentLayer = otherMap.currentLayer;
+    dataProvider = otherMap.dataProvider;
+    coordTrans = otherMap.coordTrans;
+    mapRoot = otherMap.mapRoot;
+    mapScale = otherMap.mapScale;
+    mapTransf = otherMap.mapTransf;
+    rouAix = otherMap.rouAix;
+    rouAngle = otherMap.rouAngle;
+    layerMap = otherMap.layerMap;
+    m_pMapUndoStack = otherMap.m_pMapUndoStack;
 }
 
 Map::~Map(void)
@@ -225,7 +239,11 @@ void Map::CopyTo( Map* pOther )
 
 Map& Map::operator+=( const Map& other )
 {
-	QMap<QString, Layer*>::iterator i = other.layerMap.begin(), res = this->layerMap.end(), notFound = this->layerMap.end();
+    Map otherMap = other;
+    QMap<QString, Layer*>::iterator i = otherMap.layerMap.begin();//const_cast<QMap<QString, Layer*>::iterator>();
+    QMap<QString, Layer*>::iterator res = this->layerMap.end();
+    QMap<QString, Layer*>::iterator notFound = this->layerMap.end();
+
 	for(; i != other.layerMap.end(); i++)
 	{
 		res = this->layerMap.find(i.key());
@@ -238,7 +256,8 @@ Map& Map::operator+=( const Map& other )
 
 Map& Map::operator-=( const Map& other )
 {
-	QMap<QString, Layer*>::iterator i = other.layerMap.begin(), res = this->layerMap.end(), notFound = this->layerMap.end();
+    Map otherMap = other;
+    QMap<QString, Layer*>::iterator i = otherMap.layerMap.begin(), res(this->layerMap.end()), notFound(this->layerMap.end());
 	for(; i != other.layerMap.end(); i++)
 	{
 		res = this->layerMap.find(i.key());
@@ -251,7 +270,8 @@ Map& Map::operator-=( const Map& other )
 
 Map& Map::operator=( const Map& other )
 {
-	QMap<QString, Layer*>::iterator i = other.layerMap.begin();
+    Map otherMap = other;
+    QMap<QString, Layer*>::iterator i = otherMap.layerMap.begin();
 	for(; i != other.layerMap.end(); i++)
 	{
 		AddLayer(i.key(), i.value());

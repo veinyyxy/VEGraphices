@@ -1,5 +1,5 @@
 #include "Layer.h"
-#include <QMessageBox>
+#include <QtWidgets/QMessageBox>
 //namespace CIPAS_GIS
 //{
 	Layer::Layer(DataProvider* data, CoordinateTransform* ct) : layerZ(0.0f), coordTrans(ct), dataProvider(data), renderVol(0)

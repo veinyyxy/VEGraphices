@@ -37,7 +37,7 @@ V 1.0
 #include "SymbolContourLine.h"
 #include "NormalSymbol.h"
 #include <QtGui/QCursor>
-#include <QDockWidget>
+#include <QtWidgets/QDockWidget>
 //#include "QTextureFont.h"
 
 /************************************************************************/

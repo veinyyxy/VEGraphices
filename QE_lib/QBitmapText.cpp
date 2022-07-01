@@ -182,7 +182,7 @@ void QBitmapText::SetPickIndex()
 
 void QBitmapText::TextRenderUseCallList()
 {
-	ListName = (GLuint)this;
+    //ListName = static_cast<GLuint>(this);
 	int len = 0;
 	if(stringArray.size() < postion.size())
 		len = stringArray.size();

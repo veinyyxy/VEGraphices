@@ -1,7 +1,7 @@
 #include "Proj4Transform.h"
 
 
-Proj4Transform::Proj4Transform(void)
+Proj4Transform::Proj4Transform(void) : m_pContext(0), mSourceProjection(0), mDestinationProjection(0)
 {
 	initialise();
 	initProMap();
@@ -14,11 +14,11 @@ Proj4Transform::~Proj4Transform(void)
 	// free the proj objects
 	if ( mSourceProjection != 0 )
 	{
-		pj_free( mSourceProjection );
+        //pj_free( mSourceProjection );
 	}
 	if ( mDestinationProjection != 0 )
 	{
-		pj_free( mDestinationProjection );
+        //pj_free( mDestinationProjection );
 	}
 }
 
@@ -28,7 +28,7 @@ void Proj4Transform::setSourceCRS (QString ProjString)
 
 	setSourceProjName(QString("WGS84"));	
 
-	mSourceProjection = pj_init_plus(ProjString.toUtf8());
+    mSourceProjection = proj_create(m_pContext, ProjString.toUtf8());
 	if ( mSourceProjection == NULL )
 	{
 		qDebug("Set mSourceProjection fail");
@@ -46,7 +46,7 @@ void Proj4Transform::setDestCRS (QString ProjString)
 		setDesProjName(Pro_map.find(ProjString).value());
 	}		
 
-	mDestinationProjection = pj_init_plus(ProjString.toUtf8());
+    //mDestinationProjection = pj_init_plus(ProjString.toUtf8());
 	if ( mDestinationProjection == NULL )
 	{
 		qDebug("Set mDestinationProjection fail");
@@ -98,6 +98,7 @@ QRectF Proj4Transform::TransformBoundingBox(const QRectF rectangle, TRANSFORM_DI
 
 int Proj4Transform::transformCoords( const int& numPoints, double *x, double *y, double *z, TRANSFORM_DIRECTION direction )
 {
+#if 0
 	if ( mDestinationProjection == NULL )
 	{
 		qDebug("DestinationProjection NULL");
@@ -169,6 +170,9 @@ int Proj4Transform::transformCoords( const int& numPoints, double *x, double *y,
 		}
 	}
 	return 1;
+#else
+    return 0;
+#endif
 }
 
 int Proj4Transform::Transform(const QVector3DArray& src, QVector3DArray& dst, TRANSFORM_DIRECTION direction)
@@ -178,6 +182,7 @@ int Proj4Transform::Transform(const QVector3DArray& src, QVector3DArray& dst, TR
 
 int Proj4Transform::Transform( const QVector3D& src, QVector3D& dst )
 {
+#if 0
 	int projResult = 0;
 	double dX, dY, dZ;
 
@@ -194,6 +199,9 @@ int Proj4Transform::Transform( const QVector3D& src, QVector3D& dst )
 	dst.setZ(src.z());
 	//dst.setZ(dZ);
 	return projResult;
+#else
+    return 0;
+#endif
 }
 
 
@@ -206,6 +214,7 @@ int Proj4Transform::Transform( const QVector3D& src, QVector3D& dst )
  ********************************************************/
 QString Proj4Transform::ImportFromESRI(const char *  pszFname )
 {
+#if 0
 	OGRSpatialReference projection;
 
 	char **papszPrj = CSLLoad(pszFname); 
@@ -218,6 +227,9 @@ QString Proj4Transform::ImportFromESRI(const char *  pszFname )
 	QString temp ;	
 	temp = destproj;
 	return temp.trimmed();
+#else
+    return "";
+#endif
 }
 
 QString Proj4Transform::getDesCRS()

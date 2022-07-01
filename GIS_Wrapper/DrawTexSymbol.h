@@ -15,7 +15,7 @@
 
 //#include "QTextureFont.h"
 #include "TextBox.h"
-
+#include <QtGui/QFont>
 
 class GIS_WRAPPER_EXPORT_IMPORT DrawTexSymbol :public ManualDraw
 {

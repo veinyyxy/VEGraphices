@@ -12,10 +12,10 @@
 ============================================================*/
 #include "DrawArea.h"
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 #include "ILayerAttribute.h"
-#include <qinputdialog.h>
-#include <QMessageBox>
+#include <QtWidgets/QInputDialog>
+#include <QtWidgets/QMessageBox>
 #include "ReadColorTableFromXML.h"
 
 // 

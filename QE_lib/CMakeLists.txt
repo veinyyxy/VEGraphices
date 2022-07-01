@@ -1,10 +1,11 @@
 set(PROJECT_NAME QE_lib)
 
+include_directories(${CMAKE_PREFIX_PATH}/include)
+
 ################################################################################
 # Source groups
 ################################################################################
 set(no_group_source_files
-    "QE_lib.cd"
     "ReadMe.txt"
 )
 source_group("" FILES ${no_group_source_files})
@@ -124,13 +125,16 @@ set(ALL_FILES
 ################################################################################
 # Target
 ################################################################################
+find_package(Qt6 REQUIRED COMPONENTS Core gui widgets opengl)
+qt_standard_project_setup()
+
 add_library(${PROJECT_NAME} SHARED ${ALL_FILES})
 
-use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
+#use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
 ################################################################################
 # Includes for CMake from *.props
 ################################################################################
-use_props(${PROJECT_NAME} Debug   "CIPAS_QT.cmake")
+#use_props(${PROJECT_NAME} Debug   "CIPAS_QT.cmake")
 
 set(ROOT_NAMESPACE QE_lib)
 
@@ -152,86 +156,7 @@ set_target_properties(${PROJECT_NAME} PROPERTIES
 set_target_properties(${PROJECT_NAME} PROPERTIES
     INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
 )
-################################################################################
-# MSVC runtime library
-################################################################################
-get_property(MSVC_RUNTIME_LIBRARY_DEFAULT TARGET ${PROJECT_NAME} PROPERTY MSVC_RUNTIME_LIBRARY)
-string(CONCAT "MSVC_RUNTIME_LIBRARY_STR"
-    $<$<CONFIG:Release>:
-        MultiThreadedDLL
-    >
-    $<$<NOT:$<OR:$<CONFIG:Release>>>:${MSVC_RUNTIME_LIBRARY_DEFAULT}>
-)
-set_target_properties(${PROJECT_NAME} PROPERTIES MSVC_RUNTIME_LIBRARY ${MSVC_RUNTIME_LIBRARY_STR})
 
-################################################################################
-# Compile definitions
-################################################################################
-target_compile_definitions(${PROJECT_NAME} PRIVATE
-    "$<$<CONFIG:Debug>:"
-        "_DEBUG"
-    ">"
-    "$<$<CONFIG:Release>:"
-        "NDEBUG"
-    ">"
-    "WIN32;"
-    "_LIB;"
-    "UNICODE;"
-    "_UNICODE"
-)
-
-################################################################################
-# Compile and link options
-################################################################################
-if(MSVC)
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        $<$<CONFIG:Debug>:
-            /Od;
-            /Ob0
-        >
-        $<$<CONFIG:Release>:
-            /O2;
-            /Oi;
-            /Gy
-        >
-        /W3;
-        ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
-        ${DEFAULT_CXX_EXCEPTION_HANDLING};
-        /Y-
-    )
-    string(CONCAT FILE_CL_OPTIONS
-        "$<$<CONFIG:Debug>:"
-            "/Od;/RTC1;/ZI"
-        ">"
-    )
-    source_file_compile_options(QStateSet.cpp ${FILE_CL_OPTIONS})
-    target_link_options(${PROJECT_NAME} PRIVATE
-        $<$<CONFIG:Release>:
-            /OPT:REF;
-            /OPT:ICF
-        >
-        /MANIFEST:NO;
-        /DEBUG;
-        /SUBSYSTEM:WINDOWS
-    )
-endif()
-
-################################################################################
-# Dependencies
-################################################################################
-set(ADDITIONAL_LIBRARY_DEPENDENCIES
-    "$<$<CONFIG:Debug>:"
-        "QtGuid4;"
-        "QtCored4;"
-        "QtOpenGLd4;"
-        "QtXmld4"
-    ">"
-    "$<$<CONFIG:Release>:"
-        "QtGui4;"
-        "QtCore4;"
-        "QtOpenGL4;"
-        "QtXml4"
-    ">"
-)
-target_link_libraries(${PROJECT_NAME} PUBLIC "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
+target_link_libraries(${PROJECT_NAME} PRIVATE Qt${QT_VERSION_MAJOR}::Core Qt${QT_VERSION_MAJOR}::OpenGL Qt${QT_VERSION_MAJOR}::Gui Qt${QT_VERSION_MAJOR}::Widgets Qt${QT_VERSION_MAJOR}::OpenGLWidgets opengl32 glu32)
+#target_link_libraries(${PROJECT_NAME} PRIVATE Qt6::Core Qt6::Opengl Qt6::gui)
 

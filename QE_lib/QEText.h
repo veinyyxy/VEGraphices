@@ -69,18 +69,18 @@ private:
 	//QPixmapTextrue m_FontTextrue;
 	qreal m_qrMargin;
 	bool m_pixmapDirty;
-	QEText::TEXTRUE_INFO DrawTextToPixmap(const QString& str, const QFont& font, QGLContext* pTempGLContext);
+    QEText::TEXTRUE_INFO DrawTextToPixmap(const QString& str, const QFont& font, QOpenGLContext* pTempGLContext);
 	void DrawOneString(const QVector3D& pos, TEXTRUE_INFO textrueinfo, POSITION_ORIGIN_POINT oripoint);
 	void  ScreenToGL( const QVector3D& screenPoint, QVector3D& glPoint );
 	bool GetRectPoint(POSITION_ORIGIN_POINT ogrPosition, const QVector3D& ogrPoint, bool bChange
 		, qreal stringWidth, qreal stringHeight
 		, QVector3D& point1, QVector3D& point2
 		, QVector3D& point3, QVector3D& point4);
-	void DeleteTextModeTextrue(QGLContext* pGlContext);
-	void DeleteTextListModeTextrue(QGLContext* pGlContext);
+    void DeleteTextModeTextrue(QOpenGLContext* pGlContext);
+    void DeleteTextListModeTextrue(QOpenGLContext* pGlContext);
 	qreal m_stringHeight;
 	qreal m_stringWidth;
-	QGLContext* pGLContext;
+    QOpenGLContext* pGLContext;
 
 	GLuint m_TextrueID;
 	QPixmap m_pixmap;

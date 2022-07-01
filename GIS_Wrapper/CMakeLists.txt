@@ -7,7 +7,7 @@ set(no_group_source_files
     "GIS_Abilities.cd"
 )
 source_group("" FILES ${no_group_source_files})
-
+include_directories(${CMAKE_PREFIX_PATH}/include "../QE_lib" ${PROJ_INCLUDE_DIR})
 set(Gen_file
     "moc_DelSymbol.cpp"
     "moc_DrawLineTP.cpp"
@@ -100,7 +100,6 @@ set(Header_Files
     "ReadColorTableFromXML.h"
     "ReadSymbolFromM14File.h"
     "SaveColorTableToXML.h"
-    "SaveLayerToKML.h"
     "SaveLayerToShape.h"
     "SaveSymbolToM14File.h"
     "SaveSymbolToXML.h"
@@ -192,7 +191,6 @@ set(Source_Files
     "ReadColorTableFromXML.cpp"
     "ReadSymbolFromM14File.cpp"
     "SaveColorTableToXML.cpp"
-    "SaveLayerToKML.cpp"
     "SaveLayerToShape.cpp"
     "SaveSymbolToM14File.cpp"
     "SaveSymbolToXML.cpp"
@@ -233,7 +231,7 @@ source_group("nn" FILES ${nn})
 
 set(ALL_FILES
     ${no_group_source_files}
-    ${Gen_file}
+    #${Gen_file}
     ${Header_Files}
     ${Source_Files}
     ${nn}
@@ -244,97 +242,16 @@ set(ALL_FILES
 ################################################################################
 add_library(${PROJECT_NAME} SHARED ${ALL_FILES})
 
-use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
+#use_props(${PROJECT_NAME} "${CMAKE_CONFIGURATION_TYPES}" "${DEFAULT_CXX_PROPS}")
 set(ROOT_NAMESPACE GIS_Wrapper)
-
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    VS_GLOBAL_KEYWORD "Win32Proj"
-)
-################################################################################
-# Output directory
-################################################################################
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    OUTPUT_DIRECTORY_RELEASE "${CMAKE_CURRENT_SOURCE_DIR}/../Release/Bin"
-)
-set_target_properties(${PROJECT_NAME} PROPERTIES
-    INTERPROCEDURAL_OPTIMIZATION_RELEASE "TRUE"
-)
-################################################################################
-# Compile definitions
-################################################################################
-target_compile_definitions(${PROJECT_NAME} PRIVATE
-    "$<$<CONFIG:Debug>:"
-        "_DEBUG;"
-        "CDATAELEMENT_LIB;"
-        "_MBCS"
-    ">"
-    "$<$<CONFIG:Release>:"
-        "NDEBUG;"
-        "UNICODE;"
-        "_UNICODE"
-    ">"
-    "WIN32;"
-    "_LIB;"
-    "QE_LIB_IMPORT"
-)
-
-################################################################################
-# Compile and link options
-################################################################################
-if(MSVC)
-    target_compile_options(${PROJECT_NAME} PRIVATE
-        $<$<CONFIG:Debug>:
-            /Od;
-            /w
-        >
-        $<$<CONFIG:Release>:
-            /O2;
-            /Oi;
-            /Gy;
-            /W3
-        >
-        ${DEFAULT_CXX_DEBUG_INFORMATION_FORMAT};
-        ${DEFAULT_CXX_EXCEPTION_HANDLING};
-        /Zc:wchar_t-;
-        /Y-
-    )
-    target_link_options(${PROJECT_NAME} PRIVATE
-        $<$<CONFIG:Release>:
-            /OPT:REF;
-            /OPT:ICF
-        >
-        /MANIFEST:NO;
-        /DEBUG;
-        /SUBSYSTEM:WINDOWS
-    )
-endif()
-
 ################################################################################
 # Dependencies
 ################################################################################
 set(ADDITIONAL_LIBRARY_DEPENDENCIES
-    "$<$<CONFIG:Debug>:"
-        "QtNetworkd4;"
-        "QtGuid4;"
-        "QtCored4;"
-        "QtOpenGLd4"
-    ">"
-    "$<$<CONFIG:Release>:"
-        "XMLProvider;"
-        "QtGui4;"
-        "QtCore4;"
-        "QtOpenGL4;"
-        "qgis_core;"
-        "qgis_gui;"
-        "CDataElement;"
-        "CDataProviderManager;"
-        "QtNetwork4"
-    ">"
     "glu32;"
     "opengl32;"
-    "proj_i;"
-    "gdal_i;"
-    "QE_lib"
+    "QE_lib;"
+    "QtCore"
 )
-target_link_libraries(${PROJECT_NAME} PUBLIC "${ADDITIONAL_LIBRARY_DEPENDENCIES}")
+target_link_libraries(${PROJECT_NAME} PUBLIC "${ADDITIONAL_LIBRARY_DEPENDENCIES}" ${PROJ_BLIBRARY})
 

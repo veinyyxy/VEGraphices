@@ -14,12 +14,12 @@ V 1.0
 #pragma once
 #include "GIS_WrapperConfig.h"
 
-#include <QtGui/QFileDialog>
+#include <QtWidgets/QFileDialog>
 #include <QtCore/QTextStream>
-#include <QtGui/QTreeWidget>
-#include <QtGui/QTreeWidgetItem>
+#include <QtWidgets/QTreeWidget>
+#include <QtWidgets/QTreeWidgetItem>
 #include <QtCore/QDebug>
-#include <QVector3D>
+#include <QtGui/QVector3D>
 #include <QtCore/QStringList>
 
 #include "SymbolPluginInterface.h"
@@ -152,14 +152,14 @@ private:
 	作    者：renxue
 	完成日期：2011年11月22日
 	*************************************************************************/
-void CReadSymbolFromM14File::CreatClosedContourArea(QVector<QVector3DArray> &VectorArray, QVector<CSymbolAttribute*> &AttributArray);
+void CreatClosedContourArea(QVector<QVector3DArray> &VectorArray, QVector<CSymbolAttribute*> &AttributArray);
 
 	/*************************************************************
 	功能说明：计算任意多边形的面积
 	参数说明：pointArray是多边形的三维坐标数组；
 	来    源：wuenp
 	**************************************************************/
-	double CReadSymbolFromM14File::ProfileArea2D(QVector3DArray pointArray);
+    double ProfileArea2D(QVector3DArray pointArray);
 
 	/************************************************************************
 	功能说明：计算任意多边形的边界极限
@@ -168,7 +168,7 @@ void CReadSymbolFromM14File::CreatClosedContourArea(QVector<QVector3DArray> &Vec
 	作    者：renxue
 	完成日期：2011年11月23日
 	*************************************************************************/
-	QVector<double> CReadSymbolFromM14File::MaxRangeXY(QVector3DArray pointArray);
+    QVector<double> MaxRangeXY(QVector3DArray pointArray);
 
 	/************************************************************************
 	功能说明：比较二维矩形的边界，判断smallRange是否完全包含在bigRange内
@@ -177,7 +177,7 @@ void CReadSymbolFromM14File::CreatClosedContourArea(QVector<QVector3DArray> &Vec
 	作    者：renxue
 	完成日期：2011年11月23日
 	*************************************************************************/
-	bool CReadSymbolFromM14File::CompareRange(QVector<double> bigRange, QVector<double> smallRange);
+    bool CompareRange(QVector<double> bigRange, QVector<double> smallRange);
 
 private:
 	QTreeWidget    *treeWidget;

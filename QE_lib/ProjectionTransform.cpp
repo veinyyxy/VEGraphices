@@ -5,7 +5,6 @@ ProjectionTransform::ProjectionTransform(void)
 {
 }
 
-
 ProjectionTransform::~ProjectionTransform(void)
 {
 }

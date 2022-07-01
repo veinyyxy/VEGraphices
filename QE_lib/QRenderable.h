@@ -124,7 +124,7 @@ public:
 	// Qualifier: 开启和关闭渲染列
 	//************************************
 	inline bool DisplayList();
-	inline void DisplayList(bool yesno);
+    void DisplayList(bool yesno);
 	//************************************
 	// Method:    GetListName
 	// FullName:  QRenderable::GetListName

@@ -1,5 +1,5 @@
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 #include "GeoCoordTransform.h"
 
 GeoCoordTransform::GeoCoordTransform()

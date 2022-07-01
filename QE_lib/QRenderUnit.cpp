@@ -17,7 +17,8 @@ QRenderUnit::QRenderUnit(DATA_COMPOSE compos) : compose(compos)
 
 QRenderUnit::~QRenderUnit(void)
 {
-	glDeleteLists((GLuint)this, 1);
+    GLuint listID = (ULONGLONG)(this);
+    glDeleteLists(listID, 1);
 }
 
 void QRenderUnit::Render()
@@ -76,7 +77,7 @@ void QRenderUnit::Render()
 			   CallDisplayList();
 		   else
 		   {
-			   ListName = (GLuint)this;
+               GLuint ListName = (ULONGLONG)this;
 			   glNewList(ListName, GL_COMPILE_AND_EXECUTE);
 			   //glDrawArrays(mode, 0, vertexArray->getDataCount());
 			   if(vertexArray)

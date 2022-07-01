@@ -16,10 +16,10 @@ V 0.1
 
 #include "DrawContourLine.h"
 #include <QtCore/QSettings>
-#include <QtCore/QTextCodec>
+//#include <QtCore/QTextCodec>
 #include "ILayerAttribute.h"
-#include <qinputdialog.h>
-#include <QMessageBox>
+#include <QtWidgets/QInputDialog>
+#include <QtWidgets/QMessageBox>
 
 typedef struct
 {
@@ -193,7 +193,7 @@ void DrawContourLine::MousePress(QMouseEvent *event)
 			m_nCount++; 
 
 			bool ok;
-			int m_value = QInputDialog::getInteger(NULL, tr("数值"),tr("选择数值:"), 0, -9999,9999, 1, &ok );
+            int m_value = QInputDialog::getInt(NULL, tr("数值"),tr("选择数值:"), 0, -9999,9999, 1, &ok );
 			if (ok) 
 				m_pContourLine->GetAttribute()->SetValue(m_value);
 			else 

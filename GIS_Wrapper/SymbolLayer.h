@@ -36,8 +36,8 @@ V 1.0
 ============================================================*/
 #pragma once
 #include "vectorlayer.h"
-#include <QCoreApplication>
-#include <QPluginLoader>
+#include <QtCore/QCoreApplication>
+#include <QtCore/QPluginLoader>
 #include "Nccstation.h"
 #include "Nccclosedcontour.h"
 #include "Point.h"

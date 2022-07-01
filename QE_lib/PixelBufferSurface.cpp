@@ -13,44 +13,47 @@ PixelBufferSurface::~PixelBufferSurface(void)
 
 bool PixelBufferSurface::MakeGLContext()
 {
-	return m_pGLPixelBuffer->makeCurrent();
+    //return m_pGLPixelBuffer->makeCurrent();
+    return false;
 }
 
 void PixelBufferSurface::DoneGLContext()
 {
-	m_pGLPixelBuffer->doneCurrent();
+    //m_pGLPixelBuffer->doneCurrent();
 }
 
 void PixelBufferSurface::Resize( int iW, int iH )
 {
-	DrawSurface::Resize(iW, iH);
+    //DrawSurface::Resize(iW, iH);
 	//QGLPixelBuffer* pTempBuffer = new QGLPixelBuffer(iW, iH);
-	if(m_pGLPixelBuffer) delete m_pGLPixelBuffer;
-	m_pGLPixelBuffer = new QGLPixelBuffer(iW, iH);
+    //if(m_pGLPixelBuffer) delete m_pGLPixelBuffer;
+    //m_pGLPixelBuffer = new QGLPixelBuffer(iW, iH);
 }
 
 void PixelBufferSurface::FlushSurface()
 {
-	if(m_pGLPixelBuffer)
-		m_pGLPixelBuffer->makeCurrent();
+//	if(m_pGLPixelBuffer)
+//		m_pGLPixelBuffer->makeCurrent();
 
-	if(m_pAssociatedScene)
-	{
-		m_pAssociatedScene->InitScene();
-		m_pAssociatedScene->AdjustObserver(m_iWidth, m_iHeight);
-		m_pAssociatedScene->RenderFrame();
-	}
+//	if(m_pAssociatedScene)
+//	{
+//		m_pAssociatedScene->InitScene();
+//		m_pAssociatedScene->AdjustObserver(m_iWidth, m_iHeight);
+//		m_pAssociatedScene->RenderFrame();
+//	}
 	glFlush();
 }
 
-const QGLContext* PixelBufferSurface::Context()
+const QOpenGLContext* PixelBufferSurface::Context()
 {
 	return 0;
 }
 
 QImage PixelBufferSurface::ToImage( bool br /*= false*/ )
 {
-	return m_pGLPixelBuffer->toImage();
+    //return m_pGLPixelBuffer->toImage();
+    QImage newimage;
+    return newimage;
 }
 
 QPixmap PixelBufferSurface::ToPixmap( int iW, int iH, bool bs /*= false*/ )

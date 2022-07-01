@@ -1,7 +1,6 @@
 #include "OptMicapsDataXml.h"
-#include "qfile.h"
-#include "qcoreapplication.h"
-#include "QObject.h"
+#include <QtCore/QFile>
+#include <QtCore/QCoreApplication>
 
  OptMicapsDataXml::OptMicapsDataXml()
 {
@@ -33,7 +32,7 @@ bool OptMicapsDataXml::WriteMapPathData(QTreeWidget *treeWidget,QString xmlFileN
 		xmlWriter.writeStartElement("Info");
 		xmlWriter.writeAttribute("mapname",treeWidget->topLevelItem(i)->text(0));
 		xmlWriter.writeAttribute("shpname",treeWidget->topLevelItem(i)->text(1));
-		QColor color = treeWidget->topLevelItem(i)->backgroundColor(2);
+        QColor color = treeWidget->topLevelItem(i)->background(2).color();
 		xmlWriter.writeAttribute("red",QString::number(color.redF()));
 		xmlWriter.writeAttribute("green",QString::number(color.greenF()));
 		xmlWriter.writeAttribute("blue",QString::number(color.blueF()));
@@ -205,7 +204,7 @@ bool OptMicapsDataXml::ReadMicapsBtnData()
 		{
 			if (m_XmlReader.isStartElement())
 			{
-				if (m_XmlReader.name() == "MicapsData")
+                if (m_XmlReader.name() == QObject::tr("MicapsData"))
 				{
 					ReadItemBtnData();
 				}
@@ -263,7 +262,7 @@ void OptMicapsDataXml::ReadItemBtnData()
 		if (m_XmlReader.isStartElement())
 		{
 			//qDebug()<<m_XmlReader.name();
-			if (m_XmlReader.name() == "AItem")
+            if (m_XmlReader.name() == QObject::tr("AItem"))
 			{
 				MicapsDataA temDataA;
 				temDataA.Depth=1;
@@ -273,7 +272,7 @@ void OptMicapsDataXml::ReadItemBtnData()
 				m_MicapsBtnDataArray.push_back(temDataA);
 				ReadItemBtnData();
 			}
-			else if (m_XmlReader.name() == "BItem")
+            else if (m_XmlReader.name() == QObject::tr("BItem"))
 			{
 				MicapsDataB temDataB;
 				temDataB.Depth=2;
@@ -290,7 +289,7 @@ void OptMicapsDataXml::ReadItemBtnData()
 				}
 				ReadItemBtnData();
 			}
-			else if (m_XmlReader.name() == "CItem")
+            else if (m_XmlReader.name() == QObject::tr("CItem"))
 			{
 				MicapsDataC temDataC;
 				temDataC.CBtnName = m_XmlReader.attributes().value("name").toString();
@@ -359,7 +358,7 @@ bool OptMicapsDataXml::ReadMeteToolBoxData()
 		{
 			if (m_XmlReader.isStartElement())
 			{
-				if (m_XmlReader.name() == "MeteToolBox")
+                if (m_XmlReader.name() == QObject::tr("MeteToolBox"))
 				{
 					ReadItemBtnData();
 				}
@@ -515,23 +514,23 @@ void OptMicapsDataXml::ReadColor(QString name,QColor& color)
 	{  
 		m_XmlReader.readNext();  
 		if(m_XmlReader.isStartElement())  
-		{  
-			if(m_XmlReader.name() == "r")  
+        {
+            if(m_XmlReader.name() == QObject::tr("r"))
 			{  
 				r = m_XmlReader.readElementText().toInt();
-			}  
-			if(m_XmlReader.name() == "g")  
+            }
+            if(m_XmlReader.name() == QObject::tr("g"))
 			{  
 				g =m_XmlReader.readElementText().toInt();
-			}  
-			if(m_XmlReader.name() == "b")  
+            }
+            if(m_XmlReader.name() == QObject::tr("b"))
 			{  
 				b = m_XmlReader.readElementText().toInt();
-			}  
-			if(m_XmlReader.name() == "a")  
+            }
+            if(m_XmlReader.name() == QObject::tr("a"))
 			{  
 				a = m_XmlReader.readElementText().toInt();
-			}  	
+            }
 		}  
 		if(m_XmlReader.isEndElement())  
 		{  
@@ -557,7 +556,7 @@ void OptMicapsDataXml::Readbool(QString name,bool& AlasCheck)
 
 		if (m_XmlReader.isStartElement())
 		{
-			if (m_XmlReader.name() == "checked")
+            if (m_XmlReader.name() == QObject::tr("checked"))
 			{
 				strCheck = m_XmlReader.readElementText();
 			}			
@@ -572,7 +571,7 @@ void OptMicapsDataXml::Readbool(QString name,bool& AlasCheck)
 		}
 	}
 
-	if (strCheck == "true")
+    if (strCheck == QObject::tr("true"))
 	{
 		AlasCheck = true;
 	}
@@ -590,7 +589,7 @@ void OptMicapsDataXml::ReadString(QString name,QString& sysname)
 
 		if (m_XmlReader.isStartElement())
 		{
-			if (m_XmlReader.name() == "str")
+            if (m_XmlReader.name() == QObject::tr("str"))
 			{
 				sysname = m_XmlReader.readElementText();
 			}			
@@ -614,23 +613,23 @@ void OptMicapsDataXml::ReadMapColorConfig(QColor& bcolor,QColor& fcolor,bool& Al
 
 		if (m_XmlReader.isStartElement())
 		{
-			if (m_XmlReader.name() == "bColor")
+            if (m_XmlReader.name() == QObject::tr("bColor"))
 			{
 				ReadColor(QString("bColor"),bcolor);
 			}
-			if (m_XmlReader.name() == "fColor")
+            if (m_XmlReader.name() == QObject::tr("fColor"))
 			{
 				ReadColor(QString("fColor"),fcolor);
 			}
-			if (m_XmlReader.name()== "Aaliasing")
+            if (m_XmlReader.name()== QObject::tr("Aaliasing"))
 			{
 				Readbool(QString("Aaliasing"),AlasCheck);
 			}
-			if (m_XmlReader.name()== "objsysName")
+            if (m_XmlReader.name()== QObject::tr("objsysName"))
 			{
 				ReadString(QString("objsysName"),sysname);
 			}
-			if (m_XmlReader.name()== "Projection")
+            if (m_XmlReader.name()== QObject::tr("Projection"))
 			{
 				ReadString(QString("Projection"),projectionname);
 			}
@@ -638,7 +637,7 @@ void OptMicapsDataXml::ReadMapColorConfig(QColor& bcolor,QColor& fcolor,bool& Al
 
 		if (m_XmlReader.isEndElement())
 		{
-			if(m_XmlReader.name() == "MapColorConfig")  
+            if(m_XmlReader.name() == QObject::tr("MapColorConfig"))
 			{  			
 				break;  
 			} 
@@ -662,7 +661,7 @@ bool OptMicapsDataXml::ReadMapColorConfigFile(QColor& bcolor,QColor& fcolor,bool
 
 		if (m_XmlReader.isStartElement())
 		{
-			if (m_XmlReader.name() == "MapColorConfig")
+            if (m_XmlReader.name() == QObject::tr("MapColorConfig"))
 			{
 				ReadMapColorConfig(bcolor,fcolor,AlasCheck,sysname,projectionname);				
 			}			
